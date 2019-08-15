@@ -178,6 +178,13 @@ body >footer{
     align-items: center;
   }
 
+  body >main,
+  body >aside#aLeft,
+  body >aside#aRight{
+    align-self: stretch;
+    align-items: flex-start;
+  }
+
   nav ul{
     justify-content:space-between;
   }
@@ -199,8 +206,6 @@ body >footer{
     order:4;
     flex:1 1 20%;
     flex:1 1 calc( 100% / 5 );
-
-    align-self: flex-start;
   }
 
   body >main{
@@ -212,8 +217,6 @@ body >footer{
   body >aside#aRight{
     flex:1 1 20%;
     flex:1 1 calc( 100% / 5 );
-
-    align-self: flex-start;
   }
 
   /**

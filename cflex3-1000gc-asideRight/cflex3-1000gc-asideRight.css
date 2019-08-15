@@ -176,6 +176,13 @@ body >footer{
     width:1000px; margin:0 auto;
   }
 
+  body >main,
+  body >aside#aLeft,
+  body >aside#aRight{
+    align-self: stretch;
+    align-items: flex-start;
+  }
+
   nav ul{
     justify-content:space-between;
   }
@@ -198,8 +205,6 @@ body >footer{
     order:4;
     flex:1 1 382px;
     flex:1 1 calc( 1000px - ( 1000px / 1.618 ) );
-
-    align-self: flex-start;
   }
   */
 
@@ -212,8 +217,6 @@ body >footer{
   body >aside#aRight{
     flex:1 1 382px;
     flex:1 1 calc( 1000px - ( 1000px / 1.618 ) );
-
-    align-self: flex-start;
   }
 
   body >footer >section{
