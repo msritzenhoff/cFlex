@@ -153,7 +153,7 @@ mark::after {
 * margin and padding to ZERO
 */
 :root, body, nav, header, main, article, section, footer, aside, blockquote, q, details,
-dl, dt, dd, ol, ul, li, i, em, strong, code, h1, h2, h3, h4, h5, h6,
+dl, dt, dd, ol, ul, li, i, em, strong, code, h1, h2, h3, h4, h5, h6, pre, code,
 p, a, div, small, figure, figcaption, svg, img,
 video, audio, canvas, object, applet, embed, iframe,
 form, fieldset, label, input, select, option, textarea, table{

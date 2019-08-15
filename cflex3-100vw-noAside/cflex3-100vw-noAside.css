@@ -176,6 +176,37 @@ body >footer{
     margin:0 auto;
   }
 
+  body >header >h1{
+    /*
+     * starting factors
+     * flex-grow: 1
+     * flex-shrink: 1
+     * flex-basis: 100vw
+    */
+    flex:1 1 33.3333%;
+    flex:1 1 calc( 100% / 3 );
+    /**
+     * footer >section as column
+     * 3 equal widths
+     */
+    flex-basis: 0;
+  }
+  body >header >section{
+    /*
+     * starting factors
+     * flex-grow: 1
+     * flex-shrink: 1
+     * flex-basis: 100vw
+    */
+    flex:2 1 66.6666%;
+    flex:2 1 calc( 100% / 3 * 2 );
+    /**
+     * footer >section as column
+     * 3 equal widths
+     */
+    flex-basis: 0;
+  }
+
   body >main,
   body >aside#aLeft,
   body >aside#aRight{

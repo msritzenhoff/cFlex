@@ -203,6 +203,7 @@ body >footer{
     text-align: center;
   }
 
+  /*
   body >aside#aLeft{
     order:4;
     flex:1 1 20%;
@@ -219,6 +220,9 @@ body >footer{
     flex:1 1 20%;
     flex:1 1 calc( 100% / 5 );
   }
+  */
+
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
   /**
    * 960px fixed width content
@@ -230,9 +234,16 @@ body >footer{
   body >footer >div{
     width:960px; max-width:960px; margin:0 auto;
   }
+  body >header,
+  body >footer{
+    padding:0;
+  }
+  body >header >div,
+  body >footer >div{
+    padding: 1.5vh 1vw;
+  }
 
-  body >main >div,
-  body >footer >section,
+  body >header >div >h1,
   body >footer >div >section{
     /*
      * starting factors
@@ -250,6 +261,22 @@ body >footer{
 
     flex-direction:column;
     align-items: flex-start;
+  }
+
+  body >header >div >section{
+    /*
+     * starting factors
+     * flex-grow: 1
+     * flex-shrink: 1
+     * flex-basis: 100vw
+    */
+    flex:2 1 66.6666%;
+    flex:2 1 calc( 100% / 3 * 2 );
+    /**
+     * footer >section as column
+     * 3 equal widths
+     */
+    flex-basis: 0;
   }
 
   /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
