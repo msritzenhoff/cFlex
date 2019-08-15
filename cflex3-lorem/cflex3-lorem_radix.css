@@ -162,6 +162,9 @@ p, a, div, small, figure, figcaption, svg, img,
 video, audio, canvas, object, applet, embed, iframe,
 form, fieldset, label, input, select, option, textarea, table{
   margin: 0; padding: 0;
+
+  margin-block-start:0; margin-block-end:0; margin-inline-start:0; margin-inline-end:0;
+  padding-block-start:0; padding-block-end:0; padding-inline-start:0; padding-inline-end:0;
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */

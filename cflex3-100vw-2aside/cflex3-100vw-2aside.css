@@ -182,6 +182,11 @@ body >footer{
     align-self: stretch;
     align-items: flex-start;
   }
+  body >main >*,
+  body >aside#aLeft >*,
+  body >aside#aRight >*{
+    align-self: flex-start;
+  }
 
   nav ul{
     justify-content:space-between;
@@ -196,7 +201,7 @@ body >footer{
     flex:1 1 0;
   }
   nav ul li a{
-    float: left; height: auto;
+    float: left;
     text-align: center;
   }
 

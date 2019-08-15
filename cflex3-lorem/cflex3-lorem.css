@@ -241,6 +241,11 @@ textarea:focus {
     align-self: stretch;
     align-items: flex-start;
   }
+  body >main >*,
+  body >aside#aLeft >*,
+  body >aside#aRight >*{
+    align-self: flex-start;
+  }
 
   nav ul{
     justify-content:space-between;
