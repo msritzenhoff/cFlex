@@ -181,11 +181,7 @@ body >footer{
   body >aside#aRight{
     align-self: stretch;
     align-items: flex-start;
-  }
-  body >main >*,
-  body >aside#aLeft >*,
-  body >aside#aRight >*{
-    align-self: flex-start;
+    align-content: flex-start;
   }
 
   nav ul{
