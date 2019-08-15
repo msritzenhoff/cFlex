@@ -5,12 +5,12 @@
 
 # Image #
 #########
-*.png
-*.jpg
+#*.svg
+#*.png
+#*.jpg
 *.jpeg
 *.gif
 *.bmp
-*.svg
 *.ico
 *.psd
 
@@ -19,13 +19,13 @@
 *.wmv
 *.mpg
 *.mpeg
-*.mp4
+#*.mp4
 *.mov
 *.flv
 *.avi
-*.ogv
-*.ogg
-*.webm
+#*.ogv
+#*.ogg
+#*.webm
 
 # Audio #
 #########
