@@ -5,11 +5,14 @@ cflex3-lorem/
 
 # Image #
 #########
-*.jpg
-*.gif
 *.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
 *.svg
 *.ico
+*.psd
 
 # Video #
 #########
