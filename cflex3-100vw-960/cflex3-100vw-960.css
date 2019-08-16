@@ -199,7 +199,7 @@ body >footer{
     flex:1 1 0;
   }
   nav ul li a{
-    float:left;
+    float:left; padding:0 1vw;
   }
 
   /*
