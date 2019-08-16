@@ -238,7 +238,16 @@ hr.dash{
   border-bottom:1px dashed #666;
 }
 
+pre{
+  margin:0.5em; padding:1em;
+  background:rgba(0,0,0,0.05);
+}
+
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+html{
+  color:#444;
+}
 
 body >header,
 body >nav >h3,
