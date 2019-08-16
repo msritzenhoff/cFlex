@@ -228,7 +228,7 @@ body >section#breadcrumb >ul{
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 hr{
-  margin:1em 0;
+  margin:1vh 0;
   border-top:0; border-bottom:1px solid #666;
 }
 hr.dot{
@@ -239,7 +239,7 @@ hr.dash{
 }
 
 pre{
-  margin:0.5em 0; padding:1em;
+  margin:0.5em 0; padding:1vh 1em;
   background:rgba(0,0,0,0.05);
 }
 
@@ -395,6 +395,14 @@ main >article{
 .accordion input:checked ~ label >h3 {
   color: #9da3af;
 }
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+.githubBtn{
+  max-width:125px; max-width:170px; max-height:20px;
+}
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 

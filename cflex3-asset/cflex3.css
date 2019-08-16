@@ -183,8 +183,8 @@ body >footer{
      * flex-shrink: 1
      * flex-basis: 100vw
     */
-    flex:1 1 33.3333%;
-    flex:1 1 calc( 100% / 3 );
+    flex:1 0 33.3333%;
+    flex:1 0 calc( 100% / 3 );
     /**
      * footer >section as column
      * 3 equal widths
@@ -198,8 +198,8 @@ body >footer{
      * flex-shrink: 1
      * flex-basis: 100vw
     */
-    flex:2 1 66.6666%;
-    flex:2 1 calc( 100% / 3 * 2 );
+    flex:2 0 66.6666%;
+    flex:2 0 calc( 100% / 3 * 2 );
     /**
      * footer >section as column
      * 3 equal widths
@@ -258,8 +258,8 @@ body >footer{
      * flex-shrink: 1
      * flex-basis: 100vw
     */
-    flex:1 1 33.3333%;
-    flex:1 1 calc( 100% / 3 );
+    flex:1 0 33.3333%;
+    flex:1 0 calc( 100% / 3 );
     /**
      * footer >section as column
      * 3 equal widths
@@ -278,60 +278,60 @@ body >footer{
   }
   /*
   .cF_10{
-    flex:1 1 10%;
-    flex:1 1 calc( 100% / 10 );
+    flex:1 0 10%;
+    flex:1 0 calc( 100% / 10 );
   }
   .cF_20{
-    flex:1 1 20%;
-    flex:1 1 calc( 100% / 5 );
+    flex:1 0 20%;
+    flex:1 0 calc( 100% / 5 );
   }
   .cF_25{
-    flex:1 1 25%;
-    flex:1 1 calc( 100% / 4 );
+    flex:1 0 25%;
+    flex:1 0 calc( 100% / 4 );
   }
   .cF_30{
-    flex:1 1 30%;
-    flex:1 1 calc( 100% / 10 * 3 );
+    flex:1 0 30%;
+    flex:1 0 calc( 100% / 10 * 3 );
   }
   */
   .cF_33{
-    flex:1 1 33.3333%;
-    flex:1 1 calc( 100% / 3 );
+    flex:1 0 33.3333%;
+    flex:1 0 calc( 100% / 3 );
   }
   /*
   .cF_40{
-    flex:1 1 40%;
-    flex:1 1 calc( 100% / 5 * 2 );
+    flex:1 0 40%;
+    flex:1 0 calc( 100% / 5 * 2 );
   }
   */
   .cF_50{
-    flex:1 1 50%;
-    flex:1 1 calc( 100% / 2 );
+    flex:1 0 50%;
+    flex:1 0 calc( 100% / 2 );
   }
   /*
   .cF_60{
-    flex:1 1 60%;
-    flex:1 1 calc( 100% / 5 * 3 );
+    flex:1 0 60%;
+    flex:1 0 calc( 100% / 5 * 3 );
   }
   .cF_66{
-    flex:1 1 66%;
-    flex:1 1 calc( 100% / 3 * 2 );
+    flex:1 0 66%;
+    flex:1 0 calc( 100% / 3 * 2 );
   }
   .cF_70{
-    flex:1 1 70%;
-    flex:1 1 calc( 100% / 10 * 7 );
+    flex:1 0 70%;
+    flex:1 0 calc( 100% / 10 * 7 );
   }
   .cF_75{
-    flex:1 1 75%;
-    flex:1 1 calc( 100% / 4 * 3 );
+    flex:1 0 75%;
+    flex:1 0 calc( 100% / 4 * 3 );
   }
   .cF_80{
-    flex:1 1 80%;
-    flex:1 1 calc( 100% / 5 * 4 );
+    flex:1 0 80%;
+    flex:1 0 calc( 100% / 5 * 4 );
   }
   .cF_90{
-    flex:1 1 90%;
-    flex:1 1 calc( 100% / 10 * 9 );
+    flex:1 0 90%;
+    flex:1 0 calc( 100% / 10 * 9 );
   }
   */
 
