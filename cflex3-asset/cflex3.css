@@ -315,7 +315,7 @@ body >footer{
   }
   .cF_66{
     flex:1 1 66%;
-    flex:1 1 calc( 100% / 5 * 3 );
+    flex:1 1 calc( 100% / 3 * 2 );
   }
   .cF_70{
     flex:1 1 70%;
