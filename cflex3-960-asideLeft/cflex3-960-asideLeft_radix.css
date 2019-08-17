@@ -328,11 +328,15 @@ pre{
 h2, h3, h4, h5, h6{
   padding-bottom:1vh;
 }
-p{
+main p,
+aside p,
+footer p{
   padding-bottom:1vh;
   line-height: 1.625;
 }
-p:last-of-type{
+main p:last-of-type,
+aside p:last-of-type,
+footer p:last-of-type{
   padding-bottom:0;
 }
 
