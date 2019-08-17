@@ -321,6 +321,8 @@ dd{
 pre{
   margin:0.5em 0; padding:1vh 1em;
   background:rgba(0,0,0,0.05);
+
+  font-size:88% !important;
 }
 
 h2, h3, h4, h5, h6{
@@ -328,6 +330,10 @@ h2, h3, h4, h5, h6{
 }
 p{
   padding-bottom:0.5vh;
+  line-height: 1.625;
+}
+p:last-of-type{
+  padding-bottom:0;
 }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
