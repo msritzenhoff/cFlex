@@ -1,5 +1,7 @@
 # cFlex
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 
 > cFlex is a kind of blueprint/framework to setup a website layout for modern browser with CSS Flexbox.
 
