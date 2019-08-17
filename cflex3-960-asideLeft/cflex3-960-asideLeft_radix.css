@@ -57,7 +57,7 @@ header >*{
   /* 1rem = 16px
   * http://gregrickaby.com/using-the-golden-ratio-and-rems/
   */
-  font-size: 16px;
+  font-size:16px; font-size:1rem;
 
   /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
@@ -70,8 +70,13 @@ header >*{
 
   /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-  /**
+  /* http://www.ampsoft.net/webdesign-l/WindowsMacFonts.html
+   * /
+  font-family: Verdana, Geneva, sans-serif;
+
+  /* maybe like to read
    * https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/
+   * https://css-tricks.com/snippets/css/system-font-stack/
    */
   font-family:
   /* 1 */ -apple-system, BlinkMacSystemFont,
@@ -79,11 +84,7 @@ header >*{
   /* 3 */ "Helvetica Neue", sans-serif;
   /* # */
 
-  /**
-   * http://www.ampsoft.net/webdesign-l/WindowsMacFonts.html
-   * /
-  font-family: Verdana, Geneva, sans-serif;
-  /* # */
+  letter-spacing:0.045vw;
 
   /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
@@ -102,16 +103,6 @@ header >*{
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-
-/* Firefox */
-::-moz-selection {
-  color: #444;
-  background: #ccff15; background: rgb(204,255,21); background: hsl(73,100%,54%);
-}
-::selection {
-  color: #444;
-  background: #ccff15; background: rgb(204,255,21); background: hsl(73,100%,54%);
-}
 
 /* font italic for input placeholder */
 ::-webkit-input-placeholder {
@@ -145,6 +136,89 @@ mark::before {
 mark::after {
  content: " [highlight end] ";
 }
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/** main colors selected from
+ * https://www.stabilo.com/ch-de/produkte/textmarker/textmarker/stabilo-boss-original/
+ */
+/* red * /
+::-moz-selection {
+  background:#e94f58; background:rgb(233,79,88);
+}
+::selection {
+  background:#e94f58; background:rgb(233,79,88);
+}
+/* green * /
+::-moz-selection {
+  background:#2ba727; background:rgb(43,167,39);
+}
+::selection {
+  background:#2ba727; background:rgb(43,167,39);
+}
+/* blue * /
+::-moz-selection {
+  background:#3aafdc; background:rgb(58,175,220);
+}
+::selection {
+  background:#3aafdc; background:rgb(58,175,220);
+}
+/* yellow * /
+::-moz-selection {
+  background:#f1e740; background:rgb(241,231,64);
+}
+::selection {
+  background:#f1e740; background:rgb(241,231,64);
+}
+*/
+
+/** pastel colors selected from
+* https://www.stabilo.com/ch-de/produkte/textmarker/textmarker/stabilo-boss-original-pastel/
+*/
+/* creamy peach * /
+::-moz-selection {
+  background:#f4a384; background:rgb(244,163,132);
+}
+::selection {
+  background:#f4a384; background:rgb(244,163,132);
+}
+/* hint of mint * /
+::-moz-selection {
+  background:#90cbaa; background:rgb(144,203,170);
+}
+::selection {
+  background:#90cbaa; background:rgb(144,203,170);
+}
+/* touch of torqouise * /
+::-moz-selection {
+  background:#a1d4cf; background:rgb(161,212,207);
+}
+::selection {
+  background:#a1d4cf; background:rgb(161,212,207);
+}
+/* milk yellow */
+::-moz-selection {
+  background:#f8dd74; background:rgb(248,221,116);
+}
+::selection {
+  background:#f8dd74; background:rgb(248,221,116);
+}
+
+
+/* for example */
+.redMarker {
+  background:#f4a384; background:rgb(244,163,132);
+}
+.greenMarker {
+  background:#90cbaa; background:rgb(144,203,170);
+}
+.blueMarker {
+  background:#a1d4cf; background:rgb(161,212,207);
+}
+.yellowMarker {
+  background:#f8dd74; background:rgb(248,221,116);
+}
+
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
@@ -215,17 +289,22 @@ body >* *{
 ul, ol{
   list-style-position: inside;
 }
-main ul >li, main ol >li,
-aside ul >li, aside ol >li{
-  padding-left:1em;
+main ul >li ul, main ol >li ol,
+aside ul >li ul, aside ol >li ol{
+  padding-left:0.9em;
 }
-
-body >nav >ul,
-body >section#breadcrumb >ul{
+nav ul,
+section#breadcrumb ul{
   list-style-type: none;
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/* japan font */
+rt{
+  font-size:10px;
+}
+/* japan font */
 
 hr{
   margin:1vh 0;
@@ -238,9 +317,20 @@ hr.dash{
   border-bottom:1px dashed #666;
 }
 
+dd{
+  padding-left:1em;
+}
+
 pre{
   margin:0.5em 0; padding:1vh 1em;
   background:rgba(0,0,0,0.05);
+}
+
+h2, h3, h4, h5, h6{
+  padding-bottom:1vh;
+}
+p{
+  padding-bottom:0.5vh;
 }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
