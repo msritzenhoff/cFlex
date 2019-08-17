@@ -273,59 +273,59 @@ body >footer{
   /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
   /*
-  .cFlex{
+  .cflex{
     display:flex;
     flex-flow: row wrap;
   }
-  .cF_10{
+  .cf_10{
     flex:1 0 10%;
     flex:1 0 calc( 100% / 10 );
   }
-  .cF_20{
+  .cf_20{
     flex:1 0 20%;
     flex:1 0 calc( 100% / 5 );
   }
-  .cF_25{
+  .cf_25{
     flex:1 0 25%;
     flex:1 0 calc( 100% / 4 );
   }
-  .cF_30{
+  .cf_30{
     flex:1 0 30%;
     flex:1 0 calc( 100% / 10 * 3 );
   }
-  .cF_33{
+  .cf_33{
     flex:1 0 33.3333%;
     flex:1 0 calc( 100% / 3 );
   }
-  .cF_40{
+  .cf_40{
     flex:1 0 40%;
     flex:1 0 calc( 100% / 5 * 2 );
   }
-  .cF_50{
+  .cf_50{
     flex:1 0 50%;
     flex:1 0 calc( 100% / 2 );
   }
-  .cF_60{
+  .cf_60{
     flex:1 0 60%;
     flex:1 0 calc( 100% / 5 * 3 );
   }
-  .cF_66{
+  .cf_66{
     flex:1 0 66%;
     flex:1 0 calc( 100% / 3 * 2 );
   }
-  .cF_70{
+  .cf_70{
     flex:1 0 70%;
     flex:1 0 calc( 100% / 10 * 7 );
   }
-  .cF_75{
+  .cf_75{
     flex:1 0 75%;
     flex:1 0 calc( 100% / 4 * 3 );
   }
-  .cF_80{
+  .cf_80{
     flex:1 0 80%;
     flex:1 0 calc( 100% / 5 * 4 );
   }
-  .cF_90{
+  .cf_90{
     flex:1 0 90%;
     flex:1 0 calc( 100% / 10 * 9 );
   }

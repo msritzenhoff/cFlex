@@ -28,13 +28,13 @@ header >*{
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-.cFlex >div{
+.cflex >div{
   margin-top:0.5em;
 }
-.cFlex div:nth-child(odd){
+.cflex div:nth-child(odd){
   background:#dcdcdc;
 }
-.cFlex div:nth-child(even){
+.cflex div:nth-child(even){
   background:#e8e8e8;
 }
 
