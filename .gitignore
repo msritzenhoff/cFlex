@@ -3,6 +3,7 @@
 #/cflex3-asset
 /cflex3-test
 /cflex3-guide
+.travis.yml
 
 # Image #
 #########

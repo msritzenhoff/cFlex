@@ -13,8 +13,6 @@
 - - -
 
 
-## special THX goes to&hellip;
+## THX goes to&hellip;
 
 [A modern, HTML5-ready alternative to CSS resets](https://github.com/necolas/normalize.css)
-
-[A hackable text editor for the 21st Century](https://github.com/atom/atom)
