@@ -329,7 +329,7 @@ h2, h3, h4, h5, h6{
   padding-bottom:1vh;
 }
 p{
-  padding-bottom:0.5vh;
+  padding-bottom:1vh;
   line-height: 1.625;
 }
 p:last-of-type{
