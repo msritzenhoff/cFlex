@@ -114,7 +114,6 @@ form button{
   margin-top:2vh;
 }
 
-form button,
 button, a.cf_btn,
 button:visited, a.cf_btn:visited{
   width:auto; padding:5.45px 1.42em;
@@ -123,14 +122,6 @@ button:visited, a.cf_btn:visited{
 }
 a.cf_btn{
   padding:5.45px 1.50em;
-}
-button:hover, a.cf_btn:hover,
-button:hover, a.cf_btn:hover{
-  background:#fff;
-}
-button:active, a.cf_btn:active{
-  background:#ccc;
-  border:1px solid #ccc;
 }
 </pre>
 
@@ -150,6 +141,14 @@ button:active, a.cf_btn:active{
                   <label for="last-name">Last Name</label>
                   <input id="last-name" type="text">
                 </div>
+
+                <select multiple size="3">
+                  <option selected value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                  <option value="4">Four</option>
+                  <option value="5">Five</option>
+                </select>
 
                 <div>
                   <input type="radio" id="choice1" name="contact" value="email">

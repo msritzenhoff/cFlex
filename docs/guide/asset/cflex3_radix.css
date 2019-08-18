@@ -371,8 +371,15 @@ form select,
 form option,
 form textarea{
   padding:5.45px 0.5em;
-  border:1px solid #a1a1a1;
 }
+form select[multiple]{
+  padding:0;
+}
+form select >option{
+  padding:5.45px 0.5em;
+  border:0px;
+}
+
 form [type="radio"],
 form [type="checkbox"]{
   max-width:16px; margin-top:1px; margin-right:1em;
@@ -386,6 +393,54 @@ form [type="radio"] ~label{
 form button{
   margin-top:2vh;
 }
+
+form input:not([type="radio"]),
+form input:not([type="checkbox"]),
+form select,
+form option,
+form textarea{
+  border:1px solid #a1a1a1;
+  outline:1px solid #fff;
+}
+form [type="radio"],
+form [type="checkbox"]{
+  outline:1px solid #fff;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+input:required {
+  outline-color: #333;
+}
+input:invalid {
+  outline-color: #FF7F7F;
+}
+input:valid {
+  outline-color: #7FBF7F;
+}
+input:required:invalid {
+  outline-color: #FF7F7F;
+}
+input:required:valid {
+  outline-color: #7FBF7F;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+form input:not([type="radio"]):focus,
+form input:not([type="checkbox"]):focus,
+form select:focus,
+form option:focus,
+form textarea:focus{
+  border:1px solid #80bdff;
+  outline-color:#bfdeff;
+}
+form [type="radio"]:focus,
+form [type="checkbox"]:focus{
+  outline-color:#fff !important;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 button, a.cf_btn,
 button:visited, a.cf_btn:visited{
@@ -408,18 +463,18 @@ button:active, a.cf_btn:active{
 
 button.btnGroup:not(:first-of-type),
 a.btnGroup:not(:first-of-type),
-button.btnRoundGroup:not(:first-of-type),
-a.btnRoundGroup:not(:first-of-type){
+button.btnGroupRC:not(:first-of-type),
+a.btnGroupRC:not(:first-of-type){
   margin-left:-5px;
   border-left-width:0px;
 }
-button.btnRoundGroup:first-of-type,
-a.btnRoundGroup:first-of-type{
+button.btnGroupRC:first-of-type,
+a.btnGroupRC:first-of-type{
   border-top-left-radius:4px;
   border-bottom-left-radius:4px;
 }
-button.btnRoundGroup:last-of-type,
-a.btnRoundGroup:last-of-type{
+button.btnGroupRC:last-of-type,
+a.btnGroupRC:last-of-type{
   border-top-right-radius:4px;
   border-bottom-right-radius:4px;
 }
