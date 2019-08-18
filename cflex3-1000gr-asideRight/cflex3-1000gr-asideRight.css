@@ -172,7 +172,9 @@ body >footer{
    * body as fixed width centered
    */
   :root >body{
-    align-items: center;
+    /*
+    align-items: flex-start;
+    */
     width:1000px; margin:0 auto;
   }
 

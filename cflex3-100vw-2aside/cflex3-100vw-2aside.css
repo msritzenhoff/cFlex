@@ -171,8 +171,10 @@ body >footer{
   /* - - - - - - - - - - - - - - - - - - - - - - - -
    * body as fixed width centered
    */
-  :root >body{
-    align-items: center;
+   :root >body{
+     /*
+     align-items: flex-start;
+     */
     margin:0 auto;
   }
 

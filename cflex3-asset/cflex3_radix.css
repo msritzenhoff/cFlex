@@ -497,6 +497,12 @@ main >article{
   color: #9da3af;
 }
 
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.legal-copyright{
+  text-align:right;
+}
+
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 
 .githubBtn{
