@@ -3,11 +3,7 @@
 
 .travis.yml
 
-/cflex3-test
-/docs/cflex3-test
-
-/cflex3-guide
-/docs/cflex3-guide
+/docs/guide/test
 
 # Subfolder > ASSET
 #/cflex3-asset

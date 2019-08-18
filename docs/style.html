@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>cFlex</title>
+<meta name="keywords" content="cFlex" />
+<meta name="description" content="META Description" />
+<meta name="robots" content="index,follow" />
+<link rel="canonical" href="https://---------.---/">
+
+<meta name="HandheldFriendly" content="true" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2" />
+<meta name="theme-color" content="#444444"/>
+
+<link rel="stylesheet" href="./guide/normalize.css?v=8.0.1" />
+<link rel="stylesheet" href="./guide/cflex3-guide.min.css?v=3.0.3" />
+<link rel="stylesheet" href="./guide/cflex3-guide_radix.min.css?v=3.0.3" />
+</head>
+
+<body>
+
+  <nav>
+    <h3 hidden>cFlex Guide Main Navigation</h3>
+    <ul>
+      <li><a href="./index.html">cFlex</a></li>
+      <li><a href="./basic.html">Basic</a></li>
+      <li><a href="./style.html">Style</a></li>
+      <li hidden><a href="./button.html">Button</a></li>
+      <li hidden><a href="./table.html">Table</a></li>
+      <li><a href="./form.html">Form</a></li>
+
+      <li hidden><a href="./pattern.html">Pattern</a></li>
+      <li hidden><a href="./layout.html"><s>Layout</s></a></li>
+      <li><a href="./history.html">History</a></li>
+    </ul>
+    <div hidden>
+      <iframe class="githubBtn" src="https://ghbtns.com/github-btn.html?user=msritzenhoff&repo=cflex&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+      <iframe class="githubBtn" src="https://ghbtns.com/github-btn.html?user=msritzenhoff&type=follow&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+      <iframe class="githubBtn" src="https://ghbtns.com/github-btn.html?user=msritzenhoff&repo=cflex&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+    </div>
+  </nav>
+
+  <div>
+    <header>
+      <h1>cFlex Guide <small>// Style</small></h1>
+      <section>
+        <p>
+          <a style="float:right;" class="shieldsBtn_license" href="https://github.com/msritzenhoff/cFlex/blob/master/LICENSE.md"><img src="https://img.shields.io/github/license/msritzenhoff/cFlex?logo=cFlex&style=for-the-badge" width="127" heigh="20" alt="cFlex License" /></a>
+          <a hidden style="float:right;" class="shieldsBtn_stars" href="https://github.com/msritzenhoff/cFlex"><img src="https://img.shields.io/github/stars/msritzenhoff/cFlex?logo=cFlex&style=for-the-badge" width="94" heigh="28" alt="cFlex Stars" /></a>
+        </p>
+      </section>
+    </header>
+
+    <section id="breadcrumb">
+      <h3 hidden>cFlex Style Breadcrumb</h3>
+      <ul>
+        <li><a href="./start.html">Start</a></li>
+        <li>> Style</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <main>
+      <article>
+        <header>
+          <h2>Standards with only a few small adjustments</h2>
+        </header>
+
+        <hr>
+
+        <h3>Block Elements</h3>
+
+        <h4>hr</h4>
+        <p>tweak: horizonzal lines</p>
+<pre>
+hr{
+  margin:1vh 0;
+  border-top:0; border-bottom:1px solid #666;
+}
+hr.dot{
+  border-style:dotted;
+}
+hr.dash{
+  border-style:dashed;
+}
+</pre>
+        <hr class="dot">
+        <hr class="dash">
+
+        <hr>
+
+        <h4>font</h4>
+        <p>setup: font-size & -family</p>
+<pre>
+font-size:16px; font-size:1rem;
+
+font-family:
+/* 1 */ -apple-system, BlinkMacSystemFont,
+/* 2 */ "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+/* 3 */ "Helvetica Neue", sans-serif;
+
+letter-spacing:0.045vw;
+</pre>
+
+        <hr>
+
+        <h4>h1, h2, h3, h4, h5, h6</h4>
+        <p>setup: headline</p>
+<pre>
+article h1, h2, h3, h4, h5, h6{
+  padding-bottom:1vh;
+}
+</pre>
+
+        <h1>header >h1<br>
+          <small>small detail</small>
+        </h1>
+        <header>
+          <h2>article >header >h2<br>
+            <small>small detail</small>
+          </h2>
+        </header>
+
+        <hr class="dot">
+
+        <header>
+          <h1>article >header >h1<br>
+            <small>article >header >h1 >small</small>
+          </h1>
+        </header>
+        <h2>article h2<br>
+          <small>article >h2 >small</small>
+        </h2>
+        <h3>article h3<br>
+          <small>article >h3 >small</small>
+        </h3>
+        <h4>article h4<br>
+          <small>article >h4 >small</small>
+        </h4>
+        <h5>article h5<br>
+          <small>article >h5 >small</small>
+        </h5>
+        <h6>article h6<br>
+          <small>article >h6 >small</small>
+        </h6>
+
+        <hr>
+
+        <h4>paragraph</h4>
+        <p>setup: p</p>
+<pre>
+main p,
+aside p,
+footer p{
+  padding-bottom:1vh;
+  line-height: 1.625;
+}
+main p:last-of-type,
+aside p:last-of-type,
+footer p:last-of-type{
+  padding-bottom:0;
+}
+</pre>
+
+        <h5>equal height's with textmarking color</h5>
+        <section class="cflex">
+          <div class="block cf_25">
+            <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper <span class="redMarker">suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit</span> esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+          </div>
+          <div class="block cf_25">
+            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+            <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex <span class="greenMarker">ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et</span> iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+          </div>
+          <div class="block cf_25">
+            <p>Duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, <span class="blueMarker">consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor</span> sit amet.</p>
+            <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+          </div>
+          <div class="block cf_25">
+            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto <span class="yellowMarker">odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed</span> diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+            <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+          </div>
+        </section>
+
+        <hr>
+
+        <h4>ul / ol</h4>
+        <ection class="cflex">
+          <p>setup: unordered and ordered list</p>
+<pre>
+ul, ol{
+  list-style-position: inside;
+}
+</pre>
+          <p>setup: ul and ol inside content area</p>
+<pre>
+main ul >li ul, main ol >li ol,
+aside ul >li ul, aside ol >li ol{
+  padding-left:0.9em;
+}
+</pre>
+          <p>setup: ul and ol in nav and at the breadcrumbs</p>
+<pre>
+nav ul,
+section#breadcrumb ul{
+  list-style-type: none;
+}
+</pre>
+
+          <div class="cf_33">
+            <p>
+              <ul>
+                <li>ul >li</li>
+                <li>ul >li</li>
+                <li>ul >li
+                  <ul>
+                    <li>ul ul >li</li>
+                  </ul>
+                </li>
+                <li>ul >li
+                  <ul>
+                    <li>ul ul >li</li>
+                    <li>ul ul >li
+                      <ul>
+                        <li>ul ul ul >li</li>
+                        <li>ul ul ul >li</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </p>
+          </div>
+
+          <div class="cf_33">
+            <p>
+              <ol>
+                <li>ol >li</li>
+                <li>ol >li</li>
+                <li>ol >li
+                  <ol>
+                    <li>ol ol >li</li>
+                  </ol>
+                </li>
+                <li>ol >li
+                  <ol>
+                    <li>ol ol >li</li>
+                    <li>ol ol >li
+                      <ol>
+                        <li>ol ol ol >li</li>
+                        <li>ol ol ol >li</li>
+                      </ol>
+                    </li>
+                  </ol>
+                </li>
+              </ol>
+            </p>
+          </div>
+
+          <div class="cf_33">
+            <p>
+              <ol type="i">
+                <li>ol >li</li>
+                <li>ol >li</li>
+                <li>ol >li
+                  <ol type="i">
+                    <li>ol ol >li</li>
+                  </ol>
+                </li>
+                <li>ol >li
+                  <ol type="i">
+                    <li>ol ol >li</li>
+                    <li>ol ol >li
+                      <ol type="i">
+                        <li>ol ol ol >li</li>
+                        <li>ol ol ol >li</li>
+                      </ol>
+                    </li>
+                  </ol>
+                </li>
+              </ol>
+            </p>
+          </div>
+        </section>
+
+        <hr>
+
+        <h4>pre</h4>
+        <p>setup: pre</p>
+<pre>
+pre{
+  margin:0.5em 0; padding:1vh 1em;
+  background:rgba(0,0,0,0.05);
+}
+</pre>
+        <pre>this is pre</pre>
+
+        <hr>
+
+        <h3>Inline Elements</h3>
+
+        <h4>code</h4>
+        <code>this is code</code>
+
+        <hr class="dot">
+
+        <h4>em</h4>
+        <em>this is em</em>
+
+        <hr class="dot">
+
+        <h4>df</h4>
+        <p>An a element that links to a <dfn><abbr title="definition">dfn</abbr></dfn> element with an <abbr title="Abbreviation">abbr</abbr>
+          represents an instance of the term defined by the <abbr title="definition">dfn</abbr> element.</p>
+
+        <hr class="dot">
+
+        <h4>samp</h4>
+<pre><samp><span class="prompt">jdoe@mowmow:~$</span> <kbd>ssh demo.example.com</kbd>
+  Last login: Tue Apr 12 09:10:17 2005 from mowmow.example.com on pts/1
+  Linux demo 2.6.10-grsec+gg3+e+fhs6b+nfs+gr0501+++p3+c4a+gr2b-reslog-v6.189
+  #1 SMP Tue Feb 1 11:22:36 PST 2005 i686 unknown
+  <span class="prompt">jdoe@demo:~$</span><span class="cursor">_</span></samp>
+</pre>
+
+        <hr class="dot">
+
+        <h4>kbd</h4>
+        <p>To make George eat an apple, press <kbd><kbd>Shift</kbd>+<kbd>F3</kbd></kbd></p>
+        <p>To make George eat an apple, select
+          <kbd><kbd><samp>File</samp></kbd>|<kbd><samp>Eat Apple...</samp></kbd></kbd>
+        </p>
+
+        <hr class="dot">
+
+        <h4>quotes</h4>
+        <blockquote>a blockquote</blockquote>
+        <q>short quote</q>
+        <cite>a cite</cite>
+
+        <hr class="dot">
+
+        <h4>description list</h4>
+        <p>setup: df</p>
+<pre>
+dd{
+  padding-left:1em;
+}
+</pre>
+        <dl>
+          <dt>Lorem ipsum...</dt>
+          <dd>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</dd>
+          <dt>Lorem ipsum...</dt>
+          <dd>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</dd>
+        </dl>
+
+        <hr class="dot">
+
+        <h4>adress</h4>
+        <address>
+          Author: John Doe<br>
+          <a href="mailto:john@doe.com">Send Mail to the Author</a>
+          <br>
+          <a href="tel:+49.0123.234567890">+49.0123.234567890</a>
+        </address>
+
+        <hr class="dot">
+
+        <h4>mark</h4>
+        <p><mark>mark // HyperText markup language (HTML)</mark></p>
+        <h4>ins</h4>
+        <p><ins>ins // HyperText markup language (HTML)</ins></p>
+        <h4>del</h4>
+        <p><del>del // HyperText markup language (HTML)</del></p>
+        <h4>s</h4>
+        <p><s>s // HyperText markup language (HTML)</s></p>
+
+        <hr class="dot">
+
+        <h4>bdi</h4>
+        <p>This sentence in Arabic is automatically displayed from right to left.</p>
+        <p dir="rtl"><bdi>
+هذه قطعه عربيه صممت للمصممين العرب أو للباحثين عن قطع نصيه عربيه لحين إنهاء تصميماتهم و عرضها علي عملائهم. لقد راعينا فى هذه القطعه محاولة تضمين كافة حروف اللغه العربيه لكى يتسنى للمستخدم رؤية جميع الحروف المستخدمه في اللغه العربيه و قمنا أيضا بضم بعض من الخطوط الجذابه لكى نمكنكم من رؤية القطعه بخطوط عربيه مختلفه.
+        </bdi></p>
+        <p>This sentence in Hebrew is automatically displayed from right to left.</p>
+        <p dir="rtl"><bdi>
+בתוככם בר התפשטו חת מקבלים את זז הוֹצֵא. רב שם נח עת לי. מים תעו אהב הדוקרים חום הקודמות בסיפורי הים. חוט שאל בני קנו ﻿תַּחַת לכי קפא נטה גלי. חי הנלהבים מָצְאוּ של דם כי בז רה רץ ממכיריו. הם אי יש נח דם.
+        </bdi></p>
+
+        <hr class="dot">
+
+        <h4>ruby (without knowledge)</h4>
+        <p>East Asian Langugae Annotation</p>
+        <p>
+          <ruby>
+            大哥<rt>Big Brother</rt>
+          </ruby>
+        </p>
+        <p>
+          <ruby>
+            2022<rp>(</rp><rt>Year</rt><rp>)</rp>
+             12<rp>(</rp><rt>Month</rt><rp>)</rp>
+            06<rp>(</rp><rt>Date</rt><rp>)</rp>
+          </ruby>
+        </p>
+        <p>
+          <ruby>
+            漢 <rp>(</rp><rt>Kan</rt><rp>)</rp>
+            字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+          </ruby>
+        </p>
+
+
+        <hr class="dot">
+
+        <h4>bdo</h4>
+        <p>Dieser Text wird von links nach rechts gehen.</p>
+        <p><bdo dir="rtl">Dieser Text wird von rechts nach links gehen.</bdo></p>
+
+        <hr class="dot">
+
+        <h4>wbr</h4>
+        <p>Here is placed a realy long, to force the right linebreak it has <code>< wbr ></code> inside: super<wbr>cali<wbr>fragi<wbr>listic<wbr>expiali<wbr>docious_super<wbr>cali<wbr>fragi<wbr>listic<wbr>expiali<wbr>docious</p>
+
+        <hr>
+
+        <h4>details</h4>
+        <details>
+          <summary>Some details</summary>
+          <p>Provide more info about the details here.</p>
+        </details>
+
+      </article>
+    </main>
+
+    <aside id="aRight" hidden>
+      <h2>#aRight >h2</h2>
+      <section>
+        <h3>aside#aRight >section >h3</h3>
+        <p>aside#aRight >section >p</p>
+      </section>
+      <section>
+        <h3>aside#aRight >section >h3</h3>
+        <p>aside#aRight >section >p</p>
+      </section>
+    </aside>
+
+    <footer>
+      <h2 hidden>Legal Note</h2>
+      <section>
+        <p class="legal-license">All code on this site is licensed under the <a href="https://github.com/msritzenhoff/cFlex/blob/master/LICENSE.md">MIT License</a> unless we change.</p>
+      </section>
+      <section>
+        <p class="legal-copyright"><a href="https://github.com/msritzenhoff/cFlex">GitHub Project</a> | © 2019 - M. S. RitZenhoff. All rights reserved.</p>
+      </section>
+    </footer>
+
+  </div>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-27RQRKDZ9R"></script>
+<script> window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-27RQRKDZ9R'); gtag("config","G-27RQRKDZ9R",{anonymize_ip:!0});
+</script>
+</body>
+</html>

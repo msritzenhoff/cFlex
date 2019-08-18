@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>cFlex</title>
+<meta name="keywords" content="cFlex" />
+<meta name="description" content="META Description" />
+<meta name="robots" content="index,follow" />
+<link rel="canonical" href="https://---------.---/">
+
+<meta name="HandheldFriendly" content="true" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2" />
+<meta name="theme-color" content="#444444"/>
+
+<link rel="stylesheet" href="./guide/normalize.css?v=8.0.1" />
+<link rel="stylesheet" href="./guide/cflex3-guide.min.css?v=3.0.3" />
+<link rel="stylesheet" href="./guide/cflex3-guide_radix.min.css?v=3.0.3" />
+</head>
+
+<body>
+
+  <nav>
+    <h3 hidden>cFlex Guide Main Navigation</h3>
+    <ul>
+      <li><a href="./index.html">cFlex</a></li>
+      <li><a href="./basic.html">Basic</a></li>
+      <li><a href="./style.html">Style</a></li>
+      <li hidden><a href="./button.html">Button</a></li>
+      <li hidden><a href="./table.html">Table</a></li>
+      <li><a href="./form.html">Form</a></li>
+
+      <li hidden><a href="./pattern.html">Pattern</a></li>
+      <li hidden><a href="./layout.html"><s>Layout</s></a></li>
+      <li><a href="./history.html">History</a></li>
+    </ul>
+    <div hidden>
+      <iframe class="githubBtn" src="https://ghbtns.com/github-btn.html?user=msritzenhoff&repo=cflex&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+      <iframe class="githubBtn" src="https://ghbtns.com/github-btn.html?user=msritzenhoff&type=follow&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+      <iframe class="githubBtn" src="https://ghbtns.com/github-btn.html?user=msritzenhoff&repo=cflex&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+    </div>
+  </nav>
+
+  <div>
+    <header>
+      <h1>cFlex Guide <small>// Basic</small></h1>
+      <section>
+        <p>
+          <a style="float:right;" class="shieldsBtn_license" href="https://github.com/msritzenhoff/cFlex/blob/master/LICENSE.md"><img src="https://img.shields.io/github/license/msritzenhoff/cFlex?logo=cFlex&style=for-the-badge" width="127" heigh="20" alt="cFlex License" /></a>
+          <a hidden style="float:right;" class="shieldsBtn_stars" href="https://github.com/msritzenhoff/cFlex"><img src="https://img.shields.io/github/stars/msritzenhoff/cFlex?logo=cFlex&style=for-the-badge" width="94" heigh="28" alt="cFlex Stars" /></a>
+        </p>
+      </section>
+    </header>
+
+    <section id="breadcrumb">
+      <h3 hidden>cFlex Basic Breadcrumb</h3>
+      <ul>
+        <li><a href="./start.html">Start</a></li>
+        <li>> Basic</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <main>
+      <article>
+        <header>
+          <h2>unCommented rules in ./cflex3.css</h2>
+        </header>
+
+        <hr>
+        <h3>Switch the Element-Width's</h3>
+        <p>the examples below start swtiching at a width of 1024px</p>
+<pre>
+@media screen and (min-width:1024px) {
+
+  /* Style */
+
+}
+</pre>
+<p>lower than the 1024px-viewport, all elements are ruled to 100% width <small>(<mark>we will fine tune this near time</mark>)</small></p>
+
+        <hr>
+
+        <p>On an element you can use flexbox by adding a the class <code><strong>.cflex</strong></code> and all inner elements will follow it.<br>
+          You only have to choose what width you need and add those specific class to that child element</p>
+        <p><br>
+        </p>
+
+
+        <p>html: add the classes <strong>cflex</strong> and <strong>cf_50</strong> to the elements</p>
+<pre>
+&lt;div class="cflex"&gt;
+  &lt;div class="cf_50"&gt;
+    &lt;p>lorem ipsum&lt;/p&gt;
+  &lt;/div>
+  &lt;div class="cf_50&gt;
+    &lt;p>lorem ipsum&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+        <p>css: uncomment the classes cflex and cf_50</p>
+<pre>
+.cflex{
+  display:flex;
+  flex-flow: row wrap;
+}
+
+.cf_50{
+  flex:1 1 50%;
+  flex:1 1 calc( 100% / 2 );
+}
+</pre>
+
+        <p>result</p>
+        <div class="cflex">
+          <div class="block cf_50">50%</div>
+          <div class="block cf_50">50%</div>
+        </div>
+
+      </article>
+    </main>
+
+    <ection class="cflex">
+      <hr>
+<pre>
+.cf_10{
+  flex:1 1 10%;
+  flex:1 1 calc( 100% / 10 );
+}
+.cf_90{
+  flex:1 1 90%;
+  flex:1 1 calc( 100% / 10 * 9 );
+}
+</pre>
+      <div class="block cf_10">10%</div>
+      <div class="block cf_90">90%</div>
+    </ection>
+
+    <ection class="cflex">
+      <hr>
+<pre>
+.cf_20{
+  flex:1 1 20%;
+  flex:1 1 calc( 100% / 5 );
+}
+.cf_80{
+  flex:1 1 80%;
+  flex:1 1 calc( 100% / 5 * 4 );
+}
+</pre>
+      <div class="block cf_20">20%</div>
+      <div class="block cf_80">80%</div>
+    </ection>
+
+    <ection class="cflex">
+      <hr>
+<pre>
+.cf_25{
+  flex:1 1 25%;
+  flex:1 1 calc( 100% / 4 );
+}
+.cf_75{
+  flex:1 1 75%;
+  flex:1 1 calc( 100% / 4 * 3 );
+}
+</pre>
+      <div class="block cf_25">25%</div>
+      <div class="block cf_75">75%</div>
+    </ection>
+
+    <ection class="cflex">
+      <hr>
+<pre>
+.cf_30{
+  flex:1 1 30%;
+  flex:1 1 calc( 100% / 10 * 3 );
+}
+.cf_70{
+  flex:1 1 70%;
+  flex:1 1 calc( 100% / 10 * 7 );
+}
+</pre>
+      <div class="block cf_30">30%</div>
+      <div class="block cf_70">70%</div>
+    </ection>
+
+    <ection class="cflex">
+      <hr>
+<pre>
+.cf_33{
+  flex:1 1 33.3333%;
+  flex:1 1 calc( 100% / 3 );
+}
+.cf_66{
+  flex:1 1 66%;
+  flex:1 1 calc( 100% / 3 * 2 );
+}
+</pre>
+      <div class="block cf_33">33.3333%</div>
+      <div class="block cf_66">66.6666%</div>
+    </ection>
+
+    <ection class="cflex">
+      <hr>
+<pre>
+.cf_40{
+  flex:1 1 40%;
+  flex:1 1 calc( 100% / 5 * 2 );
+}
+.cf_60{
+  flex:1 1 60%;
+  flex:1 1 calc( 100% / 5 * 3 );
+}
+</pre>
+      <div class="block cf_40">40%</div>
+      <div class="block cf_60">60%</div>
+    </ection>
+
+    <ection class="cflex">
+      <hr>
+<pre>
+.cf_50{
+  flex:1 1 50%;
+  flex:1 1 calc( 100% / 2 );
+}
+</pre>
+      <div class="block cf_50">50%</div>
+      <div class="block cf_50">50%</div>
+    </ection>
+
+    <ection class="cflex">
+      <hr>
+<pre>
+.cf_40{
+  flex:1 1 40%;
+  flex:1 1 calc( 100% / 5 * 2 );
+}
+.cf_60{
+  flex:1 1 60%;
+  flex:1 1 calc( 100% / 5 * 3 );
+}
+</pre>
+      <div class="block cf_60">60%</div>
+      <div class="block cf_40">40%</div>
+    </ection>
+
+    <ection class="cflex">
+      <hr>
+<pre>
+.cf_33{
+  flex:1 1 33.3333%;
+  flex:1 1 calc( 100% / 3 );
+}
+.cf_66{
+  flex:1 1 66%;
+  flex:1 1 calc( 100% / 3 * 2 );
+}
+</pre>
+      <div class="block cf_66">66.6666%</div>
+      <div class="block cf_33">33.3333%</div>
+    </ection>
+
+    <ection class="cflex">
+      <hr>
+<pre>
+.cf_30{
+  flex:1 1 30%;
+  flex:1 1 calc( 100% / 10 * 3 );
+}
+.cf_70{
+  flex:1 1 70%;
+  flex:1 1 calc( 100% / 10 * 7 );
+}
+</pre>
+      <div class="block cf_70">70%</div>
+      <div class="block cf_30">30%</div>
+    </ection>
+
+    <ection class="cflex">
+      <hr>
+<pre>
+.cf_25{
+  flex:1 1 25%;
+  flex:1 1 calc( 100% / 4 );
+}
+.cf_75{
+  flex:1 1 75%;
+  flex:1 1 calc( 100% / 4 * 3 );
+}
+</pre>
+      <div class="block cf_75">75%</div>
+      <div class="block cf_25">25%</div>
+    </ection>
+
+
+    <ection class="cflex">
+      <hr>
+<pre>
+.cf_20{
+  flex:1 1 20%;
+  flex:1 1 calc( 100% / 5 );
+}
+.cf_80{
+  flex:1 1 80%;
+  flex:1 1 calc( 100% / 5 * 4 );
+}
+</pre>
+      <div class="block cf_80">80%</div>
+      <div class="block cf_20">20%</div>
+    </ection>
+
+    <ection class="cflex">
+      <hr>
+<pre>
+.cf_10{
+  flex:1 1 10%;
+  flex:1 1 calc( 100% / 10 );
+}
+.cf_90{
+  flex:1 1 90%;
+  flex:1 1 calc( 100% / 10 * 9 );
+}
+</pre>
+      <div class="block cf_80">80%</div>
+    </ection>
+
+    <ection class="cflex">
+      <hr>
+<pre>no class needed ;-)</pre>
+      <div class="block">100%</div>
+    </ection>
+
+    <ection class="cflex">
+      <hr>
+<pre>
+.cf_20{
+  flex:1 1 20%;
+  flex:1 1 calc( 100% / 5 );
+}
+</pre>
+      <div class="block cf_20">20%</div>
+      <div class="block cf_20">20%</div>
+      <div class="block cf_20">20%</div>
+      <div class="block cf_20">20%</div>
+      <div class="block cf_20">20%</div>
+    </ection>
+
+    <ection class="cflex">
+      <hr>
+<pre>
+.cf_25{
+  flex:1 1 25%;
+  flex:1 1 calc( 100% / 4 );
+}
+</pre>
+      <div class="block cf_25">25%</div>
+      <div class="block cf_25">25%</div>
+      <div class="block cf_25">25%</div>
+      <div class="block cf_25">25%</div>
+    </ection>
+
+    <ection class="cflex">
+      <hr>
+<pre>
+.cf_33{
+  flex:1 1 33.3333%;
+  flex:1 1 calc( 100% / 3 );
+}
+</pre>
+      <div class="block cf_33">33.3333%</div>
+      <div class="block cf_33">33.3333%</div>
+      <div class="block cf_33">33.3333%</div>
+    </ection>
+
+    <ection class="cflex">
+      <hr>
+<pre>
+.cf_50{
+  flex:1 1 50%;
+  flex:1 1 calc( 100% / 2 );
+}
+</pre>
+      <div class="block cf_50">50%</div>
+      <div class="block cf_50">50%</div>
+    </ection>
+
+    <aside id="aRight" hidden>
+      <h2>#aRight >h2</h2>
+      <section>
+        <h3>aside#aRight >section >h3</h3>
+        <p>aside#aRight >section >p</p>
+      </section>
+      <section>
+        <h3>aside#aRight >section >h3</h3>
+        <p>aside#aRight >section >p</p>
+      </section>
+    </aside>
+
+    <footer>
+      <hr>
+      <h2 hidden>Legal Note</h2>
+      <section>
+        <p class="legal-license">All code on this site is licensed under the <a href="https://github.com/msritzenhoff/cFlex/blob/master/LICENSE.md">MIT License</a> unless we change.</p>
+      </section>
+      <section>
+        <p class="legal-copyright"><a href="https://github.com/msritzenhoff/cFlex">GitHub Project</a> | © 2019 - M. S. RitZenhoff. All rights reserved.</p>
+      </section>
+    </footer>
+
+  </div>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-27RQRKDZ9R"></script>
+<script> window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-27RQRKDZ9R'); gtag("config","G-27RQRKDZ9R",{anonymize_ip:!0});
+</script>
+</body>
+</html>

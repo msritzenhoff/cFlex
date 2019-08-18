@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>cFlex</title>
+<title>cFlex | Layout-Framework for modern browser with CSS Flexbox</title>
 <meta name="keywords" content="cFlex" />
 <meta name="description" content="META Description" />
 <meta name="robots" content="index,follow" />
@@ -43,7 +43,7 @@
 
   <div>
     <header>
-      <h1>cFlex Guide</h1>
+      <h1>cFlex Guide <small>// History</small></h1>
       <section>
         <p>
           <a style="float:right;" class="shieldsBtn_license" href="https://github.com/msritzenhoff/cFlex/blob/master/LICENSE.md"><img src="https://img.shields.io/github/license/msritzenhoff/cFlex?logo=cFlex&style=for-the-badge" width="127" heigh="20" alt="cFlex License" /></a>
@@ -53,9 +53,10 @@
     </header>
 
     <section id="breadcrumb">
-      <h3 hidden>cFlex Start Breadcrumb</h3>
+      <h3 hidden>cFlex History Breadcrumb</h3>
       <ul>
-        <li>Start</li>
+        <li><a href="./start.html">Start</a></li>
+        <li>> History</li>
       </ul>
     </section>
 
@@ -64,46 +65,71 @@
     <main>
       <article>
         <header>
-          <h2>cFlex</h2>
+          <h2>Now it's Version 3.x</h2>
         </header>
 
-        <p>A kind of blueprint/framework to setup a website layout for modern browser with CSS Flexbox.</p>
-        <p>Along with the <a href="./history.html">new release</a>, a separate base file [<em>cflex3_radix.css</em>] for the faster start of layouts has been included. Based on the practical experience, this provides a minimal default setting. The ingredients make the two files larger. If you minify them, unused/commented options will be removed and very short loading times will be achieved.</p>
-
-        <hr class="dot">
-
-        <h3>Integrate cFlex into your static or dynamic website</h3>
-        <h4>All starts with adding the style</h4>
-<pre>
-&lt;link rel="stylesheet" href="./<b>&lt;PATH-TO-CSS&gt;</b>/normalize.css?v=8.0.1" /&gt;
-&lt;link rel="stylesheet" href="./<b>&lt;PATH-TO-CSS&gt;</b>/cflex3.css?v=3.0.3" /&gt;
-&lt;link rel="stylesheet" href="./<b>&lt;PATH-TO-CSS&gt;</b>/cflex3_radix.css?v=3.0.3" /&gt;
-</pre>
-
         <hr>
-        <p><br>
-          <br>
-        </p>
 
-        <section class="cflex">
-          <div class="cf_50">
-            <h4>cflex3.css file has a weight at 6,4 kB / minified 1,7 kB</h4>
-            <p>The cflex3.css file is the main framework which can be used as default.</p>
-          </div>
+        <section>
+          <h3>3rd Release <small><i>public</i> / 2019</small></h3>
+          <h4><q>proActive reCompilation!</q></h4>
+          <p>Starting with version 3, browser prefixes are no longer included, and the project was also given a shorter name. Some preconfigurations, which were previously written to a layout file, are now included in the main file. Even today, a few websites still have version 1.1.1.</p>
+          <p>
+<pre>
+/*!
+ * cFlex     :: v3.0.3
+ * License   :: MIT
+ * Update    :: 17.08.2019
+ * Create    :: 22.08.2014
+ * Author    :: Michael S. RitZenhoff
+ * https://github.com/msritzenhoff/cFlex
+ */
 
-          <div class="cf_50">
-            <h4>cflex3_radix.css file has a weight at 7,7 kB / minified 3,0 kB</h4>
-            <p>The cflex3_radix.css file is a basic template, with a few basic functions to get started quickly.</p>
-          </div>
+/*!
+ * cFlex     :: v3.0.3
+ * License   :: MIT
+ * https://github.com/msritzenhoff/cFlex
+ */
+</pre>
+          </p>
         </section>
 
-        <footer>
-          <p><br>
-            <br>
+        <hr>
+
+        <section>
+
+          <h3>2nd Release <small><i>internal</i> / 2017</small></h3>
+          <p>In 2017, several projects with CLIFFlex, still with prefixes, had already been implemented. More and more manufacturers used CSS-Flexbox and one or the other established itself. One could have changed, but due to the filling amount of Extras & Styles in their CSS, the decision was made to stay with their own. A few websites still have version 1.1.1.</p>
+          <p>
+<pre>
+/*
+  CLIFFlex
+  Version   : 2.0.0
+  Update    : 25.10.2017
+  Create    : 22.08.2014
+  Author    : Michael S. RitZenhoff
+*/
+</pre>
           </p>
-          <h3><img style="width:16px; margin-right:0.25em;" itemprop="image" src="./../cflex3-asset/logo/normalize-logo.svg" alt="Logo of Normalize.css" width="25" height="25">Normalize.css</h3>
-          <p><a href="https://github.com/necolas/normalize.css">A modern, HTML5-ready alternative to CSS resets</a></p>
-        </footer>
+        </section>
+
+        <hr>
+
+        <section>
+          <h3>1st Release <small><i>internal</i> / 2014</small></h3>
+          <p>In 2014 I started to use CSS-Flexbox with many browser-prefixes. At that time there was no mention of the modern browsers. The then named CLIFFlex was used in the first projects.</p>
+          <p>
+<pre>
+/*
+  CLIFFlex
+  Version : 1.1.1
+  Create  : 22.08.2014
+  Author  : M. S. RitZenhoff
+*/
+</pre>
+          </p>
+        </section>
+
       </article>
     </main>
 
@@ -127,8 +153,6 @@
       <section>
         <p class="legal-copyright"><a href="https://github.com/msritzenhoff/cFlex">GitHub Project</a> | © 2019 - M. S. RitZenhoff. All rights reserved.</p>
       </section>
-      <hr>
-      <p><a href="https://purecss.io/">Pure</a> | <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Flexbox Guide</a></p>
     </footer>
 
   </div>

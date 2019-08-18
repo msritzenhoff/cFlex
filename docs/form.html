@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>cFlex</title>
+<meta name="keywords" content="cFlex" />
+<meta name="description" content="META Description" />
+<meta name="robots" content="index,follow" />
+<link rel="canonical" href="https://---------.---/">
+
+<meta name="HandheldFriendly" content="true" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2" />
+<meta name="theme-color" content="#444444"/>
+
+<link rel="stylesheet" href="./guide/normalize.css?v=8.0.1" />
+<link rel="stylesheet" href="./guide/cflex3-guide.min.css?v=3.0.3" />
+<link rel="stylesheet" href="./guide/cflex3-guide_radix.min.css?v=3.0.3" />
+</head>
+
+<body>
+
+  <nav>
+    <h3 hidden>cFlex Guide Main Navigation</h3>
+    <ul>
+      <li><a href="./index.html">cFlex</a></li>
+      <li><a href="./basic.html">Basic</a></li>
+      <li><a href="./style.html">Style</a></li>
+      <li hidden><a href="./button.html">Button</a></li>
+      <li hidden><a href="./table.html">Table</a></li>
+      <li><a href="./form.html">Form</a></li>
+
+      <li hidden><a href="./pattern.html">Pattern</a></li>
+      <li hidden><a href="./layout.html"><s>Layout</s></a></li>
+      <li><a href="./history.html">History</a></li>
+    </ul>
+    <div hidden>
+      <iframe class="githubBtn" src="https://ghbtns.com/github-btn.html?user=msritzenhoff&repo=cflex&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+      <iframe class="githubBtn" src="https://ghbtns.com/github-btn.html?user=msritzenhoff&type=follow&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+      <iframe class="githubBtn" src="https://ghbtns.com/github-btn.html?user=msritzenhoff&repo=cflex&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+    </div>
+  </nav>
+
+  <div>
+    <header>
+      <h1>cFlex Guide <small>// Form</small></h1>
+      <section>
+        <p>
+          <a style="float:right;" class="shieldsBtn_license" href="https://github.com/msritzenhoff/cFlex/blob/master/LICENSE.md"><img src="https://img.shields.io/github/license/msritzenhoff/cFlex?logo=cFlex&style=for-the-badge" width="127" heigh="20" alt="cFlex License" /></a>
+          <a hidden style="float:right;" class="shieldsBtn_stars" href="https://github.com/msritzenhoff/cFlex"><img src="https://img.shields.io/github/stars/msritzenhoff/cFlex?logo=cFlex&style=for-the-badge" width="94" heigh="28" alt="cFlex Stars" /></a>
+        </p>
+      </section>
+    </header>
+
+    <section id="breadcrumb">
+      <h3 hidden>cFlex Form Breadcrumb</h3>
+      <ul>
+        <li><a href="./start.html">Start</a></li>
+        <li>> Form</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <main>
+      <article>
+        <header>
+          <h2>Form Adjustments</h2>
+        </header>
+
+        <hr>
+
+        <p>In Dev-View at Firefox, i made nearly no resize on the inputs and buttons. I made it all flat, like all &lt;3 actually. </p>
+
+        <section class="cflex">
+
+<pre class="block cf_50">
+form fieldset{
+  padding:1.2vh 0.75em;
+  border:1px solid #a1a1a1;
+}
+form legend{
+  width:auto; padding-right:0.25em; padding-left:0.25em;
+}
+form label{
+  padding-top:0.5vh; padding-bottom:0.5vh;
+}
+form div,
+form span,
+form input,
+form select{
+  margin-bottom:0.5em;
+}
+form input,
+form select,
+form option,
+form textarea{
+  padding:5.45px 0.42em;
+  border:1px solid #a1a1a1;
+}
+form [type="radio"],
+form [type="checkbox"]{
+  max-width:16px; margin-top:1px; margin-right:1em;
+}
+form [type="radio"]{
+  margin-right:0.1em;
+}
+form [type="radio"] ~label{
+  position:relative; top:-2px; margin-right:1em;
+}
+form button{
+  margin-top:2vh;
+}
+form button,
+button, a.cf_btn{
+  width:auto;
+}
+
+
+button, a.cf_btn{
+  padding:5.45px 1.42em;
+  background:#e0e0e0;
+  border:1px solid #a1a1a1;
+}
+a.cf_btn{
+  padding:5.45px 1.50em;
+}
+button:hover, a.cf_btn:hover,
+button:hover, a.cf_btn:hover{
+  background:#fff;
+}
+button:active, a.cf_btn:active{
+  background:#ccc;
+  border:1px solid #ccc;
+}
+</pre>
+
+          <div class="block cf_50" style="padding:1em;">
+            <h3>Preview 320px-Width Example</h3>
+
+            <form class="stacked" style="width:320px !important; margin:0 auto;">
+              <fieldset class="cflex">
+                <legend>legend</legend>
+
+                <div>
+                  <label for="first-name">First Name</label>
+                  <input id="first-name" type="text">
+                </div>
+
+                <div>
+                  <label for="last-name">Last Name</label>
+                  <input id="last-name" type="text">
+                </div>
+
+                <div>
+                  <input type="radio" id="choice1" name="contact" value="email">
+                  <label for="choice1">Email</label>
+
+                  <input type="radio" id="choice2" name="contact" value="phone">
+                  <label for="choice2">Phone</label>
+
+                  <input type="radio" id="choice3" name="contact" value="mail">
+                  <label for="choice3">Mail</label>
+                </div>
+
+                <div>
+                  <label for="email">E-Mail</label>
+                  <input id="email" type="email" required>
+                </div>
+
+                <div>
+                  <label for="city">City</label>
+                  <input id="city" type="text">
+                </div>
+
+                <div>
+                  <label for="state">State</label>
+                  <select id="state">
+                    <option>AL</option>
+                    <option>CA</option>
+                    <option>IL</option>
+                  </select>
+                </div>
+
+                <label class="cflex" for="terms">
+                  <input class="cf_10" id="terms" type="checkbox">
+                  <span class="cf_90">I've read the terms and conditions</span>
+                </label>
+
+                <button type="submit">Submit</button>
+              </fieldset>
+            </form>
+          </div>
+
+        </section>
+
+        <p>If you still want to edit/hack the form style, there is still plenty of room for &hellip;</p>
+
+        <hr>
+
+        <form action="" method="post">
+          <fieldset class="cflex">
+            <legend>compact inline</legend>
+
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+
+            <label class="cflex" for="remember">
+              <input class="cf_10" id="remember" type="checkbox">
+              <span class="cf_90">Remember me</span>
+            </label>
+
+            <button type="submit">Sign in</button>
+          </fieldset>
+        </form>
+
+        <hr>
+
+        <form action="" method="post">
+          <fieldset class="cflex">
+            <legend>stacked</legend>
+
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="Email">
+            <span>This is a required field.</span>
+
+            <label for="password">Password</label>
+            <input id="password" type="password" placeholder="Password">
+
+            <label for="state">State</label>
+            <select id="state">
+              <option>AL</option>
+              <option>CA</option>
+              <option>IL</option>
+            </select>
+
+            <label class="cflex" for="remember">
+              <input class="cf_10" id="remember" type="checkbox">
+              <span class="cf_90">Remember me</span>
+            </label>
+
+            <button type="submit">Sign in</button>
+          </fieldset>
+        </form>
+
+        <hr>
+
+        <form class="aligned">
+          <fieldset class="cflex">
+            <div>
+              <label for="name">Username</label>
+              <input id="name" type="text" placeholder="Username">
+              <span>This is a required field.</span>
+            </div>
+
+            <div>
+              <label for="password">Password</label>
+              <input id="password" type="password" placeholder="Password">
+            </div>
+
+            <div>
+              <label for="email">Email Address</label>
+              <input id="email" type="email" placeholder="Email Address">
+            </div>
+
+            <div>
+              <label for="foo">Supercalifragilistic Label</label>
+              <input id="foo" type="text" placeholder="Enter something here...">
+            </div>
+
+            <div class="controls">
+              <label class="cflex" for="cb">
+                <input class="cf_10" id="cb" type="checkbox">
+                <span class="cf_90">I've read the terms and conditions</span>
+              </label>
+            </div>
+            <button type="submit">Submit</button>
+          </fieldset>
+        </form>
+
+        <hr>
+
+        <form class="stacked">
+          <fieldset class="cflex">
+            <legend>legend</legend>
+
+            <div>
+              <label for="first-name">First Name</label>
+              <input id="first-name" type="text">
+            </div>
+
+            <div>
+              <label for="last-name">Last Name</label>
+              <input id="last-name" type="text">
+            </div>
+
+            <div>
+              <input type="radio" id="choice01" name="contact" value="email">
+              <label for="choice01">Email</label>
+
+              <input type="radio" id="choice02" name="contact" value="phone">
+              <label for="choice02">Phone</label>
+
+              <input type="radio" id="choice03" name="contact" value="mail">
+              <label for="choice03">Mail</label>
+            </div>
+
+            <div>
+              <label for="email">E-Mail</label>
+              <input id="email" type="email" required>
+            </div>
+
+            <div>
+              <label for="city">City</label>
+              <input id="city" type="text">
+            </div>
+
+            <div>
+              <label for="state">State</label>
+              <select id="state">
+                <option>AL</option>
+                <option>CA</option>
+                <option>IL</option>
+              </select>
+            </div>
+
+            <label class="cflex" for="terms">
+              <input class="cf_10" id="terms" type="checkbox">
+              <span class="cf_90">I've read the terms and conditions</span>
+            </label>
+
+            <button type="submit">Submit</button>
+          </fieldset>
+        </form>
+
+      </article>
+    </main>
+
+    <aside id="aRight" hidden>
+      <h2>#aRight >h2</h2>
+      <section>
+        <h3>aside#aRight >section >h3</h3>
+        <p>aside#aRight >section >p</p>
+      </section>
+      <section>
+        <h3>aside#aRight >section >h3</h3>
+        <p>aside#aRight >section >p</p>
+      </section>
+    </aside>
+
+    <footer>
+      <h2 hidden>Legal Note</h2>
+      <section>
+        <p class="legal-license">All code on this site is licensed under the <a href="https://github.com/msritzenhoff/cFlex/blob/master/LICENSE.md">MIT License</a> unless we change.</p>
+      </section>
+      <section>
+        <p class="legal-copyright"><a href="https://github.com/msritzenhoff/cFlex">GitHub Project</a> | © 2019 - M. S. RitZenhoff. All rights reserved.</p>
+      </section>
+    </footer>
+
+  </div>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-27RQRKDZ9R"></script>
+<script> window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-27RQRKDZ9R'); gtag("config","G-27RQRKDZ9R",{anonymize_ip:!0});
+</script>
+</body>
+</html>
