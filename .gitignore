@@ -4,11 +4,7 @@
 .travis.yml
 
 /docs/guide/test
-
-# Subfolder > ASSET
-#/cflex3-asset
-#/docs/cflex3-asset
-
+test.html
 
 # Image #
 #########
