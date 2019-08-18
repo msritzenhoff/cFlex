@@ -25,17 +25,18 @@ header >*{
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-/*
-.cflex >div{
-  margin-top:0.5em;
+.cflex{
+  background:#fff;
 }
-.cflex div:nth-child(odd){
+.cflex >div.block{
+  padding:1vh 1vw;
+}
+.cflex div.block:nth-child(odd){
   background:#dcdcdc;
 }
-.cflex div:nth-child(even){
+.cflex div.block:nth-child(even){
   background:#e8e8e8;
 }
-*/
 
 /* = = = START FROM MOBILE ZERO WIDTH = = = = = = = = = = = */
 

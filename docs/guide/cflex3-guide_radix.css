@@ -23,6 +23,21 @@ header >*{
 }
 /* dev */
 
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.cflex{
+  background:#fff;
+}
+.cflex >div.block{
+  padding:1vh 1vw;
+}
+.cflex div.block:nth-child(odd){
+  background:#dcdcdc;
+}
+.cflex div.block:nth-child(even){
+  background:#e8e8e8;
+}
+
 /* = = = START FROM MOBILE ZERO WIDTH = = = = = = = = = = = */
 
 :root, :root *{
@@ -398,60 +413,53 @@ form{
 
 }
 */
-form fieldset{
+fieldset{
   padding:1.2vh 0.75em;
   border:1px solid #a1a1a1;
 }
-form legend{
+legend{
   width:auto; padding-right:0.25em; padding-left:0.25em;
 }
-form label{
+label{
   padding-top:0.5vh; padding-bottom:0.5vh;
 }
-form div,
-form span,
-form input,
-form select{
+form div, form span,
+input, select{
   margin-bottom:0.5em;
 }
-form input,
-form select,
-form option,
-form textarea{
+input, select, option, textarea{
   padding:5.45px 0.5em;
 }
-form select[multiple]{
+select[multiple]{
   padding:0;
 }
-form select >option{
+select >option{
   padding:5.45px 0.5em;
   border:0px;
 }
 
-form [type="radio"],
-form [type="checkbox"]{
+[type="radio"],
+[type="checkbox"]{
   max-width:16px; margin-top:1px; margin-right:1em;
 }
-form [type="radio"]{
+[type="radio"]{
   margin-right:0.1em;
 }
-form [type="radio"] ~label{
+[type="radio"] ~label{
   position:relative; top:-2px; margin-right:1em;
 }
 form button{
   margin-top:2vh;
 }
 
-form input:not([type="radio"]),
-form input:not([type="checkbox"]),
-form select,
-form option,
-form textarea{
+input:not([type="radio"]),
+input:not([type="checkbox"]),
+select, option, textarea{
   border:1px solid #a1a1a1;
   outline:1px solid #fff;
 }
-form [type="radio"],
-form [type="checkbox"]{
+[type="radio"],
+[type="checkbox"]{
   outline:1px solid #fff;
 }
 
@@ -475,16 +483,14 @@ input:required:valid {
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-form input:not([type="radio"]):focus,
-form input:not([type="checkbox"]):focus,
-form select:focus,
-form option:focus,
-form textarea:focus{
+input:not([type="radio"]):focus,
+input:not([type="checkbox"]):focus,
+select:focus, option:focus, textarea:focus{
   border:1px solid #80bdff;
   outline-color:#bfdeff;
 }
-form [type="radio"]:focus,
-form [type="checkbox"]:focus{
+[type="radio"]:focus,
+[type="checkbox"]:focus{
   outline-color:#fff !important;
 }
 
@@ -528,21 +534,6 @@ a.btnGroupRC:last-of-type{
 }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
-
-.cflex{
-  background:#fff;
-}
-.cflex >div.block{
-  padding:1vh 1vw;
-}
-.cflex div.block:nth-child(odd){
-  background:#dcdcdc;
-}
-.cflex div.block:nth-child(even){
-  background:#e8e8e8;
-}
-
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 body >nav >h3,
 body >div >header,
