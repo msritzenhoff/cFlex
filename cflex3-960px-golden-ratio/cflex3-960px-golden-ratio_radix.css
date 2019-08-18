@@ -1,0 +1,478 @@
+/*!
+ * cFlex     :: v3.0.3
+ * License   :: MIT
+ * https://github.com/msritzenhoff/cFlex
+ */
+
+/* = = = START FROM MOBILE ZERO WIDTH = = = = = = = = = = = */
+
+/**
+ * outlines if help need
+ * for preview area in development
+ */
+
+/* dev * /
+header, main, aside, footer, article, section, h1{
+  outline: 1px solid #eee;
+}
+header >*, main >*, aside >*, footer >*, article >*, section >*{
+  outline: 1px solid #ccc;
+}
+header >*{
+  border-bottom: 1px solid #eee;
+}
+/* dev */
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*
+.cflex >div{
+  margin-top:0.5em;
+}
+.cflex div:nth-child(odd){
+  background:#dcdcdc;
+}
+.cflex div:nth-child(even){
+  background:#e8e8e8;
+}
+*/
+
+/* = = = START FROM MOBILE ZERO WIDTH = = = = = = = = = = = */
+
+:root, :root *{
+  /* Ensure that backgrounds set on columns begin
+   * just INSIDE THE BORDER, not underneath
+   */
+  -webkit-background-clip: padding-box !important;
+          background-clip: padding-box !important;
+}
+
+:root{
+  /* just in case */
+  min-height: 100vh;
+
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+  /* 1rem = 16px
+  * http://gregrickaby.com/using-the-golden-ratio-and-rems/
+  */
+  font-size:16px; font-size:1rem;
+
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+  /**
+   * a basic/reset line-height is defined in normalize.css
+   * line-height: 1.15;
+   * /
+  line-height: 1.625;
+  /* # */
+
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+  /* http://www.ampsoft.net/webdesign-l/WindowsMacFonts.html
+   * /
+  font-family: Verdana, Geneva, sans-serif;
+
+  /* maybe like to read
+   * https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/
+   * https://css-tricks.com/snippets/css/system-font-stack/
+   */
+  font-family:
+  /* 1 */ -apple-system, BlinkMacSystemFont,
+  /* 2 */ "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+  /* 3 */ "Helvetica Neue", sans-serif;
+  /* # */
+
+  letter-spacing:0.045vw;
+
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+      -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+@-webkit-keyframes{
+  from {padding: 0;}
+    to {padding: 0;}
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/* font italic for input placeholder */
+::-webkit-input-placeholder {
+  font-style: italic;
+}
+:-moz-placeholder {
+  font-style: italic;
+}
+::-moz-placeholder {
+  font-style: italic;
+}
+:-ms-input-placeholder {
+  font-style: italic;
+}
+
+/**
+ * [margin description]
+ * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/mark
+ */
+mark::before,
+mark::after {
+  clip-path: inset(100%); clip: rect(1px, 1px, 1px, 1px);
+  width: 1px; height: 1px;
+  position: absolute;
+  white-space: nowrap;
+  overflow: hidden;
+}
+mark::before {
+ content: " [highlight start] ";
+}
+mark::after {
+ content: " [highlight end] ";
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/** main colors selected from
+ * https://www.stabilo.com/ch-de/produkte/textmarker/textmarker/stabilo-boss-original/
+ */
+/* red * /
+::-moz-selection {
+  background:#e94f58; background:rgb(233,79,88);
+}
+::selection {
+  background:#e94f58; background:rgb(233,79,88);
+}
+/* green * /
+::-moz-selection {
+  background:#2ba727; background:rgb(43,167,39);
+}
+::selection {
+  background:#2ba727; background:rgb(43,167,39);
+}
+/* blue * /
+::-moz-selection {
+  background:#3aafdc; background:rgb(58,175,220);
+}
+::selection {
+  background:#3aafdc; background:rgb(58,175,220);
+}
+/* yellow * /
+::-moz-selection {
+  background:#f1e740; background:rgb(241,231,64);
+}
+::selection {
+  background:#f1e740; background:rgb(241,231,64);
+}
+*/
+
+/** pastel colors selected from
+* https://www.stabilo.com/ch-de/produkte/textmarker/textmarker/stabilo-boss-original-pastel/
+*/
+/* creamy peach * /
+::-moz-selection {
+  background:#f4a384; background:rgb(244,163,132);
+}
+::selection {
+  background:#f4a384; background:rgb(244,163,132);
+}
+/* hint of mint * /
+::-moz-selection {
+  background:#90cbaa; background:rgb(144,203,170);
+}
+::selection {
+  background:#90cbaa; background:rgb(144,203,170);
+}
+/* touch of torqouise * /
+::-moz-selection {
+  background:#a1d4cf; background:rgb(161,212,207);
+}
+::selection {
+  background:#a1d4cf; background:rgb(161,212,207);
+}
+/* milk yellow */
+::-moz-selection {
+  background:#f8dd74; background:rgb(248,221,116);
+}
+::selection {
+  background:#f8dd74; background:rgb(248,221,116);
+}
+
+
+/* for example */
+.redMarker {
+  background:#f4a384; background:rgb(244,163,132);
+}
+.greenMarker {
+  background:#90cbaa; background:rgb(144,203,170);
+}
+.blueMarker {
+  background:#a1d4cf; background:rgb(161,212,207);
+}
+.yellowMarker {
+  background:#f8dd74; background:rgb(248,221,116);
+}
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/**
+* reSET elements
+* margin and padding to ZERO
+*/
+:root, body, nav, header, main, article, section, footer, aside, blockquote, q, details,
+dl, dt, dd, ol, ul, li, i, em, strong, code, h1, h2, h3, h4, h5, h6, pre, code,
+p, a, div, small, figure, figcaption, svg, img,
+video, audio, canvas, object, applet, embed, iframe,
+form, fieldset, label, input, select, option, textarea, table{
+  margin: 0; padding: 0;
+
+  margin-block-start:0; margin-block-end:0; margin-inline-start:0; margin-inline-end:0;
+  padding-block-start:0; padding-block-end:0; padding-inline-start:0; padding-inline-end:0;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/* img, a.i. */
+svg, img, video, audio, canvas, object, applet, embed, iframe{
+  width: 100%; max-width: 100%; height: auto;
+  border: none;
+}
+img{vertical-align: middle;}
+
+/*
+ * https://gist.github.com/larrybotha/7881691
+ * Let's target IE to respect aspect ratios and sizes for img tags containing SVG files
+ * [1] IE9 / [2] IE10+
+ */
+/* 1 */
+.ie9 img[src*=".svg"] {
+  width: 100%;
+}
+/* 2 */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  img[src*=".svg"] {
+    width: 100%;
+  }
+}
+
+img[src$=".svg"]{
+         image-rendering: -moz-crisp-edges;          /* Firefox */
+         image-rendering: -o-crisp-edges;            /* Opera */
+         image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming) */
+         image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;          /* IE (non-standard property) */
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/**
+ * width's inside base elements
+ * ALL INSIDE of:
+ * e.g. body >main ...
+ * e.g. body >main ...
+ * AS LONG you don't use max- or min-
+ * it dont hurt the flex width's yet
+ */
+body >* *{
+  width: 100%;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+ul, ol{
+  list-style-position: inside;
+}
+main ul >li ul, main ol >li ol,
+aside ul >li ul, aside ol >li ol{
+  padding-left:0.9em;
+}
+nav ul,
+section#breadcrumb ul{
+  list-style-type: none;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/* japan font */
+rt{
+  font-size:10px;
+}
+/* japan font */
+
+hr{
+  margin:1vh 0;
+  border-top:0; border-bottom:1px solid #666;
+}
+hr.dot{
+  border-bottom:1px dotted #666;
+}
+hr.dash{
+  border-bottom:1px dashed #666;
+}
+
+dd{
+  padding-left:1em;
+}
+
+pre{
+  margin:0.5em 0; padding:1vh 1em;
+  background:rgba(0,0,0,0.05);
+
+  font-size:88% !important;
+}
+
+h2, h3, h4, h5, h6{
+  padding-bottom:1vh;
+}
+main p,
+aside p,
+footer p{
+  padding-bottom:1vh;
+  line-height: 1.625;
+}
+main p:last-of-type,
+aside p:last-of-type,
+footer p:last-of-type{
+  padding-bottom:0;
+}
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+html{
+  color:#444;
+}
+
+body >header,
+body >nav >h3,
+body >main,
+body >aside,
+body >footer,
+body >section{
+  padding: 1.5vh 2vw;
+}
+
+body >section#breadcrumb >ul >li:not(:first-of-type){
+  padding-left:5px;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+.legal-copyright{
+  text-align:right;
+}
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+/* = = = MEDIA QUERY FROM 960px WIDTH = = = = = = = = = = */
+
+/**
+ * media query
+ * greater than 960px
+ * @type {[type]}
+ */
+@media screen and (min-width:960px) {
+
+  :root{
+    /**
+     * show permanently scroll bar at side
+     * stops the width-jumping between short and long pages ;-)
+     */
+    overflow-y: scroll;
+  }
+
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+
+}
+
+/* = = = MEDIA QUERY FROM 1024px WIDTH = = = = = = = = = = */
+
+/**
+ * media query
+ * greater than 1024px
+ * @type {[type]}
+ */
+@media screen and (min-width:1024px) {
+
+  body >header,
+  body >nav >h3,
+  body >main,
+  body >aside,
+  body >footer,
+  body >section{
+    padding:12px 16px 10px;
+  }
+
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+  body >nav >ul{
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  body >nav ul li{
+    flex-grow: 1;
+  }
+  body >nav ul li a{
+    height:100%; padding: 2.5% 1vw;
+  }
+
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+  main{
+    overflow-y: auto;
+  }
+
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+  body >footer >section{
+    padding: 0 1vw;
+  }
+  body >footer >section:first-of-type{
+    padding-left:0;
+  }
+  body >footer >section:last-of-type{
+    padding-right:0;
+  }
+
+}
+
+/* = = = MEDIA QUERY FROM 1280px and greater = = = = = = = */
+
+/**
+ * media query
+ * greater than 1024px
+ * @type {[type]}
+ */
+@media screen and (min-width:1280px) {
+
+}
+
+/* = = = MEDIA QUERY FROM 1440px and greater = = = = = = = */
+
+/**
+ * media query
+ * greater than 1280px
+ * @type {[type]}
+ */
+@media screen and (min-width:1449px) {
+
+}
+
+/* = = = MEDIA QUERY FROM 1440px and greater = = = = = = = */
+
+/**
+ * media query
+ * greater than 1440px
+ * @type {[type]}
+ */
+@media screen and (min-width:1024px) {
+
+}
