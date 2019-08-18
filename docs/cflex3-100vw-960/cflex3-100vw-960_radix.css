@@ -392,16 +392,10 @@ form button{
 }
 
 button, a.cf_btn,
-button.btnRound, a.btnRound,
-button:visited, a.cf_btn:visited,
-button.btnRound:visited, a.btnRound:visited{
+button:visited, a.cf_btn:visited{
   width:auto; padding:5.45px 1.42em;
   background:#e0e0e0;
   border:1px solid #a1a1a1;
-}
-button.btnRound:first-of-type,
-a.btnRound:first-of-type{
-  border-radius:4px;
 }
 a.cf_btn{
   padding:5.45px 1.50em;
