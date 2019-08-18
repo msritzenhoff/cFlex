@@ -9,7 +9,7 @@
 - - -
 
 ### cFlex last version / update
-* v3.0.3 / 20190817
+* v3.0.4 / 20190819
 
 
 - - -
