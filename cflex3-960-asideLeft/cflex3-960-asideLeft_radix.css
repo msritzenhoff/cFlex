@@ -308,10 +308,10 @@ hr{
   border-top:0; border-bottom:1px solid #666;
 }
 hr.dot{
-  border-bottom:1px dotted #666;
+  border-style:dotted;
 }
 hr.dash{
-  border-bottom:1px dashed #666;
+  border-style:dashed;
 }
 
 dd{
