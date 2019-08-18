@@ -80,8 +80,8 @@
 :root,
 /* */
 body,
-body >header,
 body >nav,
+body >header,
 body >main,
 body >aside,
 body >footer,
@@ -172,10 +172,8 @@ body >footer{
    * body as fixed width centered
    */
   :root >body{
-    /*
-    align-items: flex-start;
-    */
-    width:1000px; margin:0 auto;
+    align-items: center;
+    margin:0 auto;
   }
 
   body >header >h1{
@@ -236,21 +234,22 @@ body >footer{
   /*
   body >aside#aLeft{
     order:4;
-    flex:1 1 382px;
-    flex:1 1 calc( 1000px - ( 1000px / 1.618 ) );
+    flex:1 1 20%;
   }
   */
 
+  /*
   body >main{
     order:5;
-    flex:1 0 618px;
-    flex:1 0 calc( 1000px / 1.618 );
+    flex:1 1 100%;
   }
+  */
 
+  /*
   body >aside#aRight{
-    flex:1 0 382px;
-    flex:1 0 calc( 1000px - ( 1000px / 1.618 ) );
+    flex:1 1 20%;
   }
+  */
 
   body >footer >section{
     /*
@@ -273,11 +272,11 @@ body >footer{
 
   /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-  /*
   .cflex{
     display:flex;
     flex-flow: row wrap;
   }
+  /*
   .cf_10{
     flex:1 0 10%;
     flex:1 0 calc( 100% / 10 );
@@ -294,18 +293,22 @@ body >footer{
     flex:1 0 30%;
     flex:1 0 calc( 100% / 10 * 3 );
   }
+  */
   .cf_33{
     flex:1 0 33.3333%;
     flex:1 0 calc( 100% / 3 );
   }
+  /*
   .cf_40{
     flex:1 0 40%;
     flex:1 0 calc( 100% / 5 * 2 );
   }
+  */
   .cf_50{
     flex:1 0 50%;
     flex:1 0 calc( 100% / 2 );
   }
+  /*
   .cf_60{
     flex:1 0 60%;
     flex:1 0 calc( 100% / 5 * 3 );
