@@ -587,19 +587,19 @@ main >article{
   color: #9da3af;
 }
 
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+/**
+ * Additional Classe
+ */
+
+/** Rounded Corners */
+.cf_rc4{
+  border-radius:4px;
+}
 
 .legal-copyright{
   text-align:right;
 }
-
-/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
-
-.githubBtn{
-  max-width:125px; max-width:170px; max-height:20px;
-}
-
-/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 

@@ -449,13 +449,19 @@ body >section#breadcrumb >ul >li:not(:first-of-type){
   padding-left:5px;
 }
 
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+/**
+ * Additional Classe
+ */
+
+/** Rounded Corners */
+.cf_rc4{
+  border-radius:4px;
+}
 
 .legal-copyright{
   text-align:right;
 }
-
-/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 

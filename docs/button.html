@@ -83,16 +83,10 @@
 
 <pre class="block cf_50">
 button, a.cf_btn,
-button.btnRound, a.btnRound,
-button:visited, a.cf_btn:visited,
-button.btnRound:visited, a.btnRound:visited{
+button:visited, a.cf_btn:visited{
   width:auto; padding:5.45px 1.42em;
   background:#e0e0e0;
   border:1px solid #a1a1a1;
-}
-button.btnRound:first-of-type,
-a.btnRound:first-of-type{
-  border-radius:4px;
 }
 a.cf_btn{
   padding:5.45px 1.50em;
@@ -105,6 +99,12 @@ button:focus, a.cf_btn:focus{
 button:active, a.cf_btn:active{
   background:#ccc;
   border:1px solid #ccc;
+}
+
+
+/* Rounded Corners */
+.cf_rc4{
+  border-radius:4px;
 }
 </pre>
 
@@ -124,15 +124,18 @@ button:active, a.cf_btn:active{
             <hr class="dash">
             <br>
 
-            <p>Classic Button #rounded
+            <p>Classic Button #rounded<br>
+              4px corner radius by adding the <code>class="cf_rc4"</code></p>
+
+            <p>
               <br>
-              <button class="btnRound">Stylish Button</button>
+              <button class="cf_rc4">Stylish Button</button>
             </p>
             <br>
 
             <p>Link like a Button #rounded
               <br>
-              <a class="cf_btn btnRound" href="#">Stylished Link</a>
+              <a class="cf_btn cf_rc4" href="#">Stylished Link</a>
             </p>
           </div>
         </section>
