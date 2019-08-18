@@ -419,7 +419,7 @@ form input,
 form select,
 form option,
 form textarea{
-  padding:5.45px 0.42em;
+  padding:5.45px 0.5em;
   border:1px solid #a1a1a1;
 }
 form [type="radio"],
@@ -435,28 +435,50 @@ form [type="radio"] ~label{
 form button{
   margin-top:2vh;
 }
-form button,
-button, a.cf_btn{
-  width:auto;
-}
 
-
-button, a.cf_btn{
-  padding:5.45px 1.42em;
+button, a.cf_btn,
+button.btnRound, a.btnRound,
+button:visited, a.cf_btn:visited,
+button.btnRound:visited, a.btnRound:visited{
+  width:auto; padding:5.45px 1.42em;
   background:#e0e0e0;
   border:1px solid #a1a1a1;
+}
+button.btnRound:first-of-type,
+a.btnRound:first-of-type{
+  border-radius:4px;
 }
 a.cf_btn{
   padding:5.45px 1.50em;
 }
+
 button:hover, a.cf_btn:hover,
-button:hover, a.cf_btn:hover{
+button:focus, a.cf_btn:focus{
   background:#fff;
 }
 button:active, a.cf_btn:active{
   background:#ccc;
   border:1px solid #ccc;
 }
+
+button.btnGroup:not(:first-of-type),
+a.btnGroup:not(:first-of-type),
+button.btnRoundGroup:not(:first-of-type),
+a.btnRoundGroup:not(:first-of-type){
+  margin-left:-5px;
+  border-left-width:0px;
+}
+button.btnRoundGroup:first-of-type,
+a.btnRoundGroup:first-of-type{
+  border-top-left-radius:4px;
+  border-bottom-left-radius:4px;
+}
+button.btnRoundGroup:last-of-type,
+a.btnRoundGroup:last-of-type{
+  border-top-right-radius:4px;
+  border-bottom-right-radius:4px;
+}
+
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 

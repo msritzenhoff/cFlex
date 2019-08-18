@@ -26,7 +26,7 @@
       <li><a href="./index.html">cFlex</a></li>
       <li><a href="./basic.html">Basic</a></li>
       <li><a href="./style.html">Style</a></li>
-      <li hidden><a href="./button.html">Button</a></li>
+      <li><a href="./button.html">Button</a></li>
       <li hidden><a href="./table.html">Table</a></li>
       <li><a href="./form.html">Form</a></li>
 
@@ -95,7 +95,7 @@ form input,
 form select,
 form option,
 form textarea{
-  padding:5.45px 0.42em;
+  padding:5.45px 0.5em;
   border:1px solid #a1a1a1;
 }
 form [type="radio"],
@@ -111,14 +111,11 @@ form [type="radio"] ~label{
 form button{
   margin-top:2vh;
 }
+
 form button,
-button, a.cf_btn{
-  width:auto;
-}
-
-
-button, a.cf_btn{
-  padding:5.45px 1.42em;
+button, a.cf_btn,
+button:visited, a.cf_btn:visited{
+  width:auto; padding:5.45px 1.42em;
   background:#e0e0e0;
   border:1px solid #a1a1a1;
 }

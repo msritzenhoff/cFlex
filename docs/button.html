@@ -26,7 +26,7 @@
       <li><a href="./index.html">cFlex</a></li>
       <li><a href="./basic.html">Basic</a></li>
       <li><a href="./style.html">Style</a></li>
-      <li hidden><a href="./button.html">Button</a></li>
+      <li><a href="./button.html">Button</a></li>
       <li hidden><a href="./table.html">Table</a></li>
       <li><a href="./form.html">Form</a></li>
 
@@ -65,26 +65,137 @@
     <main>
       <article>
         <header>
-          <h2>main >article >header >h2</h2>
+          <h2>Button</h2>
         </header>
 
         <hr>
 
-        <h3>main >article >h3</h3>
+        <h3>Only flat styled</h3>
 
-        <p><q>A link is a link and a button is button.</q> But if needed there is a class to let a link shne like a button</p>
-        <p>We styled them looks like the same</p>
-        <p>
-          <button class="cf_btn">Stylish Button</button><a class="cf_btn" href="#">Stylished Link</a><br>
-          <a class="cf_btn" href="#">Stylished Link</a><button class="cf_btn">Stylish Button</button><br>
-        </p>
+        <p><q>A link is a link and a button is button.</q><br>
+          &hellip;but if needed, there is a class to let a link shine like a button</p>
+        <p><br></p>
 
-        <hr>
+        <section class="cflex">
+          <h4>Single Button</h4>
 
-        <footer>
-          <h3>main >article >footer >h3</h3>
-          <p>main >article >footer >p</p>
-        </footer>
+<pre class="block cf_50">
+button, a.cf_btn,
+button.btnRound, a.btnRound,
+button:visited, a.cf_btn:visited,
+button.btnRound:visited, a.btnRound:visited{
+  width:auto; padding:5.45px 1.42em;
+  background:#e0e0e0;
+  border:1px solid #a1a1a1;
+}
+button.btnRound:first-of-type,
+a.btnRound:first-of-type{
+  border-radius:4px;
+}
+a.cf_btn{
+  padding:5.45px 1.50em;
+}
+
+button:hover, a.cf_btn:hover,
+button:focus, a.cf_btn:focus{
+  background:#fff;
+}
+button:active, a.cf_btn:active{
+  background:#ccc;
+  border:1px solid #ccc;
+}
+</pre>
+
+          <div class="block cf_50" style="padding:1em; background:#fff; border:1px solid #ccc;">
+            <p>Classic Button
+              <br>
+              <button>Stylish Button</button>
+            </p>
+
+            <br>
+
+            <p>Link like a Button
+              <br>
+              <a class="cf_btn" href="#">Stylished Link</a>
+            </p>
+
+            <hr class="dash">
+
+            <p>Classic Button Rounded
+              <br>
+              <button class="btnRound">Stylish Button</button>
+            </p>
+
+            <br>
+
+            <p>Link like a Button Rounded
+              <br>
+              <a class="cf_btn btnRound" href="#">Stylished Link</a>
+            </p>
+          </div>
+        </section>
+
+        <p><br></p>
+        <hr class="dash">
+        <p><br></p>
+
+        <section class="cflex">
+          <h4>Grouped Button</h4>
+
+<pre class="block cf_50">
+button.btnGroup:not(:first-of-type),
+a.btnGroup:not(:first-of-type),
+button.btnRoundGroup:not(:first-of-type),
+a.btnRoundGroup:not(:first-of-type){
+  margin-left:-5px;
+  border-left-width:0px;
+}
+
+button.btnRoundGroup:first-of-type,
+a.btnRoundGroup:first-of-type{
+  border-top-left-radius:4px;
+  border-bottom-left-radius:4px;
+}
+button.btnRoundGroup:last-of-type,
+a.btnRoundGroup:last-of-type{
+  border-top-right-radius:4px;
+  border-bottom-right-radius:4px;
+}
+</pre>
+
+          <div class="block cf_50" style="padding:1em; background:#fff; border:1px solid #ccc;">
+            <p>Classic Button
+              <br>
+              <button class="cf_btn btnGroup">1st Button</button>
+              <button class="cf_btn btnGroup">2nd Button</button>
+              <button class="cf_btn btnGroup">3rd Button</button>
+            </p>
+
+            <p>Link like a Button
+              <br>
+              <a class="cf_btn btnGroup" href="#">1st Button</a>
+              <a class="cf_btn btnGroup" href="#">2nd Button</a>
+              <a class="cf_btn btnGroup" href="#">3rd Button</a>
+            </p>
+
+            <hr class="dash">
+
+            <p>Classic Button Rounded
+              <br>
+              <button class="cf_btn btnRoundGroup">1st Button</button>
+              <button class="cf_btn btnRoundGroup">2nd Button</button>
+              <button class="cf_btn btnRoundGroup">3rd Button</button>
+            </p>
+
+            <p>Link like a Button Rounded
+              <br>
+              <a class="cf_btn btnRoundGroup" href="#">1st Button</a>
+              <a class="cf_btn btnRoundGroup" href="#">2nd Button</a>
+              <a class="cf_btn btnRoundGroup" href="#">3rd Button</a>
+            </p>
+          </div>
+        </section>
+
       </article>
     </main>
 
