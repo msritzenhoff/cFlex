@@ -1,4 +1,4 @@
-# cFlex | Shape and display with Flexbox
+# cFlex | Shape and display with CSS-Flexbox
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
