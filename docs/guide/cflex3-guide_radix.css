@@ -348,6 +348,13 @@ footer p:last-of-type{
   padding-bottom:0;
 }
 
+figure{
+  padding:1vh 1em;
+}
+figure >figcaption{
+
+}
+
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 
 html{
