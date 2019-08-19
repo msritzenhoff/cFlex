@@ -326,12 +326,19 @@ dd{
   padding-left:1em;
 }
 
+pre, code, kbd{
+  tab-size:2;
+}
 pre{
   margin:0.5em 0; padding:1vh 1em;
   background:rgba(0,0,0,0.05);
 
-  font-size:88% !important;
+  white-space:pre-wrap; word-wrap:break-word;
+  overflow-x:auto;
+
+  font-size:88%;
 }
+
 
 article >header >h1, h2, h3, h4, h5, h6{
   padding-bottom:1vh;
