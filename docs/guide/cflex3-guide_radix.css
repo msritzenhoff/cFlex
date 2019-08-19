@@ -349,10 +349,20 @@ footer p:last-of-type{
 }
 
 figure{
+  flex-basis: 0;
   padding:1vh 1em;
 }
+/*
+figure:first-of-type{
+  padding-left:0; padding-right:1em;
+}
+figure:last-of-type{
+  padding-left:1em; padding-right:0;
+}
+*/
 figure >figcaption{
-
+  padding:0.5vh 0.5em;
+  background:#e8e8e8;
 }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
