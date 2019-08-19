@@ -451,8 +451,11 @@ form div, form span,
 input, select{
   margin-bottom:0.5em;
 }
-input, select, option, textarea{
+input, textarea{
   padding:5.45px 0.5em;
+}
+select, option{
+  padding:3.45px 0.5em;
 }
 select[multiple]{
   padding:0;
