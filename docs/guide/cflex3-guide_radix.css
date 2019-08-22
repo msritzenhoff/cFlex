@@ -468,7 +468,6 @@ select >option{
 [type="radio"],
 [type="checkbox"]{
   max-width:16px; margin-top:1px; margin-right:1em;
-  outline:1px solid #fff;
 }
 [type="radio"]{
   margin-right:0.1em;
@@ -480,33 +479,29 @@ form button{
   margin-top:2vh;
 }
 
+input, select, option, textarea{
+  border:1px solid #a1a1a1;
+  outline:1px solid #fff;
+}
+
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
+/*
 input:required {
-  outline-color: #333;
-}
-input:invalid {
-  outline-color: #FF7F7F;
+  outline-color: #333333;
 }
 input:valid {
   outline-color: #7FBF7F;
 }
+input:invalid {
+  outline-color: #FF7F7F;
+}
+*/
 input:required:invalid {
   outline-color: #FF7F7F;
 }
 input:required:valid {
   outline-color: #7FBF7F;
-}
-
-input:not([type="radio"]),
-input:not([type="checkbox"]),
-select, option, textarea{
-  border:1px solid #a1a1a1;
-  outline:1px solid #fff;
-}
-[type="radio"],
-[type="checkbox"]{
-  outline:1px solid #fff;
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
