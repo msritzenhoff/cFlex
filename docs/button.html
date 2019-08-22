@@ -13,9 +13,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2" />
 <meta name="theme-color" content="#444444"/>
 
-<link rel="stylesheet" href="./guide/normalize.min.css?v=8.0.1" />
-<link rel="stylesheet" href="./guide/cflex3-guide.min.css?v=3.0.4" />
-<link rel="stylesheet" href="./guide/cflex3-guide_radix.min.css?v=3.0.4" />
+<link href="./guide/normalize.min.css?v=8.0.1" rel="stylesheet" />
+<link href="./guide/cflex3-guide.min.css?v=3.0.4" rel="stylesheet" />
+<link href="./guide/cflex3-guide_radix.min.css?v=3.0.4" rel="stylesheet" />
+
+<link href="./guide/asset/vendor/fontawesome/css/all.min.css?v=5.10.1" rel="stylesheet" />
 </head>
 
 <body>
@@ -93,17 +95,11 @@ a.cf_btn{
 
 button:hover, a.cf_btn:hover,
 button:focus, a.cf_btn:focus{
-  background:#fff;
+  background:#f5f5f5;
 }
 button:active, a.cf_btn:active{
   background:#ccc;
   border:1px solid #ccc;
-}
-
-
-/* Rounded Corners */
-.cf_rc4{
-  border-radius:4px;
 }
 </code></pre>
 
@@ -145,22 +141,26 @@ button:active, a.cf_btn:active{
         <section class="cflex">
           <h4>Grouped Button</h4>
 
-<pre class="block cf_50"><code>button.btnGroup:not(:first-of-type),
-a.btnGroup:not(:first-of-type),
-button.btnGroupRC:not(:first-of-type),
-a.btnGroupRC:not(:first-of-type){
+<pre class="block cf_50"><code>.btnGroup:not(:first-of-type),
+.btnGroupRC:not(:first-of-type),
+form.search button.btnGroup,
+form.search button.btnGroupRC{
   margin-left:-5px;
   border-left-width:0px;
 }
-button.btnGroupRC:first-of-type,
-a.btnGroupRC:first-of-type{
+.btnGroupRC:first-of-type,
+form.search input.btnGroupRC{
   border-top-left-radius:4px;
   border-bottom-left-radius:4px;
 }
-button.btnGroupRC:last-of-type,
-a.btnGroupRC:last-of-type{
+.btnGroupRC:last-of-type,
+form.search button.btnGroupRC{
   border-top-right-radius:4px;
   border-bottom-right-radius:4px;
+}
+form.search button.btnGroupRC{
+  border-top-left-radius:0;
+  border-bottom-left-radius:0;
 }
 </code></pre>
 
@@ -201,32 +201,93 @@ a.btnGroupRC:last-of-type{
           </div>
         </section>
 
-        <hr class="dash" HIDDEN>
-        <p HIDDEN><br></p>
+        <p><br></p>
 
-        <section class="cflex" HIDDEN>
+        <section class="cflex">
 
-          <div class="block cf_50" HIDDEN>
-            <form class="stacked">
+          <div class="block cf_50" style="padding:1em; background:#fff; border:1px solid #ccc;">
+            <form class="search">
               <fieldset class="cflex">
-                <legend>search</legend>
+                <legend>search #grouped</legend>
 
                 <label for="first-search">First Name</label>
-                <input class="cf_66" id="first-search" type="text">
-                <button class="cf_33">1st Button</button>
+                <input class="cf_75 btnGroup" id="first-search" type="text">
+                <button class="cf_25 btnGroup">search</button>
 
               </fieldset>
             </form>
           </div>
 
-          <div class="block cf_50" HIDDEN>
-            <form class="stacked">
+          <div class="block cf_50" style="padding:1em; background:#fff; border:1px solid #ccc;">
+            <form class="search">
               <fieldset class="cflex">
-                <legend>search</legend>
+                <legend>search #grouped #rounded</legend>
 
                 <label for="second-search">First Name</label>
                 <input class="cf_66 btnGroupRC" id="second-search" type="text">
-                <button class="cf_33 btnGroupRC">1st Button</button>
+                <button class="cf_33 btnGroupRC">search</button>
+
+              </fieldset>
+            </form>
+          </div>
+
+        </section>
+
+
+        <p><br></p>
+        <hr class="dash">
+
+        <section class="cflex">
+          <h4>Grouped with Icon inside</h4>
+
+<pre class="block cf_50"><code>/** only ruled the icons to auto width */
+
+/* Font Awesome */
+[class^='fa fa-'],
+[class^='fas fa-']{
+  width:auto;
+}
+</code></pre>
+
+          <div class="block cf_50" style="padding:1em; background:#fff; border:1px solid #ccc;">
+            <p>Button/Link with icon
+              <br>
+              <button class="cf_90 cf_btn"><i class="fas fa-file-pdf"></i> read the Document</button>
+              <br>
+              <br>
+              <a class="cf_btn" href="#">open the link <i class="fas fa-external-link-square-alt"></i></a>
+            </p>
+            <br>
+
+            <hr class="dash">
+            <br>
+
+            <p>Classic Button #grouped with icons
+              <br>
+              <button class="cf_10 cf_btn btnGroup"><i class="fas fa-cogs"></i></button>
+              <button class="cf_10 cf_btn btnGroup"><i class="fas fa-download"></i></button>
+              <button class="cf_10 cf_btn btnGroup"><i class="fas fa-bookmark"></i></button>
+              <button class="cf_10 cf_btn btnGroup"><i class="fas fa-share-square"></i></button>
+            </p>
+
+          </div>
+
+          <p><br></p>
+          <hr class="dash">
+          <p><br></p>
+
+<pre class="block cf_50"><code>
+&lt;i class="fas fa-search"&gt;&lt;/i&gt;
+</code></pre>
+
+          <div class="block cf_50" style="padding:1em; background:#fff; border:1px solid #ccc;">
+            <form class="search">
+              <fieldset class="cflex">
+                <legend>search #grouped</legend>
+
+                <label for="first-search">First Name</label>
+                <input class="cf_90 btnGroup" id="first-search" type="text">
+                <button class="cf_10 btnGroup"><i class="fas fa-search"></i></button>
 
               </fieldset>
             </form>
@@ -255,7 +316,7 @@ a.btnGroupRC:last-of-type{
         <p class="legal-license">All code on this site is licensed under the <a href="https://github.com/msritzenhoff/cFlex/blob/master/LICENSE.md">MIT License</a> unless we change.</p>
       </section>
       <section>
-        <p class="legal-copyright"><a href="https://github.com/msritzenhoff/cFlex">GitHub Project</a> | © 2019 - M. S. RitZenhoff. All rights reserved.</p>
+        <p class="legal-copyright">Made with <i class="fas fa-heart"></i> + <i class="fas fa-coffee"></i> + <i class="fas fa-laptop"></i> in <a href="https://www.google.com/maps/place/Berlin/Germany" target="_blank">Berlin</a> &ndash; © M. S. RitZenhoff</p>
       </section>
     </footer>
 
