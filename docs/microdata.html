@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Microdata - cFlex | Shape and display with CSS-Flexbox</title>
+<meta name="keywords" content="cFlex" />
+<meta name="description" content="META Description" />
+<meta name="robots" content="index,follow" />
+<link rel="canonical" href="https://msritzenhoff.github.io/cFlex/">
+
+<meta name="HandheldFriendly" content="true" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2" />
+<meta name="theme-color" content="#444444"/>
+
+<link href="./guide/normalize.min.css?v=8.0.1" rel="stylesheet" />
+<link href="./guide/cflex3-guide.min.css?v=3.0.5" rel="stylesheet" />
+<link href="./guide/cflex3-guide_radix.min.css?v=3.0.5" rel="stylesheet" />
+
+<link href="./guide/asset/vendor/fontawesome/css/all.min.css?v=5.10.1" rel="stylesheet" />
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage">
+
+  <nav>
+    <h3 hidden>cFlex Guide Main Navigation</h3>
+    <ul>
+      <li><a href="./index.html">cFlex</a></li>
+      <li><a href="./basic.html">Basic</a></li>
+      <li><a href="./style.html">Style</a></li>
+      <li><a href="./button.html">Button</a></li>
+      <li hidden><a href="./table.html">Table</a></li>
+      <li><a href="./form.html">Form</a></li>
+      <li><a href="./microdata.html">Microdata</a></li>
+      <li hidden><a href="./practice.html">Practice</a></li>
+
+      <li><a href="./pattern.html">Pattern</a></li>
+      <li hidden><a href="./layout.html"><s>Layout</s></a></li>
+      <li><a href="./history.html">History</a></li>
+    </ul>
+    <div hidden>
+      <iframe class="githubBtn" src="https://ghbtns.com/github-btn.html?user=msritzenhoff&repo=cflex&type=star&count=true"></iframe>
+      <iframe class="githubBtn" src="https://ghbtns.com/github-btn.html?user=msritzenhoff&type=follow&count=true"></iframe>
+      <iframe class="githubBtn" src="https://ghbtns.com/github-btn.html?user=msritzenhoff&repo=cflex&type=watch&count=true&v=2"></iframe>
+    </div>
+  </nav>
+
+  <div>
+    <header>
+      <h1>cFlex Guide <small>// Microdata</small></h1>
+      <section>
+        <p>
+          <a style="float:right;" class="shieldsBtn_license" href="https://github.com/msritzenhoff/cFlex/blob/master/LICENSE.md"><img src="https://img.shields.io/github/license/msritzenhoff/cFlex?logo=cFlex&style=for-the-badge" width="127" heigh="20" alt="cFlex License" /></a>
+          <a hidden style="float:right;" class="shieldsBtn_stars" href="https://github.com/msritzenhoff/cFlex"><img src="https://img.shields.io/github/stars/msritzenhoff/cFlex?logo=cFlex&style=for-the-badge" width="94" heigh="28" alt="cFlex Stars" /></a>
+        </p>
+      </section>
+    </header>
+
+    <hr>
+
+    <section id="breadcrumb">
+      <h3 hidden>cFlex Button Breadcrumb</h3>
+      <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a itemprop="item" href="./start.html">
+            <span itemprop="name">Start</span>
+          </a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <span>&gt;</span>
+          <span itemprop="name">Microdata</span>
+          <meta itemprop="position" content="2" />
+        </li>
+      </ol>
+    </section>
+
+    <hr>
+
+    <main>
+      <article>
+        <header>
+          <h2>Minimum use of microdata</h2>
+        </header>
+
+        <hr>
+
+        <section class="cflex">
+
+          <div class="cf_50">
+            <h3><a target="_blank" href="https://schema.org/WebPage">WebPage</a></h3>
+            <p>A web page. Every web page is implicitly assumed to be declared to be of type WebPage, so the various properties about that webpage, such as breadcrumb may be used.</p>
+            <br>
+          </div>
+
+          <div class="cf_50">
+            <h3><a target="_blank" href="https://schema.org/Brand">Brand</a></h3>
+            <p>A brand is a name used by an organization or business person for labeling a product, product group, or similar.</p>
+            <br>
+          </div>
+
+          <div class="cf_50">
+            <h3><a target="_blank" href="https://schema.org/BreadcrumbList">BreadcrumbList</a></h3>
+            <p>A BreadcrumbList is an ItemList consisting of a chain of linked Web pages, typically described using at least their URL and their name, and typically ending with the current page.</p>
+            <br>
+          </div>
+
+          <div class="cf_50">
+            <h3><a target="_blank" href="https://schema.org/Service">Service</a></h3>
+            <p>A service provided by an organization, e.g. delivery service, print services, etc.</p>
+            <br>
+          </div>
+
+        <footer>
+          <p><small>credits</small></p>
+          <div class="cf_50">
+            <h3><img style="width:18px; margin-right:0.25em;" itemprop="image" src="./guide/asset/logo/schema-org.png" alt="Logo of Schema.org" width="18" height="18">Schema.org</h3>
+            <p><a href="https://schema.org/">Promote schemas for structured data on the Internet, on web pages, in email messages, and beyond.</a></p>
+          </div>
+          <div class="cf_50">
+            <h3>Testtool für strukturierte Daten</h3>
+            <p><a href="https://search.google.com/structured-data/testing-tool">Strukturierte Daten erstellen, testen und veröffentlichen</a></p>
+          </div>
+        </footer>
+      </article>
+    </main>
+
+    <aside id="aRight" hidden>
+      <h2>#aRight >h2</h2>
+      <section>
+        <h3>aside#aRight >section >h3</h3>
+        <p>aside#aRight >section >p</p>
+      </section>
+      <section>
+        <h3>aside#aRight >section >h3</h3>
+        <p>aside#aRight >section >p</p>
+      </section>
+    </aside>
+
+    <footer>
+      <h2 hidden>Legal Note</h2>
+      <section>
+        <p class="legal-license">All code on this site is licensed under the <a itemprop="license" href="https://github.com/msritzenhoff/cFlex/blob/master/LICENSE.md">MIT License</a> unless we change.</p>
+      </section>
+      <section>
+        <p class="legal-copyright">Made with <i class="fas fa-heart"></i> + <i class="fas fa-coffee"></i> + <i class="fas fa-laptop"></i> in <a href="https://www.google.com/maps/place/Berlin/Germany" target="_blank">Berlin</a> &ndash; © M. S. RitZenhoff</p>
+      </section>
+    </footer>
+
+  </div>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-27RQRKDZ9R"></script>
+<script> window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-27RQRKDZ9R'); gtag("config","G-27RQRKDZ9R",{anonymize_ip:!0});
+</script>
+</body>
+</html>
