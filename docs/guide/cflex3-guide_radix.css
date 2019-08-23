@@ -242,7 +242,7 @@ form, fieldset, label, input, select, option, textarea, table{
   padding-block-start:0; padding-block-end:0; padding-inline-start:0; padding-inline-end:0;
 }
 
-/* # for fun */
+/* # for fun * /
 @keyframes slideInFromTop {
   0% {
     transform: translateX(111%);
