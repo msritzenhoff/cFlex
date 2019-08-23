@@ -300,8 +300,11 @@ aside ul >li ul, aside ol >li ol{
   padding-left:0.9em;
 }
 nav ul,
-section#breadcrumb ul{
+section#breadcrumb ol{
   list-style-type: none;
+}
+section#breadcrumb ol >li{
+  width:auto;
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -618,7 +621,7 @@ body >nav ul li:last-of-type{
   border-top:1px solid #666;
 }
 
-body >div >section#breadcrumb >ul >li:not(:first-of-type){
+body >div >section#breadcrumb >ol >li:not(:first-of-type){
   padding-left:5px;
 }
 

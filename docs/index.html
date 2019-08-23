@@ -20,7 +20,7 @@
 <link href="./guide/asset/vendor/fontawesome/css/all.min.css?v=5.10.1" rel="stylesheet" />
 </head>
 
-<body>
+<body itemscope="" itemtype="http://schema.org/WebPage">
 
   <nav>
     <h3 hidden>cFlex Guide Main Navigation</h3>
@@ -31,6 +31,8 @@
       <li><a href="./button.html">Button</a></li>
       <li hidden><a href="./table.html">Table</a></li>
       <li><a href="./form.html">Form</a></li>
+      <li hidden><a href="./microdata.html">Microdata</a></li>
+      <li hidden><a href="./practice.html">Practice</a></li>
 
       <li><a href="./pattern.html">Pattern</a></li>
       <li hidden><a href="./layout.html"><s>Layout</s></a></li>
@@ -58,10 +60,13 @@
     <hr hidden>
 
     <section id="breadcrumb" hidden>
-      <h3 hidden>cFlex Start Breadcrumb</h3>
-      <ul>
-        <li>Start</li>
-      </ul>
+      <h3 hidden>cFlex Button Breadcrumb</h3>
+      <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <span itemprop="name">Start</span>
+          <meta itemprop="position" content="1" />
+        </li>
+      </ol>
     </section>
 
     <hr>
@@ -150,7 +155,7 @@
     <footer>
       <h2 hidden>Legal Note</h2>
       <section>
-        <p class="legal-license">All code on this site is licensed under the <a href="https://github.com/msritzenhoff/cFlex/blob/master/LICENSE.md">MIT License</a> unless we change.</p>
+        <p class="legal-license">All code on this site is licensed under the <a itemprop="license" href="https://github.com/msritzenhoff/cFlex/blob/master/LICENSE.md">MIT License</a> unless we change.</p>
       </section>
       <section>
         <p class="legal-copyright">Made with <i class="fas fa-heart"></i> + <i class="fas fa-coffee"></i> + <i class="fas fa-laptop"></i> in <a href="https://www.google.com/maps/place/Berlin/Germany" target="_blank">Berlin</a> &ndash; © M. S. RitZenhoff</p>
