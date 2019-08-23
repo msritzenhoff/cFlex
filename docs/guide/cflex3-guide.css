@@ -158,7 +158,7 @@ body >div >footer{
  * 608px +
  * Media query: 38em
  */
-@media screen and (min-width: 38em) {
+@media screen and (min-width: 38rem) {
 
   /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
@@ -182,7 +182,7 @@ body >div >footer{
  * 960px +
  * Media query: 60em
  */
-@media screen and (min-width:60em) {
+@media screen and (min-width:60rem) {
 
   /**
    * direct the sequence of the rows as you like
@@ -370,7 +370,7 @@ body >div >footer{
  * 1280px +
  * Media query: 80em
  */
-@media screen and (min-width:80em) {
+@media screen and (min-width:80rem) {
 
 }
 
@@ -380,7 +380,7 @@ body >div >footer{
  * 1440px +
  * Media query: 90em
  */
-@media screen and (min-width:90em) {
+@media screen and (min-width:90rem) {
 
 
 }
@@ -391,7 +391,7 @@ body >div >footer{
  * 1600 +
  * Media query: 100em
  */
-@media screen and (min-width:100em) {
+@media screen and (min-width:100rem) {
 
 
 }
@@ -402,7 +402,7 @@ body >div >footer{
  * 1920 +
  * Media query: 120em
  */
-@media screen and (min-width:120em) {
+@media screen and (min-width:120rem) {
 
 
 }

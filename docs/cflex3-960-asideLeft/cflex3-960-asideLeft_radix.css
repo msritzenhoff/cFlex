@@ -525,16 +525,23 @@ body >section#breadcrumb >ul >li:not(:first-of-type){
   text-align:right;
 }
 
-/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
-
-/* = = = MEDIA QUERY FROM 960px WIDTH = = = = = = = = = = */
+/* = = = MEDIA QUERY FROM 608px and greater = = = = = = = */
 
 /**
- * media query
- * greater than 960px
- * @type {[type]}
+ * 608px +
+ * Media query: 38em
  */
-@media screen and (min-width:960px) {
+@media screen and (min-width: 38rem) {
+
+}
+
+/* = = = MEDIA QUERY FROM 960px and greater = = = = = = = */
+
+/**
+ * 960px +
+ * Media query: 60em
+ */
+@media screen and (min-width:60rem) {
 
   :root{
     /**
@@ -599,32 +606,58 @@ body >section#breadcrumb >ul >li:not(:first-of-type){
 /* = = = MEDIA QUERY FROM 1280px and greater = = = = = = = */
 
 /**
- * media query
- * greater than 1024px
- * @type {[type]}
+ * 1280px +
+ * Media query: 80em
  */
-@media screen and (min-width:1280px) {
+@media screen and (min-width:80rem) {
+
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+  :root{
+    font-size:18px; font-size:1.125rem;
+  }
+
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 }
 
 /* = = = MEDIA QUERY FROM 1440px and greater = = = = = = = */
 
 /**
- * media query
- * greater than 1280px
- * @type {[type]}
+ * 1440px +
+ * Media query: 90em
  */
-@media screen and (min-width:1449px) {
+@media screen and (min-width:90rem) {
+
 
 }
 
-/* = = = MEDIA QUERY FROM 1440px and greater = = = = = = = */
+/* = = = MEDIA QUERY FROM 1600px and greater = = = = = = = */
 
 /**
- * media query
- * greater than 1440px
- * @type {[type]}
+ * 1600 +
+ * Media query: 100em
  */
-@media screen and (min-width:1024px) {
+@media screen and (min-width:100rem) {
+
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+  /*
+  :root{
+    font-size:20px; font-size:1.25rem;
+  }
+  */
+
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+}
+
+/* = = = MEDIA QUERY FROM 1920px and greater = = = = = = = */
+
+/**
+ * 1920 +
+ * Media query: 120em
+ */
+@media screen and (min-width:120rem) {
+
 
 }

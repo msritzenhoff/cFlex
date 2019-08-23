@@ -59,7 +59,7 @@ header >*{
   * /
   font-size:16px; font-size:1rem;
   */
-  font-size:18px; font-size:1.125rem;
+  font-size:16px; font-size:1rem;
 
   /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
@@ -532,16 +532,16 @@ input, select{
   margin-bottom:0.5em;
 }
 input, textarea{
-  padding:5.45px 0.5em;
+  padding:5.45px .5em;
 }
 select, option{
-  padding:3.45px 0.5em;
+  padding:3.45px .5em;
 }
 select[multiple]{
   padding:0;
 }
 select >option{
-  padding:5.45px 0.5em;
+  padding:5.45px .5em;
   border:0px;
 }
 /**
@@ -675,7 +675,15 @@ body >div >section#breadcrumb >ol >li:not(:first-of-type){
   max-width:125px !important; max-width:170px !important; max-height:20px !important;
 }
 
-/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+/* = = = MEDIA QUERY FROM 608px and greater = = = = = = = */
+
+/**
+ * 608px +
+ * Media query: 38em
+ */
+@media screen and (min-width: 38rem) {
+
+}
 
 /* = = = MEDIA QUERY FROM 960px and greater = = = = = = = */
 
@@ -683,7 +691,7 @@ body >div >section#breadcrumb >ol >li:not(:first-of-type){
  * 960px +
  * Media query: 60em
  */
-@media screen and (min-width:60em) {
+@media screen and (min-width:60rem) {
 
   :root{
     /**
@@ -749,7 +757,15 @@ body >div >section#breadcrumb >ol >li:not(:first-of-type){
  * 1280px +
  * Media query: 80em
  */
-@media screen and (min-width:80em) {
+@media screen and (min-width:80rem) {
+
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+  :root{
+    font-size:18px; font-size:1.125rem;
+  }
+
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 }
 
@@ -759,7 +775,7 @@ body >div >section#breadcrumb >ol >li:not(:first-of-type){
  * 1440px +
  * Media query: 90em
  */
-@media screen and (min-width:90em) {
+@media screen and (min-width:90rem) {
 
 
 }
@@ -770,8 +786,16 @@ body >div >section#breadcrumb >ol >li:not(:first-of-type){
  * 1600 +
  * Media query: 100em
  */
-@media screen and (min-width:100em) {
+@media screen and (min-width:100rem) {
 
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+  /*
+  :root{
+    font-size:20px; font-size:1.25rem;
+  }
+  */
+
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 }
 
@@ -781,7 +805,7 @@ body >div >section#breadcrumb >ol >li:not(:first-of-type){
  * 1920 +
  * Media query: 120em
  */
-@media screen and (min-width:120em) {
+@media screen and (min-width:120rem) {
 
 
 }
