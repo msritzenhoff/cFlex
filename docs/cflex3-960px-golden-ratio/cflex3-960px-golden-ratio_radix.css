@@ -618,6 +618,7 @@ body >section#breadcrumb >ul >li:not(:first-of-type){
 
   :root{
     font-size:18px; font-size:1.125rem;
+    line-height: 1.625;
   }
 
   /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
