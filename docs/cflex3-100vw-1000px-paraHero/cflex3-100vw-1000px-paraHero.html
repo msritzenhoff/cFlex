@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>cFlex | Shape and display with CSS-Flexbox</title>
+<meta name="keywords" content="cFlex" />
+<meta name="description" content="META Description" />
+<meta name="robots" content="index,follow" />
+<link rel="canonical" href="https://---------.---/">
+
+<meta name="HandheldFriendly" content="true" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2" />
+<meta name="theme-color" content="#444444"/>
+
+<link rel="stylesheet" href="./normalize.min.css?v=8.0.1" />
+<link rel="stylesheet" href="./cflex3-100vw-1000px-paraHero.min.css?v=3.0.4" />
+<link rel="stylesheet" href="./cflex3-100vw-1000px-paraHero_radix.min.css?v=3.0.4" />
+
+<!-- REMOVE THIS START -->
+<style>
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+html{
+  background-color: #4072e1;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.2'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+body{
+  background:rgba(255,255,255,0.25);
+}
+body >header{
+  background:rgba(255,255,255,0.6);
+}
+body >header >div{
+  background:rgba(255,255,255,0.95);
+}
+body >nav{
+  background:rgba(255,255,255,0.85);
+}
+body >section#breadcrumb{
+  background:rgba(255,255,255,0.8);
+}
+body >aside#aLeft{
+  background:rgba(255,255,255,0.75);
+}
+body >main >article{
+  background:rgb(255,255,255,1);
+}
+body >main >section{
+  background:rgba(255,255,255,0.25);
+}
+
+body >aside#aRight{
+  background:rgba(255,255,255,0.65);
+}
+body >footer{
+  background:rgba(255,255,255,0.6);
+}
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+</style>
+<!-- REMOVE THIS END-->
+</head>
+
+<body>
+  <header>
+    <div>
+      <h1>header >h1</h1>
+      <section>
+        <code>cflex3-100vw-1000px-paraHero</code>
+      </section>
+    </div>
+  </header>
+
+  <nav>
+    <h3>nav >h3</h3>
+    <ul>
+      <li><a href="">nav >ul >li 1</a></li>
+      <li><a href="">nav >ul >li 2</a></li>
+      <li><a href="">nav >ul >li 3</a></li>
+      <li><a href="">nav >ul >li 4</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="breadcrumb">
+      <h3>section#breadcrumb >h3</h3>
+      <ul>
+        <li><a href="">ul-1i-1</a></li>
+        <li>> <a href="">ul-li-1.1</a></li>
+        <li>> <a href="">ul-li-1.2</a></li>
+        <li>> ul-li-1.3</li>
+      </ul>
+    </section>
+
+    <article>
+      <header>
+        <h2>main >article >header >h2</h2>
+      </header>
+
+      <h3>main >article >h3</h3>
+      <p>main >article >p</p>
+      <h4>main >article >h4</h4>
+      <p>main >article >p</p>
+      <h5>main >article >h5</h5>
+      <p>main >article >p</p>
+      <h6>main >article >h6</h6>
+      <p>main >article >p</p>
+
+    </article>
+
+    <section>
+      <div>
+        <header>
+          <h2>main >section >header >h2</h2>
+        </header>
+
+        <h3>main >section >h3</h3>
+        <p>main >section >p</p>
+        <h4>main >section >h4</h4>
+        <p>main >section >p</p>
+        <h5>main >section >h5</h5>
+        <p>main >section >p</p>
+        <h6>main >section >h6</h6>
+        <p>main >section >p</p>
+      </div>
+    </section>
+
+    <article>
+      <header>
+        <h2>main >article >header >h2</h2>
+      </header>
+
+      <h3>main >article >h3</h3>
+      <p>main >article >p</p>
+      <h4>main >article >h4</h4>
+      <p>main >article >p</p>
+      <h5>main >article >h5</h5>
+      <p>main >article >p</p>
+      <h6>main >article >h6</h6>
+      <p>main >article >p</p>
+
+    </article>
+
+    <section>
+      <div>
+        <header>
+          <h2>main >section >header >h2</h2>
+        </header>
+
+        <h3>main >section >h3</h3>
+        <p>main >section >p</p>
+        <h4>main >section >h4</h4>
+        <p>main >section >p</p>
+        <h5>main >section >h5</h5>
+        <p>main >section >p</p>
+        <h6>main >section >h6</h6>
+        <p>main >section >p</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <h2>footer >h2</h2>
+    <p>footer >p</p>
+    <section>
+      <h3>footer >section >h3</h3>
+      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod &hellip;</p>
+    </section>
+    <section>
+      <h3>footer >section >h3</h3>
+      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+    </section>
+    <section>
+      <h3>footer >section >h3</h3>
+      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+    </section>
+    <hr>
+    <p class="legal-copyright"><a href="https://github.com/msritzenhoff/cFlex">GitHub Project</a> | © 2019 - M. S. RitZenhoff. All rights reserved.</p>
+  </footer>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-27RQRKDZ9R"></script>
+<script> window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-27RQRKDZ9R'); gtag("config","G-27RQRKDZ9R",{anonymize_ip:!0});
+</script>
+</body>
+</html>
