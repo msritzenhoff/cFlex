@@ -150,18 +150,39 @@ body >footer{
   order:7;
 }
 
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-
-
-
-/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+/* = = = MEDIA QUERY FROM 608px and greater = = = = = = = */
 
 /**
- * media query
- * greater than 1024px
- * @type {[type]}
+ * 608px +
+ * Media query: 38em
  */
-@media screen and (min-width:1024px) {
+@media screen and (min-width: 38em) {
+
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+  /*
+  .cflex{
+    display:flex;
+    flex-flow: row wrap;
+  }
+  .cf_10, .cf_20, .cf_25, .cf_30, .cf_33, .cf_40, .cf_50,
+  .cf_60, .cf_66, .cf_70, .cf_75, .cf_80, .cf_90{
+    flex:1 0 50%;
+    flex:1 0 calc( 100% / 2 );
+  }
+  */
+
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+}
+
+/* = = = MEDIA QUERY FROM 960px and greater = = = = = = = */
+
+/**
+ * 960px +
+ * Media query: 60em
+ */
+@media screen and (min-width:60em) {
 
   /**
    * direct the sequence of the rows as you like
