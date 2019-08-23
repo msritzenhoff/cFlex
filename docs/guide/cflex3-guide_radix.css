@@ -242,6 +242,20 @@ form, fieldset, label, input, select, option, textarea, table{
   padding-block-start:0; padding-block-end:0; padding-inline-start:0; padding-inline-end:0;
 }
 
+/* # for fun */
+@keyframes slideInFromTop {
+  0% {
+    transform: translateX(111%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+body >*:not(nav){
+  animation: 0.5s ease-in 0s 1 slideInFromTop;
+}
+/* # for fun */
+
 /**
  * width's inside base elements
  * ALL INSIDE of:
