@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Media - cFlex | Shape and display with CSS-Flexbox</title>
+<title>Media Query - cFlex | Shape and display with CSS-Flexbox</title>
 <meta name="keywords" content="cFlex" />
 <meta name="description" content="META Description" />
 <meta name="robots" content="index,follow" />
@@ -20,7 +20,7 @@
 <link href="./guide/asset/vendor/fontawesome/css/all.min.css?v=5.10.1" rel="stylesheet" />
 </head>
 
-<body id="media" itemscope="" itemtype="http://schema.org/WebPage">
+<body id="layout" itemscope="" itemtype="http://schema.org/WebPage">
 
   <nav>
     <h3 hidden>cFlex Guide Main Navigation</h3>
@@ -32,7 +32,7 @@
       <li hidden><a href="./table.html">Table</a></li>
       <li><a href="./form.html">Form</a></li>
       <li><a href="./microdata.html">Microdata</a></li>
-      <li><a href="./media-query.html">Media Query</a></li>
+      <li><a class="active" href="./media-query.html">Media Query</a></li>
       <li hidden><a href="./practice.html">Practice</a></li>
 
       <li><a href="./pattern.html">Pattern</a></li>
@@ -48,7 +48,7 @@
 
   <div>
     <header>
-      <h1>cFlex Guide <small>// Media</small></h1>
+      <h1>cFlex Guide <small>// Media Queries</small></h1>
       <section>
         <p>
           <a style="float:right;" class="shieldsBtn_license" href="https://github.com/msritzenhoff/cFlex/blob/master/LICENSE.md"><img src="https://img.shields.io/github/license/msritzenhoff/cFlex?logo=cFlex&style=for-the-badge" width="127" heigh="20" alt="cFlex License" /></a>
@@ -70,8 +70,8 @@
         </li>
         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
           <span>&gt;</span>
-          <a itemprop="item" href="./media.html">
-            <span itemprop="name">Media</span>
+          <a itemprop="item" href="./media-query.html">
+            <span itemprop="name">Media Query</span>
           </a>
           <meta itemprop="position" content="2" />
         </li>
@@ -83,21 +83,77 @@
     <main>
       <article itemscope>
         <header>
-          <h2 itemprop="name">main >article >header >h2</h2>
+          <h2 itemprop="name">Media Queries which we mostly use</h2>
         </header>
 
         <hr>
+<pre>
 
-        <h3>main >article >h3</h3>
+  /* = = = MEDIA QUERY FROM 608px and greater = = = = = = = */
 
-        <q></q>
+/**
+ * 608px +
+ * Media query: 38em
+ */
+@media screen and (min-width: 38em) {
 
-        <hr>
+}
 
-        <footer>
-          <h3>main >article >footer >h3</h3>
-          <p>main >article >footer >p</p>
-        </footer>
+/* = = = MEDIA QUERY FROM 960px and greater = = = = = = = */
+
+/**
+ * 960px +
+ * Media query: 60em
+ */
+@media screen and (min-width:60em) {
+
+}
+
+/* = = = MEDIA QUERY FROM 1280px and greater = = = = = = = */
+
+
+/**
+ * 1280px +
+ * Media query: 80em
+ */
+@media screen and (min-width:80em) {
+
+}
+
+/* = = = MEDIA QUERY FROM 1440px and greater = = = = = = = */
+
+/**
+ * 1440px +
+ * Media query: 90em
+ */
+@media screen and (min-width:90em) {
+
+
+}
+
+/* = = = MEDIA QUERY FROM 1600px and greater = = = = = = = */
+
+/**
+ * 1600 +
+ * Media query: 100em
+ */
+@media screen and (min-width:100em) {
+
+
+}
+
+/* = = = MEDIA QUERY FROM 1920px and greater = = = = = = = */
+
+/**
+ * 1920 +
+ * Media query: 120em
+ */
+@media screen and (min-width:120em) {
+
+
+}
+</pre>
+
       </article>
     </main>
 

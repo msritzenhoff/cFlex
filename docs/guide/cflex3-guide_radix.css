@@ -677,14 +677,13 @@ body >div >section#breadcrumb >ol >li:not(:first-of-type){
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 
-/* = = = MEDIA QUERY FROM 960px WIDTH = = = = = = = = = = */
+/* = = = MEDIA QUERY FROM 960px and greater = = = = = = = */
 
 /**
- * media query
- * greater than 960px
- * @type {[type]}
+ * 960px +
+ * Media query: 60em
  */
-@media screen and (min-width:960px) {
+@media screen and (min-width:60em) {
 
   :root{
     /**
@@ -695,18 +694,6 @@ body >div >section#breadcrumb >ol >li:not(:first-of-type){
   }
 
   /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-
-
-}
-
-/* = = = MEDIA QUERY FROM 1024px WIDTH = = = = = = = = = = */
-
-/**
- * media query
- * greater than 1024px
- * @type {[type]}
- */
-@media screen and (min-width:1024px) {
 
   body >nav >h3,
   body >div >header,
@@ -759,32 +746,42 @@ body >div >section#breadcrumb >ol >li:not(:first-of-type){
 /* = = = MEDIA QUERY FROM 1280px and greater = = = = = = = */
 
 /**
- * media query
- * greater than 1024px
- * @type {[type]}
+ * 1280px +
+ * Media query: 80em
  */
-@media screen and (min-width:1280px) {
+@media screen and (min-width:80em) {
 
 }
 
 /* = = = MEDIA QUERY FROM 1440px and greater = = = = = = = */
 
 /**
- * media query
- * greater than 1280px
- * @type {[type]}
+ * 1440px +
+ * Media query: 90em
  */
-@media screen and (min-width:1449px) {
+@media screen and (min-width:90em) {
+
 
 }
 
-/* = = = MEDIA QUERY FROM 1440px and greater = = = = = = = */
+/* = = = MEDIA QUERY FROM 1600px and greater = = = = = = = */
 
 /**
- * media query
- * greater than 1440px
- * @type {[type]}
+ * 1600 +
+ * Media query: 100em
  */
-@media screen and (min-width:1024px) {
+@media screen and (min-width:100em) {
+
+
+}
+
+/* = = = MEDIA QUERY FROM 1920px and greater = = = = = = = */
+
+/**
+ * 1920 +
+ * Media query: 120em
+ */
+@media screen and (min-width:120em) {
+
 
 }
