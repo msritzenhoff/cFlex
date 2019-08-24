@@ -184,6 +184,16 @@ body >div >footer{
  */
 @media screen and (min-width:60em) {
 
+}
+
+/* = = = MEDIA QUERY FROM 1024px WIDTH = = = = = = = = = = */
+
+/**
+ * 1024px +
+ * Media query: 64em
+ */
+@media screen and (min-width:64em) {
+
   /**
    * direct the sequence of the rows as you like
    * of base elemnts for tablet and desktoop
@@ -202,16 +212,16 @@ body >div >footer{
 
   body >nav{
     order:1;
-    flex:1 0 10vw;
-    flex:1 0 calc( 100vw / 10 );
+    flex:1 0 15vw;
+    flex:1 0 calc( 100vw / 100 * 15 );
   }
   body >div{
     /**
      * minus 48px width for right scroll bar
      */
     order:2;
-    flex:1 0 87.5vw;
-    flex:1 0 calc( 100vw / 10 * 9 - 48px );
+    flex:1 0 85vw;
+    flex:1 0 calc( 100vw / 100 * 85 - 48px );
   }
 
   body >div >header >h1{
