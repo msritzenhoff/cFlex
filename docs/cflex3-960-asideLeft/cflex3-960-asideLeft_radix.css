@@ -531,7 +531,7 @@ body >section#breadcrumb >ul >li:not(:first-of-type){
  * 608px +
  * Media query: 38em
  */
-@media screen and (min-width: 38rem) {
+@media screen and (min-width: 38em) {
 
 }
 
@@ -541,7 +541,7 @@ body >section#breadcrumb >ul >li:not(:first-of-type){
  * 960px +
  * Media query: 60em
  */
-@media screen and (min-width:60rem) {
+@media screen and (min-width:60em) {
 
   :root{
     /**
@@ -609,7 +609,7 @@ body >section#breadcrumb >ul >li:not(:first-of-type){
  * 1280px +
  * Media query: 80em
  */
-@media screen and (min-width:80rem) {
+@media screen and (min-width:80em) {
 
   /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
@@ -628,7 +628,7 @@ body >section#breadcrumb >ul >li:not(:first-of-type){
  * 1440px +
  * Media query: 90em
  */
-@media screen and (min-width:90rem) {
+@media screen and (min-width:90em) {
 
 
 }
@@ -639,7 +639,7 @@ body >section#breadcrumb >ul >li:not(:first-of-type){
  * 1600 +
  * Media query: 100em
  */
-@media screen and (min-width:100rem) {
+@media screen and (min-width:100em) {
 
   /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
   /*
@@ -658,7 +658,7 @@ body >section#breadcrumb >ul >li:not(:first-of-type){
  * 1920 +
  * Media query: 120em
  */
-@media screen and (min-width:120rem) {
+@media screen and (min-width:120em) {
 
 
 }
