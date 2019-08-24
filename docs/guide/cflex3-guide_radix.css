@@ -56,8 +56,6 @@ header >*{
 
   /* 1rem = 16px
   * http://gregrickaby.com/using-the-golden-ratio-and-rems/
-  * /
-  font-size:16px; font-size:1rem;
   */
   font-size:16px; font-size:1rem;
 
@@ -362,6 +360,7 @@ pre{
 article >header >h1, h2, h3, h4, h5, h6{
   padding-bottom:1vh;
 }
+
 main p,
 aside p,
 footer p{
@@ -402,8 +401,8 @@ body{
   background: #efefef;
 }
 */
+
 body >nav{
-  height:100vh;
   background:#444;
 }
 body >div >section#breadcrumb,
@@ -517,30 +516,34 @@ form.search button.btnGroupRC{
 /*
 form{ }
 */
-fieldset{
+form fieldset{
   padding:1.2vh 0.75em;
   border:1px solid #a1a1a1;
 }
-legend{
+form legend{
   width:auto; padding-right:0.25em; padding-left:0.25em;
 }
-label{
+form label{
   padding-top:0.5vh; padding-bottom:0.5vh;
 }
-form div, form span,
-input, select{
+form div,
+form span,
+form input,
+form select{
   margin-bottom:0.5em;
 }
-input, textarea{
+form input,
+form textarea{
   padding:5.45px .5em;
 }
-select, option{
+form select,
+form option{
   padding:3.45px .5em;
 }
-select[multiple]{
+form select[multiple]{
   padding:0;
 }
-select >option{
+form select >option{
   padding:5.45px .5em;
   border:0px;
 }
@@ -562,14 +565,14 @@ select::-ms-expand {
 }
 */
 
-[type="radio"],
-[type="checkbox"]{
+form [type="radio"],
+form [type="checkbox"]{
   max-width:16px; margin-top:1px; margin-right:1em;
 }
-[type="radio"]{
+form [type="radio"]{
   margin-right:0.1em;
 }
-[type="radio"] ~label{
+form [type="radio"] ~label{
   position:relative; top:-2px; margin-right:1em;
 }
 
@@ -577,7 +580,10 @@ form.search input ~button{
   height: 34px;
 }
 
-input, select, option, textarea{
+form input,
+form select,
+form option,
+form textarea{
   border:1px solid #a1a1a1;
   outline:1px solid #fff;
 }
@@ -627,16 +633,86 @@ body >div >footer{
   padding: 1.5vh 2vw;
 }
 
-body >nav ul li:first-of-type{
+body >div >section#breadcrumb >ol >li:not(:first-of-type){
+  padding-left:5px;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/**
+ * NAVIGATION basic
+ * https://codepen.io/mutedblues/pen/MmPNPG
+ */
+
+body >nav {
+  z-index: 11;
+}
+body >nav >h3{
+  /*
+  display:none;
+  */
+  width:80%;
+}
+
+body >nav >ul {
+  overflow: hidden;
+}
+body >nav >ul li{
+  display: flex;
+}
+
+body >nav >ul li:first-of-type{
   border-bottom:1px solid #666;
   font-weight:600;
 }
-body >nav ul li:last-of-type{
+body >nav >ul li:last-of-type{
   border-top:1px solid #666;
 }
 
-body >div >section#breadcrumb >ol >li:not(:first-of-type){
-  padding-left:5px;
+body >nav >ul li a {
+  padding: 0.5em 2vw;
+}
+body >nav >ul li a:hover,
+body >nav >.navBtn:hover {
+  background-color: #f4f4f4;
+}
+
+/* menu */
+body >nav >ul {
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+body >nav >label {
+  /*
+  display: inline-block; float: right; position: relative;
+  */
+  /*
+  width:20%; padding:1.4em 2vw 1.4em 10vw;
+  */
+  width:100%; padding:1.4em 2vw 1.4em 2vw;
+  cursor: pointer;
+  user-select: none;
+}
+body >nav >label >.navIcon {
+  display: block; position: relative; width: 18px; height: 2px;
+  background: #fff;
+}
+body >nav >label >.navIcon:before,
+body >nav >label >.navIcon:after {
+  content: '';
+  display: block; position: absolute; width: 100%; height: 100%;
+  background: #fff;
+}
+body >nav >label >.navIcon:before { top: 5px; }
+body >nav >label >.navIcon:after { top: -5px; }
+
+/* menu btn */
+body >nav >.navBtn {
+  display: none;
+}
+body >nav >.navBtn:checked ~ul {
+  max-height: 250px;
 }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
@@ -703,6 +779,21 @@ body >div >section#breadcrumb >ol >li:not(:first-of-type){
 
   /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
+}
+
+/* = = = MEDIA QUERY FROM 1024px WIDTH = = = = = = = = = = */
+
+/**
+ * media query
+ * greater than 1024px
+ * @type {[type]}
+ */
+@media screen and (min-width:1024px) {
+
+  body{
+    min-height: 100vh;
+  }
+  
   body >nav >h3,
   body >div >header,
   body >div >section#breadcrumb,
@@ -722,17 +813,33 @@ body >div >section#breadcrumb >ol >li:not(:first-of-type){
 
     padding:1.5vh 0.75em;
   }
+
+  body >nav >ul li{
+    flex-grow: 1;
+    min-width:100%;
+  }
+  /*
+  body >nav ul li a{
+    float:left;
+    text-align: center;
+  }
+  */
+
   body >nav >ul{
     flex-direction: row;
     align-content: flex-start;
     align-items: stretch;
+
+    max-height: none;
   }
-  body >nav ul li{
-    flex-grow: 1;
-    min-width:100%;
+  body >nav >label {
+    display: none;
   }
-  body >nav ul li a{
-    min-width:100%; padding-top:1vh; padding-bottom:1vh;
+  body >nav >ul li a {
+    min-width:100%; padding: 1vh 1vw;
+    /*
+    padding-top:1vh; padding-bottom:1vh;
+    */
     color:#fff;
     text-align: left; text-decoration: none;
   }

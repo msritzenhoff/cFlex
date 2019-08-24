@@ -92,7 +92,6 @@ header >*{
   -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
-
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -106,15 +105,19 @@ header >*{
 
 /* font italic for input placeholder */
 ::-webkit-input-placeholder {
+  color:#555;
   font-style: italic;
 }
 :-moz-placeholder {
+  color:#555;
   font-style: italic;
 }
 ::-moz-placeholder {
+  color:#555;
   font-style: italic;
 }
 :-ms-input-placeholder {
+  color:#555;
   font-style: italic;
 }
 
@@ -237,7 +240,22 @@ form, fieldset, label, input, select, option, textarea, table{
   padding-block-start:0; padding-block-end:0; padding-inline-start:0; padding-inline-end:0;
 }
 
+/**
+ * width's inside base elements
+ * ALL INSIDE of:
+ * e.g. body >main ...
+ * e.g. body >main ...
+ * AS LONG you don't use max- or min-
+ * it dont hurt the flex width's yet
+ */
+body >* *{
+  width: 100%;
+}
+
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/**
+ * basics
+ */
 
 /* img, a.i. */
 svg, img, video, audio, canvas, object, applet, embed, iframe{
@@ -272,20 +290,6 @@ img[src$=".svg"]{
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-/**
- * width's inside base elements
- * ALL INSIDE of:
- * e.g. body >main ...
- * e.g. body >main ...
- * AS LONG you don't use max- or min-
- * it dont hurt the flex width's yet
- */
-body >* *{
-  width: 100%;
-}
-
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-
 ul, ol{
   list-style-position: inside;
 }
@@ -294,8 +298,11 @@ aside ul >li ul, aside ol >li ol{
   padding-left:0.9em;
 }
 nav ul,
-section#breadcrumb ul{
+section#breadcrumb ol{
   list-style-type: none;
+}
+section#breadcrumb ol >li{
+  width:auto;
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -334,10 +341,12 @@ pre{
   font-size:88%;
 }
 
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-h2, h3, h4, h5, h6{
+article >header >h1, h2, h3, h4, h5, h6{
   padding-bottom:1vh;
 }
+
 main p,
 aside p,
 footer p{
@@ -350,15 +359,144 @@ footer p:last-of-type{
   padding-bottom:0;
 }
 
+figure{
+  flex-basis: 0;
+  padding:1vh 1em;
+}
+/*
+figure:first-of-type{
+  padding-left:0; padding-right:1em;
+}
+figure:last-of-type{
+  padding-left:1em; padding-right:0;
+}
+*/
+figure >figcaption{
+  padding:0.5vh 0.5em;
+  background:#e8e8e8;
+}
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+html{
+  color:#444;
+  background: #efefef;
+}
+/*
+body{
+  background: #efefef;
+}
+*/
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+/**
+ * a:link
+ */
+
+/* a > visited > hover > focus > active */
+a,
+a:visited{
+  /*
+  color:#11589F; color:rgb(17,88,159);
+  */
+  text-decoration:none;
+}
+a:hover,
+a:focus,
+a:active{
+  /*
+  color:#98243A; color:rgb(152,36,58);
+  */
+  text-decoration:underline;
+}
+
+a >img,
+a:visited >img{
+  /*
+  border:1px solid #11589F; border:1px solid rgb(17,88,159);
+  */
+  border:1px solid #fff; border:1px solid rgb(255,255,255);
+  text-decoration:none;
+}
+a:hover >img,
+a:focus >img,
+a:active >img{
+  border:1px solid #98243A; border:1px solid rgb(152,36,58);
+  text-decoration:underline;
+}
+
+nav a,
+nav a:visited{
+
+}
+nav a:hover,
+nav a:focus,
+nav a:active, nav a.active{
+
+  background:rgba(255,255,255,0.1);
+  text-decoration:none;
+}
+nav a.active{
+  background:rgba(0,0,0,0.2);
+}
+
+h1 >a, h2 >a, h3 >a, h4 >a, h5 >a, h6 >a{
+  float:left;
+}
+
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /**
- * FORM basic
+ * button
+ */
+
+button, a.cf_btn,
+button:visited, a.cf_btn:visited{
+  width:auto; padding:5.45px 1.42em;
+  background:#e0e0e0;
+  border:1px solid #a1a1a1;
+}
+a.cf_btn{
+  padding:5.45px 1.50em;
+}
+
+button:hover, a.cf_btn:hover,
+button:focus, a.cf_btn:focus{
+  background:#f5f5f5;
+}
+button:active, a.cf_btn:active{
+  background:#ccc;
+  border:1px solid #ccc;
+}
+
+.btnGroup:not(:first-of-type),
+.btnGroupRC:not(:first-of-type),
+form.search button.btnGroup,
+form.search button.btnGroupRC{
+  margin-left:-5px;
+  border-left-width:0px;
+}
+.btnGroupRC:first-of-type,
+form.search input.btnGroupRC{
+  border-top-left-radius:4px;
+  border-bottom-left-radius:4px;
+}
+.btnGroupRC:last-of-type,
+form.search button.btnGroupRC{
+  border-top-right-radius:4px;
+  border-bottom-right-radius:4px;
+}
+form.search button.btnGroupRC{
+  border-top-left-radius:0;
+  border-bottom-left-radius:0;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/**
+ * form
  */
 
 /*
-form{
-
-}
+form{ }
 */
 form fieldset{
   padding:1.2vh 0.75em;
@@ -377,18 +515,37 @@ form select{
   margin-bottom:0.5em;
 }
 form input,
-form select,
-form option,
 form textarea{
-  padding:5.45px 0.5em;
+  padding:5.45px .5em;
+}
+form select,
+form option{
+  padding:3.45px .5em;
 }
 form select[multiple]{
   padding:0;
 }
 form select >option{
-  padding:5.45px 0.5em;
+  padding:5.45px .5em;
   border:0px;
 }
+/**
+select{
+  /* Here's the code we need * /
+  -webkit-appearance: none;
+     -moz-appearance: none;
+      -ms-appearance: none;
+       -o-appearance: none;
+          appearance: none;
+}
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+select::-ms-expand {
+  display: none;
+}
+*/
 
 form [type="radio"],
 form [type="checkbox"]{
@@ -400,34 +557,32 @@ form [type="radio"]{
 form [type="radio"] ~label{
   position:relative; top:-2px; margin-right:1em;
 }
-form button{
-  margin-top:2vh;
+
+form.search input ~button{
+  height: 34px;
 }
 
-form input:not([type="radio"]),
-form input:not([type="checkbox"]),
+form input,
 form select,
 form option,
 form textarea{
   border:1px solid #a1a1a1;
   outline:1px solid #fff;
 }
-form [type="radio"],
-form [type="checkbox"]{
-  outline:1px solid #fff;
-}
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
+/*
 input:required {
-  outline-color: #333;
-}
-input:invalid {
-  outline-color: #FF7F7F;
+  outline-color: #333333;
 }
 input:valid {
   outline-color: #7FBF7F;
 }
+input:invalid {
+  outline-color: #FF7F7F;
+}
+*/
 input:required:invalid {
   outline-color: #FF7F7F;
 }
@@ -437,75 +592,100 @@ input:required:valid {
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-form input:not([type="radio"]):focus,
-form input:not([type="checkbox"]):focus,
-form select:focus,
-form option:focus,
-form textarea:focus{
+input:not([type="radio"]):focus,
+input:not([type="checkbox"]):focus,
+select:focus, option:focus, textarea:focus{
   border:1px solid #80bdff;
   outline-color:#bfdeff;
 }
-form [type="radio"]:focus,
-form [type="checkbox"]:focus{
+[type="radio"]:focus,
+[type="checkbox"]:focus{
   outline-color:#fff !important;
-}
-
-/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-
-button, a.cf_btn,
-button:visited, a.cf_btn:visited{
-  width:auto; padding:5.45px 1.42em;
-  background:#e0e0e0;
-  border:1px solid #a1a1a1;
-}
-a.cf_btn{
-  padding:5.45px 1.50em;
-}
-
-button:hover, a.cf_btn:hover,
-button:focus, a.cf_btn:focus{
-  background:#fff;
-}
-button:active, a.cf_btn:active{
-  background:#ccc;
-  border:1px solid #ccc;
-}
-
-button.btnGroup:not(:first-of-type),
-a.btnGroup:not(:first-of-type),
-button.btnGroupRC:not(:first-of-type),
-a.btnGroupRC:not(:first-of-type){
-  margin-left:-5px;
-  border-left-width:0px;
-}
-button.btnGroupRC:first-of-type,
-a.btnGroupRC:first-of-type{
-  border-top-left-radius:4px;
-  border-bottom-left-radius:4px;
-}
-button.btnGroupRC:last-of-type,
-a.btnGroupRC:last-of-type{
-  border-top-right-radius:4px;
-  border-bottom-right-radius:4px;
 }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 
-html{
-  color:#444;
-}
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 
-body >header,
 body >nav >h3,
-body >main,
-body >aside,
-body >footer,
-body >section{
+body >div >header,
+body >div >main,
+body >div >aside,
+body >div >footer{
   padding: 1.5vh 2vw;
 }
 
-body >section#breadcrumb >ul >li:not(:first-of-type){
+body >div >section#breadcrumb >ol >li:not(:first-of-type){
   padding-left:5px;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/**
+ * NAVIGATION basic
+ * https://codepen.io/mutedblues/pen/MmPNPG
+ */
+
+body >nav {
+  z-index: 11;
+}
+body >nav >h3{
+  /*
+  display:none;
+  */
+  width:80%;
+}
+
+body >nav >ul {
+  overflow: hidden;
+}
+body >nav >ul li{
+  display: flex;
+}
+body >nav >ul li a {
+  padding: 0.5em 2vw;
+}
+body >nav >ul li a:hover,
+body >nav >.navBtn:hover {
+  background-color: #f4f4f4;
+}
+
+/* menu */
+body >nav >ul {
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+body >nav >label {
+  /*
+  display: inline-block; float: right; position: relative;
+  */
+  /*
+  width:20%; padding:1.4em 2vw 1.4em 10vw;
+  */
+  width:100%; padding:1.4em 2vw 1.4em 2vw;
+  cursor: pointer;
+  user-select: none;
+}
+body >nav >label >.navIcon {
+  display: block; position: relative; width: 18px; height: 2px;
+  background: #444;
+}
+body >nav >label >.navIcon:before,
+body >nav >label >.navIcon:after {
+  content: '';
+  display: block; position: absolute; width: 100%; height: 100%;
+  background: #444;
+}
+body >nav >label >.navIcon:before { top: 5px; }
+body >nav >label >.navIcon:after { top: -5px; }
+
+/* menu btn */
+body >nav >.navBtn {
+  display: none;
+}
+body >nav >.navBtn:checked ~ul {
+  max-height: 250px;
 }
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
@@ -522,13 +702,35 @@ body >section#breadcrumb >ul >li:not(:first-of-type){
   text-align:right;
 }
 
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/* Font Awesome */
+[class^='fa fa-'],
+[class^='fas fa-'], [class^='far fa-'], [class^='fal fa-']{
+  width:auto;
+}
+/* Shields.io */
+[class^='shieldsBtn_']{
+  float:left; max-height:28px; margin-left:1em;
+}
+.shieldsBtn_license{
+  max-width:127px; max-width:127px;
+}
+.shieldsBtn_stars{
+  max-width:94px; max-width:94px;
+}
+/* GitHub */
+.githubBtn{
+  max-width:125px !important; max-width:170px !important; max-height:20px !important;
+}
+
 /* = = = MEDIA QUERY FROM 608px and greater = = = = = = = */
 
 /**
  * 608px +
  * Media query: 38em
  */
-@media screen and (min-width: 38em) {
+@media screen and (min-width:38em) {
 
 }
 
@@ -596,6 +798,20 @@ body >section#breadcrumb >ul >li:not(:first-of-type){
     text-align: center;
   }
   */
+
+  /**
+   * NAVIGATION basic
+   * https://codepen.io/mutedblues/pen/MmPNPG
+   */
+  body >nav >ul {
+    max-height: none;
+  }
+  body >nav >label {
+    display: none;
+  }
+  body >nav >ul li a {
+    padding: 0.25em 1vw;
+  }
 
   /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 

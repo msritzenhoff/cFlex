@@ -199,6 +199,22 @@ body >footer{
     width:960px; margin:0 auto;
   }
 
+  /* - - - - - - - - - - - - - - - - - - - - - - - -
+   * body as fixed width centered
+   */
+  :root{
+    justify-content: center;
+    align-items: center;
+  }
+  :root >body{
+    align-content: flex-start;
+    align-items: flex-start;
+
+    min-width:960px; max-width:960px;
+  }
+
+
+
   body >header >h1{
     /*
      * starting factors
