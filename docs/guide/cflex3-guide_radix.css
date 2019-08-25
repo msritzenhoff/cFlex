@@ -1,5 +1,5 @@
 /*!
- * cFlex     :: v3.0.5
+ * cFlex     :: v3.0.6
  * License   :: MIT
  * https://github.com/msritzenhoff/cFlex
  */
@@ -680,7 +680,7 @@ body >nav >.navBtn:hover {
 
 /* menu */
 body >nav >ul {
-  max-height: 0;
+  max-height: 0; padding:0 1vw;
   transition: max-height .2s ease-out;
 }
 
@@ -825,13 +825,13 @@ body >nav >.navBtn:checked ~ul {
     text-align: center;
   }
   */
-
   body >nav >ul{
     flex-direction: row;
     align-content: flex-start;
     align-items: stretch;
 
     max-height: none;
+    padding:0;
   }
   body >nav >label {
     display: none;
