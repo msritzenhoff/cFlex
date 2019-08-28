@@ -455,9 +455,6 @@ body{
 }
 */
 
-body >nav{
-  background:#444;
-}
 body >div >section#breadcrumb{
   padding:.5rem 1rem;
 }
@@ -717,7 +714,7 @@ body >nav{
 	position:sticky;
   top:0;
 
-  height: 100%;
+  background:#444;
   z-index: 11;
 }
 body >nav >h3{
