@@ -14,8 +14,8 @@
 <meta name="theme-color" content="#444444"/>
 
 <link href="./guide/normalize.min.css?v=8.0.1" rel="stylesheet" />
-<link href="./guide/cflex3-guide.min.css?v=3.0.6" rel="stylesheet" />
-<link href="./guide/cflex3-guide_radix.min.css?v=3.0.6" rel="stylesheet" />
+<link href="./guide/cflex3-guide.min.css?v=3.0.7" rel="stylesheet" />
+<link href="./guide/cflex3-guide_radix.min.css?v=3.0.7" rel="stylesheet" />
 
 <link href="./guide/asset/vendor/fontawesome/css/all.min.css?v=5.10.1" rel="stylesheet" />
 </head>
@@ -99,21 +99,21 @@
         <section class="cflex">
           <h4>Single Button</h4>
 
-<pre class="block cf_50"><code>button, a.cf_btn,
-button:visited, a.cf_btn:visited{
-  width:auto; padding:5.45px 1.42em;
+<pre class="block cf_50"><code>button, a.btn,
+button:visited, a.btn:visited{
+  width:auto; padding:0.325rem 1.42rem;
   background:#e0e0e0;
   border:1px solid #a1a1a1;
 }
-a.cf_btn{
-  padding:5.45px 1.50em;
+a.btn,
+a.btn:visited{
+  padding:0.3025rem 1.42rem;
 }
-
-button:hover, a.cf_btn:hover,
-button:focus, a.cf_btn:focus{
+button:hover, a.btn:hover,
+button:focus, a.btn:focus{
   background:#f5f5f5;
 }
-button:active, a.cf_btn:active{
+button:active, a.btn:active{
   background:#ccc;
   border:1px solid #ccc;
 }
@@ -128,7 +128,7 @@ button:active, a.cf_btn:active{
 
             <p>Link like a Button
               <br>
-              <a class="cf_btn" href="#">Stylished Link</a>
+              <a class="btn" href="#">Stylished Link</a>
             </p>
             <br>
 
@@ -146,7 +146,7 @@ button:active, a.cf_btn:active{
 
             <p>Link like a Button #rounded
               <br>
-              <a class="cf_btn cf_rc4" href="#">Stylished Link</a>
+              <a class="btn cf_rc4" href="#">Stylished Link</a>
             </p>
           </div>
         </section>
@@ -157,24 +157,28 @@ button:active, a.cf_btn:active{
         <section class="cflex">
           <h4>Grouped Button</h4>
 
-<pre class="block cf_50"><code>.btnGroup:not(:first-of-type),
-.btnGroupRC:not(:first-of-type),
-form.search button.btnGroup,
-form.search button.btnGroupRC{
-  margin-left:-5px;
+<pre class="block cf_50"><code>
+a.group, a.groupRC{
+  padding:0.09rem 1.42rem;
+}
+.group:not(:first-of-type),
+.groupRC:not(:first-of-type),
+form input ~button.group,
+form input ~button.groupRC{
   border-left-width:0px;
 }
-.btnGroupRC:first-of-type,
-form.search input.btnGroupRC{
+form input ~button{
+  padding:0.09rem 1.42rem;
+}
+form input.groupRC{
   border-top-left-radius:4px;
   border-bottom-left-radius:4px;
 }
-.btnGroupRC:last-of-type,
-form.search button.btnGroupRC{
+form input ~button.groupRC{
   border-top-right-radius:4px;
   border-bottom-right-radius:4px;
 }
-form.search button.btnGroupRC{
+form input ~button.groupRC{
   border-top-left-radius:0;
   border-bottom-left-radius:0;
 }
@@ -182,38 +186,38 @@ form.search button.btnGroupRC{
 
           <div class="block cf_50" style="padding:1em; background:#fff; border:1px solid #ccc;">
             <p>Classic Button #grouped
-              <br>
-              <button class="cf_btn btnGroup">1st Button</button>
-              <button class="cf_btn btnGroup">2nd Button</button>
-              <button class="cf_btn btnGroup">3rd Button</button>
-            </p>
+              <div class="cflex">
+                <button class="btn group">1st Button</button>
+                <button class="btn group">2nd Button</button>
+                <button class="btn group">3rd Button</button>
+              </div>
             <br>
 
             <p>Link like a Button #grouped
-              <br>
-              <a class="cf_btn btnGroup" href="#">1st Button</a>
-              <a class="cf_btn btnGroup" href="#">2nd Button</a>
-              <a class="cf_btn btnGroup" href="#">3rd Button</a>
-            </p>
+              <div class="cflex">
+                <a class="btn group" href="#">1st Button</a>
+                <a class="btn group" href="#">2nd Button</a>
+                <a class="btn group" href="#">3rd Button</a>
+              </div>
             <br>
 
             <hr class="dash">
             <br>
 
             <p>Classic Button #grouped #rounded
-              <br>
-              <button class="cf_btn btnGroupRC">1st Button</button>
-              <button class="cf_btn btnGroupRC">2nd Button</button>
-              <button class="cf_btn btnGroupRC">3rd Button</button>
-            </p>
+              <div class="cflex">
+                <button class="btn groupRC">1st Button</button>
+                <button class="btn groupRC">2nd Button</button>
+                <button class="btn groupRC">3rd Button</button>
+              </div>
             <br>
 
             <p>Link like a Button #grouped #rounded
-              <br>
-              <a class="cf_btn btnGroupRC" href="#">1st Button</a>
-              <a class="cf_btn btnGroupRC" href="#">2nd Button</a>
-              <a class="cf_btn btnGroupRC" href="#">3rd Button</a>
-            </p>
+              <div class="cflex">
+                <a class="btn groupRC" href="#">1st Button</a>
+                <a class="btn groupRC" href="#">2nd Button</a>
+                <a class="btn groupRC" href="#">3rd Button</a>
+              </div>
           </div>
         </section>
 
@@ -227,8 +231,10 @@ form.search button.btnGroupRC{
                 <legend>search #grouped</legend>
 
                 <label for="first-search">First Name</label>
-                <input class="cf_75 btnGroup" id="first-search" type="text">
-                <button class="cf_25 btnGroup">search</button>
+                <div class="cflex">
+                  <input class="cf_75 group" id="first-search" type="text">
+                  <button class="cf_25 group">search</button>
+                </div>
 
               </fieldset>
             </form>
@@ -240,8 +246,10 @@ form.search button.btnGroupRC{
                 <legend>search #grouped #rounded</legend>
 
                 <label for="second-search">First Name</label>
-                <input class="cf_66 btnGroupRC" id="second-search" type="text">
-                <button class="cf_33 btnGroupRC">search</button>
+                <div class="cflex">
+                  <input class="cf_66 groupRC" id="second-search" type="text">
+                  <button class="cf_33 groupRC">search</button>
+                </div>
 
               </fieldset>
             </form>
@@ -279,27 +287,26 @@ form.search button.btnGroupRC{
 &lt;i class="fas fa-bookmark"&gt;&lt;/i&gt;
 &lt;i class="fas fa-share-square"&gt;&lt;/i&gt;
 </code></pre>
-
           <div class="block cf_50" style="padding:1em; background:#fff; border:1px solid #ccc;">
             <p>Button/Link with icon
               <br>
-              <button class="cf_90 cf_btn"><i class="fas fa-file-pdf"></i> read the Document</button>
+              <button><i class="fas fa-file-pdf"></i> read the Document</button>
               <br>
               <br>
-              <a class="cf_btn" href="#">open the link <i class="fas fa-external-link-square-alt"></i></a>
+              <a class="btn" href="#">open the link <i class="fas fa-external-link-square-alt"></i></a>
             </p>
             <br>
 
             <hr class="dash">
             <br>
 
-            <p>Classic Button #grouped with icons
-              <br>
-              <button class="cf_10 cf_btn btnGroup"><i class="fas fa-cogs"></i></button>
-              <button class="cf_10 cf_btn btnGroup"><i class="fas fa-download"></i></button>
-              <button class="cf_10 cf_btn btnGroup"><i class="fas fa-bookmark"></i></button>
-              <button class="cf_10 cf_btn btnGroup"><i class="fas fa-share-square"></i></button>
-            </p>
+            <p>Classic Button #grouped with icons</p>
+            <div class="cflex" style="max-width:100%;">
+              <button class="cf_25 group"><i class="fas fa-cogs"></i></button>
+              <button class="cf_25 group"><i class="fas fa-download"></i></button>
+              <button class="cf_25 group"><i class="fas fa-bookmark"></i></button>
+              <button class="cf_25 group"><i class="fas fa-share-square"></i></button>
+            </div>
 
           </div>
 
@@ -313,12 +320,14 @@ form.search button.btnGroupRC{
 
           <div class="block cf_50" style="padding:1em; background:#fff; border:1px solid #ccc;">
             <form class="search">
-              <fieldset class="cflex">
+              <fieldset>
                 <legend>search #grouped</legend>
 
-                <label for="first-search">First Name</label>
-                <input class="cf_90 btnGroup" id="first-search" type="text">
-                <button class="cf_10 btnGroup"><i class="fas fa-search"></i></button>
+                <label for="first-search">Search & Find</label>
+                <div class="cflex">
+                  <input class="cf_80 group" id="first-search" type="text">
+                  <button class="cf_10 group"><i class="fas fa-search"></i></button>
+                </div>
 
               </fieldset>
             </form>

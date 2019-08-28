@@ -14,8 +14,8 @@
 <meta name="theme-color" content="#444444"/>
 
 <link href="./guide/normalize.min.css?v=8.0.1" rel="stylesheet" />
-<link href="./guide/cflex3-guide.min.css?v=3.0.6" rel="stylesheet" />
-<link href="./guide/cflex3-guide_radix.min.css?v=3.0.6" rel="stylesheet" />
+<link href="./guide/cflex3-guide.min.css?v=3.0.7" rel="stylesheet" />
+<link href="./guide/cflex3-guide_radix.min.css?v=3.0.7" rel="stylesheet" />
 
 <link href="./guide/asset/vendor/fontawesome/css/all.min.css?v=5.10.1" rel="stylesheet" />
 </head>
@@ -94,8 +94,7 @@
 
         <h4>hr</h4>
         <p>tweak: horizonzal lines</p>
-<pre>
-hr{
+<pre><code>hr{
   margin:1vh 0;
   border-top:0; border-bottom:1px solid #666;
 }
@@ -105,7 +104,7 @@ hr.dot{
 hr.dash{
   border-style:dashed;
 }
-</pre>
+</code></pre>
         <hr class="dot">
         <hr class="dash">
 
@@ -113,8 +112,7 @@ hr.dash{
 
         <h4>font</h4>
         <p>setup: font-size & -family</p>
-<pre>
-font-size:16px; font-size:1rem;
+<pre><code>font-size:16px; font-size:1rem;
 
 font-family:
 /* 1 */ -apple-system, BlinkMacSystemFont,
@@ -122,18 +120,16 @@ font-family:
 /* 3 */ "Helvetica Neue", sans-serif;
 
 letter-spacing:0.045vw;
-</pre>
+</code></pre>
 
         <hr>
 
         <h4>h1, h2, h3, h4, h5, h6</h4>
         <p>setup: headline</p>
-<pre>
-article h1, h2, h3, h4, h5, h6{
+<pre><code>article h1, h2, h3, h4, h5, h6{
   padding-bottom:1vh;
 }
-</pre>
-
+</code></pre>
         <h1>header >h1<br>
           <small>small detail</small>
         </h1>
@@ -170,8 +166,7 @@ article h1, h2, h3, h4, h5, h6{
 
         <h4>paragraph</h4>
         <p>setup: p</p>
-<pre>
-main p,
+<pre><code>main p,
 aside p,
 footer p{
   padding-bottom:1vh;
@@ -182,8 +177,7 @@ aside p:last-of-type,
 footer p:last-of-type{
   padding-bottom:0;
 }
-</pre>
-
+</code></pre>
         <h5>equal height's with textmarking color</h5>
         <section class="cflex">
           <div class="block cf_25">
@@ -205,29 +199,48 @@ footer p:last-of-type{
 
         <hr>
 
+        <h5>column [basic]</h5>
+        <p>setup: p</p>
+<pre><code>.columns {
+  max-width:100%; margin: 0 auto;
+  column-width:20rem;
+  column-gap:2rem;
+  column-rule:1px solid #ccc;
+}
+</code></pre>
+        <div class="columns">
+          <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+          <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+          <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et</span> iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+          <p>Duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+          <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+          <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+          <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+        </div>
+
+        <hr>
+
         <h4>ul / ol</h4>
         <ection class="cflex">
           <p>setup: unordered and ordered list</p>
-<pre>
-ul, ol{
+<pre><code>ul, ol{
   list-style-position: inside;
 }
-</pre>
+</code></pre>
           <p>setup: ul and ol inside content area</p>
-<pre>
+<pre><code>
 main ul >li ul, main ol >li ol,
 aside ul >li ul, aside ol >li ol{
   padding-left:0.9em;
 }
-</pre>
+</code></pre>
           <p>setup: ul and ol in nav and at the breadcrumbs</p>
-<pre>
+<pre><code>
 nav ul,
 section#breadcrumb ul{
   list-style-type: none;
 }
-</pre>
-
+</code></pre>
           <div class="cf_33">
             <p>
               <ul>
@@ -308,12 +321,16 @@ section#breadcrumb ul{
 
         <h4>pre</h4>
         <p>setup: pre</p>
-<pre>
-pre{
-  margin:0.5em 0; padding:1vh 1em;
-  background:rgba(0,0,0,0.05);
+<pre><code>pre, code, kbd{
+  tab-size:2;
 }
-</pre>
+pre{
+  margin:.5rem 0; padding:1rem 1rem;
+  background:rgba(0,0,0,.05);
+  white-space:pre-wrap; word-wrap:break-word;
+  overflow-x:auto;
+}
+</code></pre>
         <pre>this is pre</pre>
 
         <hr>
@@ -355,19 +372,49 @@ pre{
         <hr class="dot">
 
         <h4>quotes</h4>
-        <blockquote>a blockquote</blockquote>
         <q>short quote</q>
         <cite>a cite</cite>
 
         <hr class="dot">
 
+        <h4>blockquote</h4>
+<pre><code>blockquote{
+  margin-top:0.5em; margin-bottom:0.5em; padding:0.5em 0.75em !important;
+  background:#efefef;
+  border-left:4px solid #999;
+}
+/** motification */
+blockquote.info{
+  background:#d9edf7;
+  border-left:4px solid #3a87ad;
+}
+blockquote.success{
+  background:#dff0d8;
+  border-left:4px solid #468847;
+}
+blockquote.warning{
+  background:#fcf8e3;
+  border-left:4px solid #c09853;
+}
+blockquote.error{
+  background:#f2dede;
+  border-left:4px solid #b94a48;
+}
+</code></pre>
+        <blockquote>Blockquote</blockquote>
+        <blockquote class="info">INFO Notification <small>blockquote with class</small></blockquote>
+        <blockquote class="success">SUCCESS Notification <small>blockquote with class</small></blockquote>
+        <blockquote class="warning">WARNING Notification <small>blockquote with class</small></blockquote>
+        <blockquote class="error">ERROR Notification <small>blockquote with class</small></blockquote>
+
+        <hr class="dot">
+
         <h4>description list</h4>
         <p>setup: df</p>
-<pre>
-dd{
+<pre><code>dd{
   padding-left:1em;
 }
-</pre>
+</code></pre>
         <dl>
           <dt>Lorem ipsum...</dt>
           <dd>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</dd>
@@ -398,7 +445,7 @@ dd{
 
         <hr class="dot">
 
-        <h4>bdi</h4>
+        <h4>bdi (<small><mark>I hope it fits right.</mark></small>)</h4>
         <p>This sentence in Arabic is automatically displayed from right to left.</p>
         <p dir="rtl"><bdi>
 هذه قطعه عربيه صممت للمصممين العرب أو للباحثين عن قطع نصيه عربيه لحين إنهاء تصميماتهم و عرضها علي عملائهم. لقد راعينا فى هذه القطعه محاولة تضمين كافة حروف اللغه العربيه لكى يتسنى للمستخدم رؤية جميع الحروف المستخدمه في اللغه العربيه و قمنا أيضا بضم بعض من الخطوط الجذابه لكى نمكنكم من رؤية القطعه بخطوط عربيه مختلفه.
@@ -410,7 +457,7 @@ dd{
 
         <hr class="dot">
 
-        <h4>ruby (without knowledge)</h4>
+        <h4>ruby (<small><mark>Without knowing how it really has to be placed.</mark></small>)</h4>
         <p>East Asian Langugae Annotation</p>
         <p>
           <ruby>
@@ -441,11 +488,26 @@ dd{
         <hr class="dot">
 
         <h4>wbr</h4>
-        <p>Here is placed a realy long, to force the right linebreak it has <code>< wbr ></code> inside: super<wbr>cali<wbr>fragi<wbr>listic<wbr>expiali<wbr>docious_super<wbr>cali<wbr>fragi<wbr>listic<wbr>expiali<wbr>docious</p>
+        <p>Here is placed a realy long word, to force the right linebreak it has <code>&lt;wbr&gt;</code> inside: super<wbr>cali<wbr>fragi<wbr>listic<wbr>expiali<wbr>docious_super<wbr>cali<wbr>fragi<wbr>listic<wbr>expiali<wbr>docious</p>
 
         <hr>
 
         <h4>details</h4>
+<pre><code>details {
+  padding:.5rem;
+  border:1px solid #444;
+}
+summary {
+  font-weight: bold;
+}
+details[open] {
+  padding:.5rem;
+}
+details[open] summary {
+  margin-bottom:.5rem;
+  border-bottom:1px solid #444;
+}
+</code></pre>
         <details>
           <summary>Some details</summary>
           <p>Provide more info about the details here.</p>

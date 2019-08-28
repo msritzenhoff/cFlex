@@ -14,8 +14,8 @@
 <meta name="theme-color" content="#444444"/>
 
 <link href="./guide/normalize.min.css?v=8.0.1" rel="stylesheet" />
-<link href="./guide/cflex3-guide.min.css?v=3.0.6" rel="stylesheet" />
-<link href="./guide/cflex3-guide_radix.min.css?v=3.0.6" rel="stylesheet" />
+<link href="./guide/cflex3-guide.min.css?v=3.0.7" rel="stylesheet" />
+<link href="./guide/cflex3-guide_radix.min.css?v=3.0.7" rel="stylesheet" />
 
 <link href="./guide/asset/vendor/fontawesome/css/all.min.css?v=5.10.1" rel="stylesheet" />
 </head>
@@ -214,12 +214,111 @@ a.cf_btn{
         <hr class="dot">
         <p><br></p>
 
+        <form class="stacked">
+          <fieldset class="cflex">
+            <legend>form types</legend>
+
+            <div class="cflex">
+              <h4>type: color</h4>
+              <div class="cf_50 cflex">
+                <input class="cf_50" type="color" id="head" name="head" value="#e66465">
+                <label class="cf_50" for="head">Head</label>
+              </div>
+            </div>
+
+            <div class="cflex">
+              <h4>date & time</h4>
+
+              <div class="cf_20 cflex">
+                <label for="trip-date">type: date</label>
+                <input type="date" id="trip-date" name="trip-date" value="2018-07-22" min="2018-01-01" max="2018-12-31">
+              </div>
+              <div class="cf_20 cflex">
+                <label for="month">type: month</label>
+                <input type="month" id="month" name="month" min="2018-03" value="2018-05">
+              </div>
+              <div class="cf_20 cflex">
+                <label for="week">type: week</label>
+                <input type="week" name="week" id="camp-week" min="2018-W18" max="2018-W26" required>
+              </div>
+
+              <hr class="dot">
+
+              <div class="cf_20 cflex">
+                <label for="appt">type: time</label>
+                <input type="time" id="appt" name="appt" min="09:00" max="18:00" required>
+              </div>
+              <div class="cf_20 cflex">
+                <label for="meeting-time">type: datetime-local</label>
+                <input type="datetime-local" id="meeting-time" name="meeting-time" value="2018-06-12T19:30" min="2018-06-07T00:00" max="2018-06-14T00:00">
+              </div>
+            </div>
+
+            <div>
+              <label for="phone">type: tel</label>
+              <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
+
+              <label for="url">type: url</label>
+              <input type="url" name="url" id="url" placeholder="https://example.com" pattern="https://.*" size="30" required>
+            </div>
+
+            <div>
+              <label for="name">type: text</label>
+              <input type="text" id="name" name="name" minlength="4" maxlength="8" size="10" required>
+
+              <label for="email">type: email</label>
+              <input id="email" type="email" required>
+            </div>
+
+            <div class="cflex">
+              <label for="site-search">type: search</label>
+              <input class="cf_90" type="search" id="site-search" name="q" aria-label="Search through site content">
+              <button class="cf_10">Search</button>
+            </div>
+
+            <div class="cflex">
+              <div class="cf_50">
+                <label for="volume">type: range</label>
+                <input type="range" id="start" name="volume" min="0" max="11">
+              </div>
+            </div>
+
+            <div>
+              <label for="dino-select">tpye: optgroup</label>
+              <select id="dino-select">
+                  <optgroup label="Theropods">
+                      <option>Tyrannosaurus</option>
+                      <option>Velociraptor</option>
+                      <option>Deinonychus</option>
+                  </optgroup>
+                  <optgroup label="Sauropods">
+                      <option>Diplodocus</option>
+                      <option>Saltasaurus</option>
+                      <option>Apatosaurus</option>
+                  </optgroup>
+              </select>
+            </div>
+
+            <div class="cflex">
+              <input class="cf_50 btn" type="reset" value="reset">
+              <input class="cf_50 btn" type="submit" value="submit">
+            </div>
+
+          </fieldset>
+        </form>
+
+        <p><br></p>
+        <hr class="dash">
+        <p><br></p>
+
         <form action="" method="post">
           <fieldset class="cflex">
             <legend>compact inline</legend>
 
-            <input type="email" placeholder="Email" required>
-            <input type="password" placeholder="Password" required>
+            <div class="cflex">
+              <input class="cf_50" type="email" placeholder="Email" required>
+              <input class="cf_50" type="password" placeholder="Password" required>
+            </div>
 
             <label class="cflex" for="remember">
               <input class="cf_10" id="remember" type="checkbox">
@@ -266,26 +365,31 @@ a.cf_btn{
         <p><br></p>
 
         <form class="aligned">
-          <fieldset class="cflex">
-            <div class="cf_40" style="padding-right:0.5em;">
-              <label for="name">Username</label>
-              <input id="name" type="text" placeholder="Username">
-              <span>This is a required field.</span>
+          <fieldset>
+
+            <div class="cflex">
+              <div class="cf_40" style="padding-right:0.5em;">
+                <label for="name">Username</label>
+                <input id="name" type="text" placeholder="Username">
+                <span>This is a required field.</span>
+              </div>
+
+              <div class="cf_60" style="padding-left:0.5em;">
+                <label for="password">Password</label>
+                <input id="password" type="password" placeholder="Password">
+              </div>
             </div>
 
-            <div class="cf_60" style="padding-left:0.5em;">
-              <label for="password">Password</label>
-              <input id="password" type="password" placeholder="Password">
-            </div>
+            <div class="cflex">
+              <div class="cf_33" style="padding-right:0.5em;">
+                <label for="email">Email Address</label>
+                <input id="email" type="email" placeholder="Email Address">
+              </div>
 
-            <div class="cf_33" style="padding-right:0.5em;">
-              <label for="email">Email Address</label>
-              <input id="email" type="email" placeholder="Email Address">
-            </div>
-
-            <div class="cf_66" style="padding-left:0.5em;">
-              <label for="foo">Supercali<wbr>fragilistic Label_with_wbr</label>
-              <input id="foo" type="text" placeholder="Enter something here...">
+              <div class="cf_66" style="padding-left:0.5em;">
+                <label for="foo">Supercali<wbr>fragilistic Label_with_wbr</label>
+                <input id="foo" type="text" placeholder="Enter something here...">
+              </div>
             </div>
 
             <div class="controls">
@@ -294,63 +398,6 @@ a.cf_btn{
                 <span class="cf_90">I've read the terms and conditions</span>
               </label>
             </div>
-            <button type="submit">Submit</button>
-          </fieldset>
-        </form>
-
-        <p><br></p>
-        <hr class="dash">
-        <p><br></p>
-
-        <form class="stacked">
-          <fieldset class="cflex">
-            <legend>legend</legend>
-
-            <div class="cf_50" style="padding-right:0.5em;">
-              <label for="first-name">First Name</label>
-              <input id="first-name" type="text">
-            </div>
-
-            <div class="cf_50" style="padding-left:0.5em;">
-              <label for="last-name">Last Name</label>
-              <input id="last-name" type="text">
-            </div>
-
-            <div>
-              <input type="radio" id="choice01" name="contact" value="email">
-              <label for="choice01">Email</label>
-
-              <input type="radio" id="choice02" name="contact" value="phone">
-              <label for="choice02">Phone</label>
-
-              <input type="radio" id="choice03" name="contact" value="mail">
-              <label for="choice03">Mail</label>
-            </div>
-
-            <div>
-              <label for="email">E-Mail</label>
-              <input id="email" type="email" required>
-            </div>
-
-            <div class="cf_66" style="padding-right:0.5em;">
-              <label for="city">City</label>
-              <input id="city" type="text">
-            </div>
-
-            <div class="cf_33" style="padding-left:0.5em;">
-              <label for="state">State</label>
-              <select id="state">
-                <option>AL</option>
-                <option>CA</option>
-                <option>IL</option>
-              </select>
-            </div>
-
-            <label class="cflex" for="terms">
-              <input class="cf_10" id="terms" type="checkbox">
-              <span class="cf_90">I've read the terms and conditions</span>
-            </label>
-
             <button type="submit">Submit</button>
           </fieldset>
         </form>
