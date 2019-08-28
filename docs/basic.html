@@ -14,13 +14,14 @@
 <meta name="theme-color" content="#444444"/>
 
 <link href="./guide/normalize.min.css?v=8.0.1" rel="stylesheet" />
-<link href="./guide/cflex3-guide.min.css?v=3.0.6" rel="stylesheet" />
-<link href="./guide/cflex3-guide_radix.min.css?v=3.0.6" rel="stylesheet" />
+<link href="./guide/cflex3-guide.min.css?v=3.0.7" rel="stylesheet" />
+<link href="./guide/cflex3-guide_radix.min.css?v=3.0.7" rel="stylesheet" />
 
 <link href="./guide/asset/vendor/fontawesome/css/all.min.css?v=5.10.1" rel="stylesheet" />
 </head>
 
-<body id="basic" itemscope="" itemtype="http://schema.org/WebPage">
+<!-- Resize the window (here output panel) and see the result !-->
+<body id="basic" itemscope="" itemtype="http://schema.org/WebPage" onload="getSize()" onresize="getSize()">
 
   <nav>
     <h3 hidden>cFlex Guide Main Navigation</h3>
@@ -132,8 +133,12 @@
 
         <p>result</p>
         <div class="cflex">
-          <div class="block cf_50">50%</div>
-          <div class="block cf_50">50%</div>
+          <div class="block cf_50">
+            <p>50%</p>
+          </div>
+          <div class="block cf_50">
+            <p>50%</p>
+          </div>
         </div>
 
       </article>
@@ -150,8 +155,12 @@
   flex:1 1 calc( 100% / 10 * 9 );
 }
 </code></pre>
-      <div class="block cf_10">10%</div>
-      <div class="block cf_90">90%</div>
+      <div class="block cf_10">
+        <p>10%</p>
+      </div>
+      <div class="block cf_90">
+        <p>90%</p>
+      </div>
     </ection>
 
     <ection class="cflex">
@@ -165,8 +174,12 @@
   flex:1 1 calc( 100% / 5 * 4 );
 }
 </code></pre>
-      <div class="block cf_20">20%</div>
-      <div class="block cf_80">80%</div>
+      <div class="block cf_20">
+        <p>20%</p>
+      </div>
+      <div class="block cf_80">
+        <p>80%</p>
+      </div>
     </ection>
 
     <ection class="cflex">
@@ -180,8 +193,12 @@
   flex:1 1 calc( 100% / 4 * 3 );
 }
 </code></pre>
-      <div class="block cf_25">25%</div>
-      <div class="block cf_75">75%</div>
+      <div class="block cf_25">
+        <p>25%</p>
+      </div>
+      <div class="block cf_75">
+        <p>75%</p>
+      </div>
     </ection>
 
     <ection class="cflex">
@@ -195,8 +212,12 @@
   flex:1 1 calc( 100% / 10 * 7 );
 }
 </code></pre>
-      <div class="block cf_30">30%</div>
-      <div class="block cf_70">70%</div>
+      <div class="block cf_30">
+        <p>30%</p>
+      </div>
+      <div class="block cf_70">
+        <p>70%</p>
+      </div>
     </ection>
 
     <ection class="cflex">
@@ -210,8 +231,12 @@
   flex:1 1 calc( 100% / 3 * 2 );
 }
 </code></pre>
-      <div class="block cf_33">33.3333%</div>
-      <div class="block cf_66">66.6666%</div>
+      <div class="block cf_33">
+        <p>33.3333%</p>
+      </div>
+      <div class="block cf_66">
+        <p>66.6666%</p>
+      </div>
     </ection>
 
     <ection class="cflex">
@@ -225,8 +250,12 @@
   flex:1 1 calc( 100% / 5 * 3 );
 }
 </code></pre>
-      <div class="block cf_40">40%</div>
-      <div class="block cf_60">60%</div>
+      <div class="block cf_40">
+        <p>40%</p>
+      </div>
+      <div class="block cf_60">
+        <p>60%</p>
+      </div>
     </ection>
 
     <ection class="cflex">
@@ -236,8 +265,12 @@
   flex:1 1 calc( 100% / 2 );
 }
 </code></pre>
-      <div class="block cf_50">50%</div>
-      <div class="block cf_50">50%</div>
+      <div class="block cf_50">
+        <p>50%</p>
+      </div>
+      <div class="block cf_50">
+        <p>50%</p>
+      </div>
     </ection>
 
     <ection class="cflex">
@@ -251,8 +284,12 @@
   flex:1 1 calc( 100% / 5 * 3 );
 }
 </code></pre>
-      <div class="block cf_60">60%</div>
-      <div class="block cf_40">40%</div>
+      <div class="block cf_60">
+        <p>60%</p>
+      </div>
+      <div class="block cf_40">
+        <p>40%</p>
+      </div>
     </ection>
 
     <ection class="cflex">
@@ -266,8 +303,12 @@
   flex:1 1 calc( 100% / 3 * 2 );
 }
 </code></pre>
-      <div class="block cf_66">66.6666%</div>
-      <div class="block cf_33">33.3333%</div>
+      <div class="block cf_66">
+        <p>66.6666%</p>
+      </div>
+      <div class="block cf_33">
+        <p>33.3333%</p>
+      </div>
     </ection>
 
     <ection class="cflex">
@@ -281,8 +322,12 @@
   flex:1 1 calc( 100% / 10 * 7 );
 }
 </code></pre>
-      <div class="block cf_70">70%</div>
-      <div class="block cf_30">30%</div>
+      <div class="block cf_70">
+        <p>70%</p>
+      </div>
+      <div class="block cf_30">
+        <p>30%</p>
+      </div>
     </ection>
 
     <ection class="cflex">
@@ -296,8 +341,12 @@
   flex:1 1 calc( 100% / 4 * 3 );
 }
 </code></pre>
-      <div class="block cf_75">75%</div>
-      <div class="block cf_25">25%</div>
+      <div class="block cf_75">
+        <p>75%</p>
+      </div>
+      <div class="block cf_25">
+        <p>25%</p>
+      </div>
     </ection>
 
 
@@ -312,8 +361,12 @@
   flex:1 1 calc( 100% / 5 * 4 );
 }
 </code></pre>
-      <div class="block cf_80">80%</div>
-      <div class="block cf_20">20%</div>
+      <div class="block cf_80">
+        <p>80%</p>
+      </div>
+      <div class="block cf_20">
+        <p>20%</p>
+      </div>
     </ection>
 
     <ection class="cflex">
@@ -327,14 +380,20 @@
   flex:1 1 calc( 100% / 10 * 9 );
 }
 </code></pre>
-      <div class="block cf_90">90%</div>
-      <div class="block cf_10">10%</div>
+      <div class="block cf_90">
+        <p>90%</p>
+      </div>
+      <div class="block cf_10">
+        <p>10%</p>
+      </div>
     </ection>
 
     <ection class="cflex">
       <hr>
 <pre><code>no class needed ;-)</code></pre>
-      <div class="block">100%</div>
+      <div class="block">
+        <p>100%</p>
+      </div>
     </ection>
 
     <p><br></p>
@@ -347,11 +406,21 @@
   flex:1 1 calc( 100% / 5 );
 }
 </code></pre>
-      <div class="block cf_20">20%</div>
-      <div class="block cf_20">20%</div>
-      <div class="block cf_20">20%</div>
-      <div class="block cf_20">20%</div>
-      <div class="block cf_20">20%</div>
+      <div class="block cf_20">
+        <p>20%</p>
+      </div>
+      <div class="block cf_20">
+        <p>20%</p>
+      </div>
+      <div class="block cf_20">
+        <p>20%</p>
+      </div>
+      <div class="block cf_20">
+        <p>20%</p>
+      </div>
+      <div class="block cf_20">
+        <p>20%</p>
+      </div>
     </ection>
 
     <ection class="cflex">
@@ -361,10 +430,18 @@
   flex:1 1 calc( 100% / 4 );
 }
 </code></pre>
-      <div class="block cf_25">25%</div>
-      <div class="block cf_25">25%</div>
-      <div class="block cf_25">25%</div>
-      <div class="block cf_25">25%</div>
+      <div class="block cf_25">
+        <p>25%</p>
+      </div>
+      <div class="block cf_25">
+        <p>25%</p>
+      </div>
+      <div class="block cf_25">
+        <p>25%</p>
+      </div>
+      <div class="block cf_25">
+        <p>25%</p>
+      </div>
     </ection>
 
     <ection class="cflex">
@@ -374,9 +451,15 @@
   flex:1 1 calc( 100% / 3 );
 }
 </code></pre>
-      <div class="block cf_33">33.3333%</div>
-      <div class="block cf_33">33.3333%</div>
-      <div class="block cf_33">33.3333%</div>
+      <div class="block cf_33">
+        <p>33.3333%</p>
+      </div>
+      <div class="block cf_33">
+        <p>33.3333%</p>
+      </div>
+      <div class="block cf_33">
+        <p>33.3333%</p>
+      </div>
     </ection>
 
     <ection class="cflex">
@@ -386,8 +469,12 @@
   flex:1 1 calc( 100% / 2 );
 }
 </code></pre>
-      <div class="block cf_50">50%</div>
-      <div class="block cf_50">50%</div>
+      <div class="block cf_50">
+        <p>50%</p>
+      </div>
+      <div class="block cf_50">
+        <p>50%</p>
+      </div>
     </ection>
 
     <aside id="aRight" hidden>
@@ -413,6 +500,22 @@
     </footer>
 
   </div>
+
+  <style>
+  #vp{ position:fixed; right:0; bottom:14vh; padding:5px 10px; color:#aaa; background-color:#444; z-index:9999; }
+  #vsize{ color:lime; }
+  </style>
+  <div id="vp">
+  <!-- Place height and width size here! -->
+  </div>
+  <script>
+  function getSize() {
+    var w = window.innerWidth;
+    //var h = window.innerHeight;
+    //document.getElementById('wh').innerHTML = "<p>width:&#160;&#160;" + w + "<br>height:&#160;" + h + "</p>";
+    document.getElementById('vp').innerHTML = "<p>vw:&#160;<span id='vsize'>" + w + "</span>px</p>";
+  }
+  </script>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-27RQRKDZ9R"></script>
 <script> window.dataLayer = window.dataLayer || [];
