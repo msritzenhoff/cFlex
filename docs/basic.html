@@ -107,19 +107,7 @@
         <p><br>
         </p>
 
-
-        <p>html: add the classes <strong>cflex</strong> and <strong>cf_50</strong> to the elements</p>
-<pre><code>&lt;div class="cflex"&gt;
-  &lt;div class="cf_50"&gt;
-    &lt;p>lorem ipsum&lt;/p&gt;
-  &lt;/div>
-  &lt;div class="cf_50&gt;
-    &lt;p>lorem ipsum&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-
-        <p>css: uncomment the classes cflex and cf_50</p>
+        <h4>css: uncomment the classes cflex and cf_50</h4>
 <pre><code>.cflex{
   display:flex;
   flex-flow: row wrap;
@@ -129,6 +117,33 @@
   flex:1 1 50%;
   flex:1 1 calc( 100% / 2 );
 }
+</code></pre>
+
+        <h5>html: add the class <strong>cflex</strong> to a div and <strong>cf_50</strong> to the paragraph</h5>
+<pre><code>&lt;div class="cflex"&gt;
+  &lt;p class="cf_50"&gt;lorem ipsum &hellip;&lt;/p&gt;
+  &lt;p class="cf_50"&gt;lorem ipsum &hellip;&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+        <p>result</p>
+        <div class="cflex">
+          <p class="block cf_50">50%<br>
+            Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+          <p class="block cf_50">50%<br>
+            Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+        <p><br>
+        </p>
+        <h5>html: add the classes <strong>cflex</strong> and <strong>cf_50</strong> to two enclosing <code>div</code>'s</h5>
+<pre><code>&lt;div class="cflex"&gt;
+  &lt;div class="cf_50"&gt;
+    &lt;p>lorem ipsum&lt;/p&gt;
+  &lt;/div>
+  &lt;div class="cf_50&gt;
+    &lt;p>lorem ipsum&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 </code></pre>
 
         <p>result</p>
