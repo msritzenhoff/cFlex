@@ -521,14 +521,18 @@
   #vsize{ color:lime; }
   </style>
   <div id="vp">
+    <p id="w_px"></p>
+    <p id="w_em"></p>
   <!-- Place height and width size here! -->
   </div>
   <script>
   function getSize() {
-    var w = window.innerWidth;
+    var w_px = window.outerWidth;
+    var w_em = window.outerWidth / 16;
     //var h = window.innerHeight;
     //document.getElementById('wh').innerHTML = "<p>width:&#160;&#160;" + w + "<br>height:&#160;" + h + "</p>";
-    document.getElementById('vp').innerHTML = "<p>vw:&#160;<span id='vsize'>" + w + "</span>px</p>";
+    document.getElementById('w_px').innerHTML = "<p>vw:&#160;<span id='vsize'>" + w_px + "</span>&#160;px</p>";
+    document.getElementById('w_em').innerHTML = "<p>vw:&#160;<span id='vsize'>" + w_em + "</span>&#160;em</p>";
   }
   </script>
 
