@@ -518,6 +518,85 @@ h1 >a, h2 >a, h3 >a, h4 >a, h5 >a, h6 >a{
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /**
+ * table
+ */
+
+table {
+	width: 100%;
+	border-spacing: 0;
+}
+
+table thead {
+	position: absolute;
+	clip: rect(1px 1px 1px 1px);
+    /* IE6, IE7 */
+	padding: 0;
+	border: 0;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+table thead th {
+	background-color: #444;
+	border: 1px solid #666;
+	text-align: center;
+	color: white;
+}
+table thead th:first-of-type {
+	text-align: left;
+}
+
+table tbody,
+table tr,
+table th,
+table td {
+	display: block;
+	padding: 0;
+	text-align: left;
+	white-space: normal;
+}
+
+table th,
+table td {
+	padding:.25rem;
+	vertical-align: middle;
+}
+
+table caption {
+	margin-bottom: 1rem;
+	font-weight: bold;
+	text-align: center;
+}
+
+table tfoot {
+	font-style: italic;
+}
+
+table tbody td[data-type=currency] {
+	text-align: right;
+}
+table tbody td[data-title]:before {
+	content: attr(data-title);
+	float: left;
+}
+
+table tbody tr {
+	margin-bottom:1.5rem;
+}
+table tbody tr:last-of-type {
+	margin-bottom: 0;
+}
+
+table tbody th[scope="row"] {
+	background-color: #444;
+	color: white;
+}
+table tbody td {
+	text-align: right;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/**
  * button
  */
 
@@ -838,6 +917,23 @@ body >nav >.navBtn:checked ~ul{
  */
 @media screen and (min-width:38em){
 
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+  table {
+  	width: 50%;
+  }
+	table th,
+  table td {
+		padding:.5rem .5rem;
+	}
+
+  table tbody th[scope="row"] {
+		border-left: 1px solid #ccc;
+		border-bottom: 1px solid #ccc;
+	}
+
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
 }
 
 /* = = = MEDIA QUERY FROM 960px and greater = = = = = = = */
@@ -847,6 +943,66 @@ body >nav >.navBtn:checked ~ul{
  * Media query: 60em
  */
 @media screen and (min-width:60em){
+
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+  table {
+    width: 100%;
+		font-size: .9rem;
+	}
+
+  table thead {
+    clip: auto;
+		position: relative; width: auto; height: auto;
+		overflow: auto;
+	}
+  table thead tr {
+    position:-webkit-sticky;
+    position:sticky;
+    top:50px;
+    height:100%;
+  }
+
+  table tr {
+		display: table-row;
+	}
+  table th,
+  table td {
+		display: table-cell;
+		padding: .5rem;
+	}
+
+  table caption {
+		font-size: 1.5rem;
+	}
+  table tbody {
+		display: table-row-group;
+	}
+  table tbody tr {
+		display: table-row;
+		border-width: 1px;
+	}
+  table tbody tr:nth-of-type(even) {
+		background-color: rgba(94, 93, 82, 0.1);
+	}
+  table tbody th[scope="row"] {
+		color: #5e5d52;
+    background-color: transparent;
+		text-align: left;
+	}
+  table tbody td {
+		border-left: 1px solid #ccc;
+		border-bottom: 1px solid #ccc;
+		text-align: center;
+	}
+  table tbody td:last-of-type {
+		border-right: 1px solid #ccc;
+	}
+  table tbody td[data-title]:before {
+		content: none;
+	}
+
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 }
 
@@ -864,6 +1020,22 @@ body >nav >.navBtn:checked ~ul{
      * stops the width-jumping between short and long pages ;-)
      */
     overflow-y: scroll;
+  }
+
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+  table {
+    font-size:1rem;
+  }
+  table th,
+  table td {
+    padding:.75rem .5rem;
+  }
+  table thead tr {
+    position:-webkit-sticky;
+    position:sticky;
+    top:0;
+    height:100%;
   }
 
   /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -952,6 +1124,13 @@ body >nav >.navBtn:checked ~ul{
     font-size:18px; font-size:1.125rem;
     line-height: 1.625;
   }
+
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+  table th,
+  table td {
+		padding: .5rem .5rem;
+	}
 
   /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
