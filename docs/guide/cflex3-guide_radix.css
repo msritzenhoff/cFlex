@@ -919,13 +919,14 @@ body >nav >.navBtn:checked ~ul{
 
   /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-  table {
-  	width: 50%;
-  }
 	table th,
   table td {
 		padding:.5rem .5rem;
 	}
+
+  table tbody tr{
+    float: left; width: 50%; padding:0 .25rem;
+  }
 
   table tbody th[scope="row"] {
 		border-left: 1px solid #ccc;
@@ -948,7 +949,9 @@ body >nav >.navBtn:checked ~ul{
 
   table {
     width: 100%;
+    /*
 		font-size: .9rem;
+    */
 	}
 
   table thead {
@@ -972,14 +975,17 @@ body >nav >.navBtn:checked ~ul{
 		padding: .5rem;
 	}
 
+  /*
   table caption {
 		font-size: 1.5rem;
 	}
+  */
   table tbody {
 		display: table-row-group;
 	}
   table tbody tr {
 		display: table-row;
+    float:unset; width: 100%; padding:0;
 		border-width: 1px;
 	}
   table tbody tr:nth-of-type(even) {
@@ -1001,6 +1007,10 @@ body >nav >.navBtn:checked ~ul{
   table tbody td[data-title]:before {
 		content: none;
 	}
+
+  table tbody td:not(:first-of-type) {
+    padding-left:1.5rem;
+  }
 
   /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
@@ -1024,9 +1034,11 @@ body >nav >.navBtn:checked ~ul{
 
   /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
+  /*
   table {
     font-size:1rem;
   }
+  */
   table th,
   table td {
     padding:.75rem .5rem;
