@@ -1,7 +1,7 @@
 /*!
  * cFlex     :: v3.0.7
  * License   :: MIT
- * Update    :: 17.08.2019
+ * Update    :: 30.08.2019
  * Create    :: 22.08.2014
  * Author    :: Michael S. RitZenhoff
  * https://github.com/msritzenhoff/cFlex
@@ -42,14 +42,12 @@
 
   /**
    * [behavior description]
-   * @type {[type]}
    */
       scroll-behavior: smooth;
   overscroll-behavior: contain;
 
   /**
    * All vendor prefixes for "font-feature-settings"
-   * @type {String}
    */
      -moz-font-feature-settings: "kern" 1;
       -ms-font-feature-settings: "kern" 1;
@@ -65,7 +63,7 @@
  * https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
  * https://blog.teamtreehouse.com/box-sizing-secret-simple-css-layouts#comment-50223
  */
-*, *:before, *:after {
+*, *:before, *:after{
   box-sizing: inherit;
 }
 
@@ -114,7 +112,6 @@ article >footer{
   flex-flow:row wrap;
 }
 
-
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 /**
@@ -150,27 +147,69 @@ body >footer{
   order:7;
 }
 
+/* = = = MEDIA QUERY FROM 560px and greater = = = = = = = */
+
+/**
+ * 560px +
+ * Media query: 35em
+ */
+@media screen and (min-width: 35em){
+
+}
+
 /* = = = MEDIA QUERY FROM 608px and greater = = = = = = = */
 
 /**
  * 608px +
  * Media query: 38em
  */
-@media screen and (min-width: 38em) {
+@media screen and (min-width: 38em){
 
   /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-  /*
-  .cflex{
-    display:flex;
-    flex-flow: row wrap;
+  .cf_30{
+    flex:1 0 30%;
+    flex:1 0 calc( 100% / 10 * 3 );
   }
-  .cf_10, .cf_20, .cf_25, .cf_30, .cf_33, .cf_40, .cf_50,
-  .cf_60, .cf_66, .cf_70, .cf_75, .cf_80, .cf_90{
-    flex:1 0 50%;
-    flex:1 0 calc( 100% / 2 );
+  .cf_33{
+    flex:1 0 33.3333%;
+    flex:1 0 calc( 100% / 3 );
   }
-  */
+  .cf_66{
+    flex:1 0 66.6666%;
+    flex:1 0 calc( 100% / 3 * 2 );
+  }
+  .cf_70{
+    flex:1 0 70%;
+    flex:1 0 calc( 100% / 10 * 7 );
+  }
+
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+}
+
+/* = = = MEDIA QUERY FROM 960px and greater = = = = = = = */
+
+/**
+ * 768px +
+ * Media query: 48em
+ */
+@media screen and (min-width:48em){
+
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+  .cf_25{
+    flex:1 0 20%;
+    flex:1 0 calc( 100% / 4 );
+  }
+  .cf_50{
+    flex:1 0 33.3333%;
+    flex:1 0 calc( 100% / 4 * 2 );
+  }
+  .cf_75{
+    flex:1 0 66.6666%;
+    flex:1 0 calc( 100% / 4 * 3 );
+  }
 
   /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
@@ -182,7 +221,53 @@ body >footer{
  * 960px +
  * Media query: 60em
  */
-@media screen and (min-width:60em) {
+@media screen and (min-width:60em){
+
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+  .cf_20{
+    flex:1 0 20%;
+    flex:1 0 calc( 100% / 5 );
+  }
+  .cf_40{
+    flex:1 0 33.3333%;
+    flex:1 0 calc( 100% / 5 * 2 );
+  }
+  .cf_60{
+    flex:1 0 66.6666%;
+    flex:1 0 calc( 100% / 5 * 3 );
+  }
+  .cf_80{
+    flex:1 0 70%;
+    flex:1 0 calc( 100% / 5 * 4 );
+  }
+
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+}
+
+/* = = = MEDIA QUERY FROM 1024px WIDTH = = = = = = = = = = */
+
+/**
+ * 1024px +
+ * Media query: 64em
+ */
+@media screen and (min-width:64em){
+
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+  .cf_10{
+    flex:1 0 10%;
+    flex:1 0 calc( 100% / 10 );
+  }
+  .cf_90{
+    flex:1 0 90%;
+    flex:1 0 calc( 100% / 10 * 9 );
+  }
+
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
   /**
    * direct the sequence of the rows as you like
@@ -195,7 +280,7 @@ body >footer{
   /* - - - - - - - - - - - - - - - - - - - - - - - -
    * body as fixed width centered
    */
-   :root >body{
+  :root >body{
     /*
     align-items: flex-start;
     */
@@ -301,67 +386,46 @@ body >footer{
     flex-basis: 0;
   }
 
-  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+}
 
-  /*
-  .cflex{
-    display:flex;
-    flex-flow: row wrap;
-  }
-  .cf_10{
-    flex:1 0 10%;
-    flex:1 0 calc( 100% / 10 );
-  }
-  .cf_20{
-    flex:1 0 20%;
-    flex:1 0 calc( 100% / 5 );
-  }
-  .cf_25{
-    flex:1 0 25%;
-    flex:1 0 calc( 100% / 4 );
-  }
-  .cf_30{
-    flex:1 0 30%;
-    flex:1 0 calc( 100% / 10 * 3 );
-  }
-  .cf_33{
-    flex:1 0 33.3333%;
-    flex:1 0 calc( 100% / 3 );
-  }
-  .cf_40{
-    flex:1 0 40%;
-    flex:1 0 calc( 100% / 5 * 2 );
-  }
-  .cf_50{
-    flex:1 0 50%;
-    flex:1 0 calc( 100% / 2 );
-  }
-  .cf_60{
-    flex:1 0 60%;
-    flex:1 0 calc( 100% / 5 * 3 );
-  }
-  .cf_66{
-    flex:1 0 66%;
-    flex:1 0 calc( 100% / 3 * 2 );
-  }
-  .cf_70{
-    flex:1 0 70%;
-    flex:1 0 calc( 100% / 10 * 7 );
-  }
-  .cf_75{
-    flex:1 0 75%;
-    flex:1 0 calc( 100% / 4 * 3 );
-  }
-  .cf_80{
-    flex:1 0 80%;
-    flex:1 0 calc( 100% / 5 * 4 );
-  }
-  .cf_90{
-    flex:1 0 90%;
-    flex:1 0 calc( 100% / 10 * 9 );
-  }
-  */
+/* = = = MEDIA QUERY FROM 1280px and greater = = = = = = = */
 
-  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/**
+ * 1280px +
+ * Media query: 80em
+ * /
+@media screen and (min-width:80em){
 
 }
+
+/* = = = MEDIA QUERY FROM 1440px and greater = = = = = = = */
+
+/**
+ * 1440px +
+ * Media query: 90em
+ * /
+@media screen and (min-width:90em){
+
+}
+
+/* = = = MEDIA QUERY FROM 1600px and greater = = = = = = = */
+
+/**
+ * 1600 +
+ * Media query: 100em
+ * /
+@media screen and (min-width:100em){
+
+}
+
+/* = = = MEDIA QUERY FROM 1920px and greater = = = = = = = */
+
+/**
+ * 1920 +
+ * Media query: 120em
+ * /
+@media screen and (min-width:120em){
+
+}
+*/

@@ -1,7 +1,7 @@
 /*!
  * cFlex     :: v3.0.7
  * License   :: MIT
- * Update    :: 17.08.2019
+ * Update    :: 30.08.2019
  * Create    :: 22.08.2014
  * Author    :: Michael S. RitZenhoff
  * https://github.com/msritzenhoff/cFlex
@@ -149,7 +149,7 @@ body >div >footer{
   order:5;
 }
 
-/* = = = MEDIA QUERY FROM 608px and greater = = = = = = = */
+/* = = = MEDIA QUERY FROM 560px and greater = = = = = = = */
 
 /**
  * 560px +

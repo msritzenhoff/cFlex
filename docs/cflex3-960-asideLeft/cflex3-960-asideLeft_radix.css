@@ -5,6 +5,7 @@
  */
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
 /* = = = FOR DEVELOPMENT = = = = = = = = = = = = = = = = = */
 
 /**
@@ -50,9 +51,6 @@ header >*{
 }
 
 :root{
-  /* just in case */
-  min-height: 100vh;
-
   /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
   /* 1rem = 16px
@@ -93,8 +91,6 @@ header >*{
   -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
-
-   scroll-behavior: smooth;
 }
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -238,19 +234,15 @@ small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, l
 form, fieldset, legend, label, button, table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,  figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary, time, mark, audio, video {
-	margin: 0; padding: 0;
-
+  margin: 0; padding: 0;
   margin-block-start:0; margin-block-end:0; margin-inline-start:0; margin-inline-end:0;
   padding-block-start:0; padding-block-end:0; padding-inline-start:0; padding-inline-end:0;
-}
-[hidden]{
-  display: none !important;
+  border:0px;
 }
 
 /**
  * width's inside base elements
  * ALL INSIDE of:
- * e.g. body >main ...
  * e.g. body >main ...
  * AS LONG you don't use max- or min-
  * it dont hurt the flex width's yet
@@ -278,8 +270,55 @@ body >*:not(nav){
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /**
+ * show/hide
+ */
+
+.cflex >.block{
+  padding:.25rem 1rem;
+}
+.cflex{
+  background:#fff;
+}
+.cflex .block:nth-child(odd){
+  background:#dcdcdc;
+}
+.cflex .block:nth-child(even){
+  background:#e8e8e8;
+}
+
+/* for example */
+.redMarker{
+  background:#f4a384; background:rgb(244,163,132);
+}
+.greenMarker{
+  background:#90cbaa; background:rgb(144,203,170);
+}
+.blueMarker{
+  background:#a1d4cf; background:rgb(161,212,207);
+}
+.yellowMarker{
+  background:#f8dd74; background:rgb(248,221,116);
+}
+
+/* show hide code */
+.toggle-label {
+  display: block; padding:.25rem 1rem;
+  cursor: pointer;
+  text-align:right;
+}
+.toggle-content{ padding:0 .5rem; }
+.toggle-input{ display: none }
+.toggle-input:not(checked) ~.toggle-content{ display: none; }
+.toggle-input:checked ~.toggle-content{ display: block; }
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/**
  * basics
  */
+
+[hidden]{
+  display: none !important;
+}
 
 /* img, a.i. */
 svg, img, video, audio, canvas, object, applet, embed, iframe{
@@ -1119,10 +1158,12 @@ body >nav >.navBtn:checked ~ul{
 
   /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
+  /*
   :root{
     font-size:18px; font-size:1.125rem;
     line-height: 1.625;
   }
+  */
 
   /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
