@@ -142,7 +142,7 @@ a.cf_btn{
 }
 </code></pre>
 
-          <div class="block cf_50" style="padding:1em;">
+          <div class="block cf_50" style="padding:1em; background:#fff; border:1px solid #ccc;">
             <h3>Preview 320px-Width Example</h3>
 
             <form class="stacked" style="width:320px !important; margin:0 auto;">
@@ -159,13 +159,16 @@ a.cf_btn{
                   <input id="last-name" type="text">
                 </div>
 
-                <select multiple size="3">
-                  <option selected value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                  <option value="4">Four</option>
-                  <option value="5">Five</option>
-                </select>
+                <div>
+                  <label for="multi-select">Multiple Selection</label>
+                  <select id="multi-select" multiple size="3">
+                    <option selected value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                    <option value="4">Four</option>
+                    <option value="5">Five</option>
+                  </select>
+                </div>
 
                 <div>
                   <input type="radio" id="choice1" name="contact" value="email">
@@ -220,9 +223,9 @@ a.cf_btn{
 
             <div class="cflex">
               <h4>type: color</h4>
-              <div class="cf_50 cflex">
-                <input class="cf_50" type="color" id="head" name="head" value="#e66465">
-                <label class="cf_50" for="head">Head</label>
+              <div class="cflex">
+                <input class="cf_10" type="color" id="head" name="head" value="#e66465">
+                <label class="cf_90" for="head">Head</label>
               </div>
             </div>
 
@@ -271,19 +274,13 @@ a.cf_btn{
             </div>
 
             <div class="cflex">
-              <label for="site-search">type: search</label>
-              <input class="cf_90" type="search" id="site-search" name="q" aria-label="Search through site content">
-              <button class="cf_10">Search</button>
-            </div>
-
-            <div class="cflex">
-              <div class="cf_50">
+              <div>
                 <label for="volume">type: range</label>
                 <input type="range" id="start" name="volume" min="0" max="11">
               </div>
             </div>
 
-            <div>
+            <div class="cflex">
               <label for="dino-select">tpye: optgroup</label>
               <select id="dino-select">
                   <optgroup label="Theropods">
@@ -300,9 +297,24 @@ a.cf_btn{
             </div>
 
             <div class="cflex">
-              <input class="cf_50 btn" type="reset" value="reset">
-              <input class="cf_50 btn" type="submit" value="submit">
+              <input class="cf_50 btn group" type="reset" value="reset">
+              <input class="cf_50 btn group" type="submit" value="submit">
             </div>
+
+          </fieldset>
+        </form>
+
+        <p><br></p>
+        <hr class="dash">
+        <p><br></p>
+
+        <form action="" method="post">
+          <fieldset class="cflex">
+            <legend>search form</legend>
+
+            <label for="form-search">type: search</label>
+            <input class="cf_90" type="search" id="form-search" name="q" aria-label="Search through site content">
+            <button class="cf_10 btn">Search</button>
 
           </fieldset>
         </form>

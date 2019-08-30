@@ -26,7 +26,7 @@ header >*{
 /* dev */
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
-
+/*
 .cflex{
   background:#fff;
 }
@@ -39,7 +39,7 @@ header >*{
 .cflex div.block:nth-child(even){
   background:#e8e8e8;
 }
-
+*/
 /* = = = START WITH SOME BASIC RULES = = = = = = = = = = = */
 
 :root, :root *{
@@ -491,6 +491,7 @@ body{
 }
 */
 
+/*
 body >section#breadcrumb{
   padding:.5rem 1rem;
 }
@@ -498,6 +499,7 @@ body >section#breadcrumb,
 body >main{
   background:#fff;
 }
+*/
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 /**
@@ -815,14 +817,14 @@ select:focus, option:focus, textarea:focus{
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 
 body >nav >h3,
-body >header,
-body >main,
-body >aside,
-body >footer{
+body >div >header,
+body >div >main,
+body >div >aside,
+body >div >footer{
   padding: 1rem 1rem;
 }
 
-body >section#breadcrumb >ol >li:not(:first-of-type){
+body >div >section#breadcrumb >ol >li:not(:first-of-type){
   padding-left:.25rem;
 }
 
@@ -954,13 +956,19 @@ body >nav >.navBtn:checked ~ul{
 
   /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
+  header div[class^="cf_"], header section[class^="cf_"],
+  main div[class^="cf_"], main section[class^="cf_"],
+  footer div[class^="cf_"], footer section[class^="cf_"]{
+    padding-right:.5em; padding-left:.5em;
+  }
+
   header div[class^="cf_"]:first-of-type,
   header section[class^="cf_"]:first-of-type,
   main div[class^="cf_"]:first-of-type,
   main section[class^="cf_"]:first-of-type,
   footer div[class^="cf_"]:first-of-type,
   footer section[class^="cf_"]:first-of-type{
-    padding-right:.75em; padding-left:0;
+    padding-right:.5em; padding-left:0;
   }
   header div[class^="cf_"]:last-of-type,
   header section[class^="cf_"]:last-of-type,
@@ -968,7 +976,7 @@ body >nav >.navBtn:checked ~ul{
   main section[class^="cf_"]:last-of-type,
   footer div[class^="cf_"]:last-of-type,
   footer section[class^="cf_"]:last-of-type{
-    padding-right:0; padding-left:.75em;
+    padding-right:0; padding-left:.5em;
   }
 
   /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -1157,7 +1165,7 @@ body >nav >.navBtn:checked ~ul{
     display: none;
   }
   body >nav >ul li a{
-    min-width:100%; padding:0 .75rem;
+    min-width:100%; padding: 0.425em 1vw;
     /*
     padding-top:1vh; padding-bottom:1vh;
     color:#fff;
@@ -1167,7 +1175,13 @@ body >nav >.navBtn:checked ~ul{
 
   /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-  body >section{
+  main{
+    overflow-y: scroll;
+  }
+
+  /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+  body >footer >section{
     padding: 0 1vw;
   }
   body >footer >section:first-of-type{

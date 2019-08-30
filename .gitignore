@@ -4,6 +4,8 @@
 .travis.yml
 
 /docs/guide/test
+/docs/layout
+practice.html
 test.html
 
 # Image #
