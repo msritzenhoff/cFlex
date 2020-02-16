@@ -4,7 +4,6 @@
  * https://github.com/msritzenhoff/cFlex
  */
 
-
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 
 /* = = = FOR DEVELOPMENT = = = = = = = = = = = = = = = = = */
@@ -447,6 +446,9 @@ blockquote.error{
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
+body >header{
+  background:url("https://images.unsplash.com/photo-1575915655585-76375f9d46bc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80") 50% 50% no-repeat;
+}
 article >header >h1, h2, h3, h4, h5, h6{
   padding-top:.15rem; padding-bottom:.35rem;
 }
@@ -495,8 +497,7 @@ body{
 body >section#breadcrumb{
   padding:.5rem 1rem;
 }
-body >section#breadcrumb,
-body >main{
+body >section#breadcrumb{
   background:#fff;
 }
 
@@ -1128,14 +1129,24 @@ body >nav >.navBtn:checked ~ul{
   body{
     min-height: 100%;
   }
+  body >header >div{
+    padding: 5vh 1vw;
+  }
 
-  body >nav >h3,
+  body >main{
+    padding: 0;
+  }
   body >header,
-  body >section#breadcrumb,
-  body >main,
+  body >main >section#breadcrumb,
+  body >nav >h3,
   body >aside,
-  body >footer{
+  body >footer,
+  body >section{
     padding: 1.5vh 1vw;
+  }
+  body >main >article,
+  body >main >section >div{
+    padding: 5vh 1vw;
   }
 
   /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
@@ -1174,7 +1185,7 @@ body >nav >.navBtn:checked ~ul{
 
   /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-  body >section{
+  body >footer >section{
     padding: 0 1vw;
   }
   body >footer >section:first-of-type{
